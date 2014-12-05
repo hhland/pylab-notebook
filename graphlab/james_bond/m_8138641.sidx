@@ -1,0 +1,51 @@
+{
+    "sarray":
+    {
+        "version": "2",
+        "num_segments": "2"
+    },
+    "segment_files":
+    {
+        "0000": "m_8138641.0000",
+        "0001": "m_8138641.0001"
+    },
+    "columns":
+    [
+        {
+            "content_type": "",
+            "metadata":
+            {
+                "__type__": "0"
+            },
+            "segment_sizes":
+            {
+                "0000": "0",
+                "0001": "0"
+            }
+        },
+        {
+            "content_type": "",
+            "metadata":
+            {
+                "__type__": "0"
+            },
+            "segment_sizes":
+            {
+                "0000": "0",
+                "0001": "0"
+            }
+        },
+        {
+            "content_type": "",
+            "metadata":
+            {
+                "__type__": "2"
+            },
+            "segment_sizes":
+            {
+                "0000": "0",
+                "0001": "0"
+            }
+        }
+    ]
+}
