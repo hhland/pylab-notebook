@@ -8,3 +8,6 @@
 [I 17:52:22.821 tornado.access] 302 GET / (124.160.105.37) 1.49ms
 [I 17:52:34.185 NotebookApp] Creating new notebook in /
 [I 17:52:35.513 NotebookApp] Kernel started: 8a98de61-ec61-48f1-8b07-d307ae37166d
+[I 17:54:35.452 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:56:35.481 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:58:23.244 NotebookApp] Kernel interrupted: 8a98de61-ec61-48f1-8b07-d307ae37166d
