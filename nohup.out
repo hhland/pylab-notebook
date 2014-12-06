@@ -17,3 +17,302 @@
 [I 18:07:27.849 NotebookApp] Kernel started: 17388e22-1cbb-41ac-bb52-2e7c266fd56b
 [I 18:08:37.932 NotebookApp] Saving notebook at /shell.ipynb
 [I 18:09:28.836 NotebookApp] Saving notebook at /avro/test.ipynb
+[I 18:10:38.902 NotebookApp] Saving notebook at /shell.ipynb
+[I 18:40:56.157 NotebookApp] Using existing profile dir: u'/root/.ipython/profile_default'
+[I 18:40:56.163 NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+[I 18:40:56.176 NotebookApp] Serving notebooks from local directory: /d/git/mypylab
+[I 18:40:56.177 NotebookApp] 0 active kernels 
+[I 18:40:56.177 NotebookApp] The IPython Notebook is running at: http://0.0.0.0:8686/
+[I 18:40:56.177 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 18:40:56.184 NotebookApp] No web browser found: could not locate runnable browser.
+[E 18:40:58.662 tornado.application] Uncaught exception in /api/kernels/89c6c620-cbfa-48d6-9a0b-8241697377e7/shell
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 322, in wrapper
+        return callback(*args, **kwargs)
+      File "/usr/local/lib/python2.7/dist-packages/IPython/html/services/kernels/handlers.py", line 136, in on_first_message
+        self.close()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 232, in close
+        self.ws_connection.close()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 767, in close
+        self.stream.io_loop.time() + 5, self._abort)
+    AttributeError: 'IOLoop' object has no attribute 'time'
+[E 18:40:58.687 tornado.application] Uncaught exception, closing connection.
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 354, in wrapper
+        callback(*args)
+      File "/usr/local/lib/python2.7/dist-packages/tornado/stack_context.py", line 331, in wrapped
+        raise_exc_info(exc)
+      File "/usr/local/lib/python2.7/dist-packages/tornado/stack_context.py", line 302, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/usr/local/lib/python2.7/dist-packages/tornado/httpserver.py", line 328, in _on_headers
+        self.request_callback(self._request)
+      File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1745, in __call__
+        handler._execute(transforms, *args, **kwargs)
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 152, in _execute
+        self.ws_connection.accept_connection()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 529, in accept_connection
+        self._accept_connection()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 575, in _accept_connection
+        "\r\n" % (self._challenge_response(), subprotocol_header)))
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 214, in write
+        self._check_closed()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 593, in _check_closed
+        raise StreamClosedError("Stream is closed")
+    StreamClosedError: Stream is closed
+ERROR:root:Exception in callback <zmq.eventloop.stack_context._StackContextWrapper object at 0x39b5788>
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/zmq/eventloop/ioloop.py", line 418, in _run_callback
+    callback()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 354, in wrapper
+    callback(*args)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/httpserver.py", line 328, in _on_headers
+    self.request_callback(self._request)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/web.py", line 1745, in __call__
+    handler._execute(transforms, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 152, in _execute
+    self.ws_connection.accept_connection()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 529, in accept_connection
+    self._accept_connection()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 575, in _accept_connection
+    "\r\n" % (self._challenge_response(), subprotocol_header)))
+  File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 214, in write
+    self._check_closed()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 593, in _check_closed
+    raise StreamClosedError("Stream is closed")
+StreamClosedError: Stream is closed
+[E 18:41:08.929 tornado.application] Uncaught exception in /api/kernels/89c6c620-cbfa-48d6-9a0b-8241697377e7/shell
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 322, in wrapper
+        return callback(*args, **kwargs)
+      File "/usr/local/lib/python2.7/dist-packages/IPython/html/services/kernels/handlers.py", line 136, in on_first_message
+        self.close()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 232, in close
+        self.ws_connection.close()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/websocket.py", line 767, in close
+        self.stream.io_loop.time() + 5, self._abort)
+    AttributeError: 'IOLoop' object has no attribute 'time'
+[I 18:49:18.284 NotebookApp] Using existing profile dir: u'/root/.ipython/profile_mypylab'
+[E 18:49:18.285 NotebookApp] Exception while loading config file /root/.ipython/profile_mypylab/ipython_notebook_config.py
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/IPython/config/application.py", line 499, in _load_config_files
+        config = loader.load_config()
+      File "/usr/local/lib/python2.7/dist-packages/IPython/config/loader.py", line 425, in load_config
+        self._read_file_as_dict()
+      File "/usr/local/lib/python2.7/dist-packages/IPython/config/loader.py", line 478, in _read_file_as_dict
+        py3compat.execfile(conf_filename, namespace)
+      File "/usr/local/lib/python2.7/dist-packages/IPython/utils/py3compat.py", line 231, in execfile
+        builtin_mod.execfile(filename, *where)
+      File "/root/.ipython/profile_mypylab/ipython_notebook_config.py", line 24
+        c.NotebookApp.pylab = 'inline'
+       ^
+    IndentationError: unexpected indent
+[I 18:49:18.307 NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+[I 18:49:18.320 NotebookApp] Serving notebooks from local directory: /d/git/mypylab
+[I 18:49:18.321 NotebookApp] 0 active kernels 
+[I 18:49:18.321 NotebookApp] The IPython Notebook is running at: http://0.0.0.0:8686/
+[I 18:49:18.321 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 18:49:18.321 NotebookApp] No web browser found: could not locate runnable browser.
+[I 18:49:30.459 tornado.access] 302 GET /tree/ (124.160.105.37) 0.67ms
+[I 18:49:32.096 tornado.access] 302 GET /tree/ (124.160.105.37) 0.58ms
+[I 18:53:31.335 NotebookApp] Using existing profile dir: u'/root/.ipython/profile_mypylab'
+[I 18:53:31.343 NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+[I 18:53:31.356 NotebookApp] Serving notebooks from local directory: /d/git/mypylab
+[I 18:53:31.356 NotebookApp] 0 active kernels 
+[I 18:53:31.356 NotebookApp] The IPython Notebook is running at: http://0.0.0.0:8686/
+[I 18:53:31.356 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 18:53:31.357 NotebookApp] No web browser found: could not locate runnable browser.
+[I 18:53:38.582 tornado.access] 302 GET /api/sessions?_=1417776577903 (124.160.105.37) 1.31ms
+[I 18:53:38.584 tornado.access] 302 GET /clusters?_=1417776577904 (124.160.105.37) 0.81ms
+[I 18:53:38.585 tornado.access] 302 GET /clusters?_=1417776577906 (124.160.105.37) 0.58ms
+[I 18:53:38.586 tornado.access] 302 GET /api/sessions?_=1417776577905 (124.160.105.37) 0.73ms
+[I 18:53:41.325 tornado.access] 302 GET /tree (124.160.105.37) 0.84ms
+[I 18:54:42.023 tornado.access] 302 GET /api/sessions?_=1417775867575 (124.160.105.37) 0.88ms
+[I 18:54:42.024 tornado.access] 302 GET /clusters?_=1417775867576 (124.160.105.37) 0.63ms
+[I 18:54:42.025 tornado.access] 302 GET /api/sessions?_=1417775867577 (124.160.105.37) 0.66ms
+[I 18:54:42.026 tornado.access] 302 GET /clusters?_=1417775867578 (124.160.105.37) 0.59ms
+[I 18:58:44.509 NotebookApp] Using existing profile dir: u'/root/.ipython/profile_mypylab'
+[I 18:58:44.518 NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+[I 18:58:44.530 NotebookApp] Serving notebooks from local directory: /d/git/mypylab
+[I 18:58:44.531 NotebookApp] 0 active kernels 
+[I 18:58:44.531 NotebookApp] The IPython Notebook is running at: http://0.0.0.0:8686/
+[I 18:58:44.531 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 18:58:44.531 NotebookApp] No web browser found: could not locate runnable browser.
+[I 18:58:51.549 tornado.access] 302 GET /api/sessions?_=1417774045017 (124.160.105.37) 1.43ms
+[I 18:58:51.551 tornado.access] 302 GET /clusters?_=1417774045018 (124.160.105.37) 0.80ms
+[I 18:58:51.552 tornado.access] 302 GET /clusters?_=1417774045020 (124.160.105.37) 0.87ms
+[I 18:58:51.554 tornado.access] 302 GET /api/sessions?_=1417774045019 (124.160.105.37) 1.09ms
+[I 18:58:55.750 tornado.access] 302 GET /tree/avro (124.160.105.37) 0.89ms
+[I 18:58:59.383 tornado.access] 302 POST /login?next=%2Ftree%2Favro (124.160.105.37) 1.29ms
+[I 18:59:14.391 NotebookApp] Writing notebook-signing key to /root/.ipython/profile_mypylab/security/notebook_secret
+[W 18:59:14.392 NotebookApp] Notebook /shell.ipynb is not trusted
+[I 18:59:14.757 NotebookApp] Kernel started: 92501fdd-b7b0-4f9d-b5c8-1bfb5835e1b0
+[I 19:01:10.750 tornado.access] 302 GET / (124.160.105.37) 0.95ms
+[W 19:01:29.754 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[I 19:01:31.151 NotebookApp] Kernel started: fff8653a-c05b-4973-b12f-51ddc433bf4b
+[W 19:02:25.307 NotebookApp] Notebook numpy/load image into memory.ipynb is not trusted
+[I 19:02:25.467 NotebookApp] Kernel started: 9966ec89-c998-4dd1-a872-feb9752f6bb6
+[W 19:08:13.373 NotebookApp] Notebook oct2py/test.ipynb is not trusted
+[I 19:08:13.502 NotebookApp] Kernel started: bc84ddab-6d8f-49eb-b6e9-0be7a7f7b539
+[I 19:09:02.391 NotebookApp] Kernel shutdown: 92501fdd-b7b0-4f9d-b5c8-1bfb5835e1b0
+[I 19:09:03.411 NotebookApp] Kernel shutdown: 9966ec89-c998-4dd1-a872-feb9752f6bb6
+[I 19:09:04.062 NotebookApp] Kernel shutdown: fff8653a-c05b-4973-b12f-51ddc433bf4b
+[I 19:09:05.236 NotebookApp] Kernel shutdown: bc84ddab-6d8f-49eb-b6e9-0be7a7f7b539
+[W 19:10:39.557 NotebookApp] Notebook avro/test.ipynb is not trusted
+[I 19:10:39.699 NotebookApp] Kernel started: aba1f0cd-28c6-4eaf-aa2c-84ff46f91bdb
+[I 14:07:51.691 tornado.access] 302 GET / (61.153.0.166) 0.75ms
+[I 16:16:32.302 tornado.access] 302 GET / (61.153.0.166) 0.72ms
+[I 16:16:44.862 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 1.13ms
+[I 16:16:44.873 tornado.access] 302 GET / (61.153.0.166) 0.82ms
+[I 16:23:19.597 NotebookApp] Creating new notebook in /
+[I 16:23:28.815 NotebookApp] Kernel started: 431c8b2b-fdf2-4a64-85a1-af688bb43125
+[W 16:23:48.842 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[I 16:23:50.268 NotebookApp] Kernel started: f8fc2088-0260-4f1d-a2f5-08dbd1aefe61
+[I 16:24:21.933 tornado.access] 302 GET / (61.153.0.166) 0.69ms
+[I 16:25:07.902 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 1.31ms
+[I 16:25:07.910 tornado.access] 302 GET / (61.153.0.166) 0.57ms
+[W 16:25:22.161 NotebookApp] Notebook oct2py/test.ipynb is not trusted
+[I 16:25:22.316 NotebookApp] Kernel started: 63f11ec9-f193-4495-be17-3d00dfe1f024
+[I 16:27:22.278 NotebookApp] Saving notebook at /oct2py/test.ipynb
+[W 16:30:58.064 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:32:56.261 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:34:18.990 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:34:24.986 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.71ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:34:24.987 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.43ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:34:24.988 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.51ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:35:51.127 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 1.02ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:36:00.188 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:36:00.191 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.44ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:36:00.227 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.47ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:37:12.633 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.68ms referer=http://115.29.243.145:8686/notebooks/oct2py/test.ipynb
+[W 16:37:12.682 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.57ms referer=http://115.29.243.145:8686/notebooks/oct2py/test.ipynb
+[W 16:37:12.684 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.42ms referer=http://115.29.243.145:8686/notebooks/oct2py/test.ipynb
+[W 16:38:53.438 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.78ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:02.408 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:39:02.411 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.49ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:02.444 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.62ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:16.932 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.63ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:24.422 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:39:24.425 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.50ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:24.464 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.43ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:42.480 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.61ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:51.567 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[W 16:39:51.570 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.48ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[W 16:39:51.601 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.44ms referer=http://115.29.243.145:8686/notebooks/matplotlib/Visualizing%20the%20content%20of%20a%202D%20array.ipynb
+[I 16:41:38.128 tornado.access] 302 GET / (61.153.0.166) 0.87ms
+[I 16:41:58.869 NotebookApp] Kernel shutdown: aba1f0cd-28c6-4eaf-aa2c-84ff46f91bdb
+[I 16:41:59.883 NotebookApp] Kernel shutdown: 431c8b2b-fdf2-4a64-85a1-af688bb43125
+[I 16:42:01.700 NotebookApp] Kernel shutdown: 63f11ec9-f193-4495-be17-3d00dfe1f024
+[I 16:42:02.477 NotebookApp] Kernel shutdown: f8fc2088-0260-4f1d-a2f5-08dbd1aefe61
+[I 16:43:19.843 NotebookApp] Creating new notebook in /numpy/
+[I 16:43:20.556 NotebookApp] Kernel started: 22f44cc8-1b71-4cb7-ab6c-1ec63291e7db
+[I 16:47:20.553 NotebookApp] Saving notebook at /numpy/Special function.ipynb
+[I 16:49:03.336 NotebookApp] Creating new notebook in /numpy/
+[I 16:49:04.067 NotebookApp] Kernel started: 3483d771-8157-4d9a-a545-b82a6efc49cf
+[I 16:51:04.075 NotebookApp] Saving notebook at /numpy/Convenience function.ipynb
+[W 16:53:48.463 NotebookApp] Notebook /shell.ipynb is not trusted
+[I 16:53:49.968 NotebookApp] Kernel started: d587d4bf-4d0a-4ff9-8a05-1e190c1bc44f
+[I 16:55:32.839 NotebookApp] Creating new notebook in /cython/helloworld/
+[I 16:55:33.467 NotebookApp] Kernel started: 5a945e19-57e4-4ff9-9eb3-6ba5826fe9b6
+[I 16:55:50.535 NotebookApp] Saving notebook at /shell.ipynb
+[I 16:57:33.470 NotebookApp] Saving notebook at /cython/helloworld/sh.ipynb
+[I 17:01:27.586 NotebookApp] Creating new notebook in /numpy/
+[I 17:01:28.341 NotebookApp] Kernel started: d465838f-a66b-4462-81c0-1d5839b5ba06
+[W 17:02:05.709 NotebookApp] Notebook numpy/load image into memory.ipynb is not trusted
+[I 17:02:05.913 NotebookApp] Kernel started: 7e6ee566-dce2-4cb0-bf34-2f105550556a
+[I 17:03:28.490 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:04:50.426 NotebookApp] Kernel shutdown: 7e6ee566-dce2-4cb0-bf34-2f105550556a
+[W 17:05:02.774 NotebookApp] Notebook numpy/mix image.ipynb is not trusted
+[I 17:05:03.262 NotebookApp] Kernel started: e04e03f1-8273-4c1c-9adb-d25f8e0e2104
+[I 17:05:28.489 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:07:03.281 NotebookApp] Saving notebook at /numpy/mix image.ipynb
+[I 17:07:28.482 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:09:29.489 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:11:29.465 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:15:29.461 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:17:23.940 NotebookApp] Kernel shutdown: e04e03f1-8273-4c1c-9adb-d25f8e0e2104
+[I 17:17:29.458 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[W 17:18:11.574 NotebookApp] Notebook numpy/copy voice.ipynb is not trusted
+[I 17:18:11.975 NotebookApp] Kernel started: f7ccd229-4830-4227-8b68-2f68e84f406d
+[W 17:19:26.382 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.68ms referer=http://115.29.243.145:8686/notebooks/numpy/Voice%20and%20Image.ipynb
+[W 17:19:26.383 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.46ms referer=http://115.29.243.145:8686/notebooks/numpy/Voice%20and%20Image.ipynb
+[I 17:19:29.475 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:21:29.459 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:23:30.310 NotebookApp] Kernel shutdown: f7ccd229-4830-4227-8b68-2f68e84f406d
+[I 17:23:30.440 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[W 17:23:51.369 NotebookApp] Notebook numpy/mix voice.ipynb is not trusted
+[I 17:23:51.677 NotebookApp] Kernel started: 8bf1e1cd-2c0e-4635-9a40-9df87c1b6117
+[I 17:24:44.886 NotebookApp] Kernel shutdown: 8bf1e1cd-2c0e-4635-9a40-9df87c1b6117
+[I 17:25:30.437 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:27:30.427 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:29:30.424 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:31:30.782 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:33:07.683 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[W 17:33:49.989 NotebookApp] Notebook numpy/overturn image.ipynb is not trusted
+[I 17:33:51.315 NotebookApp] Kernel started: 30b4dd35-7b55-44f9-aadb-3fb357ea75bb
+[I 17:35:30.428 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:37:30.759 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:38:25.155 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[W 17:38:49.284 NotebookApp] Notebook numpy/sobel edge detection.ipynb is not trusted
+[I 17:38:50.352 NotebookApp] Kernel started: 34d91bb2-bfe4-417e-ab27-2a702d8b480e
+[I 17:39:20.922 NotebookApp] Saving notebook at /numpy/Voice and Image.ipynb
+[I 17:39:28.204 NotebookApp] Kernel shutdown: 34d91bb2-bfe4-417e-ab27-2a702d8b480e
+[W 17:39:53.150 NotebookApp] Notebook numpy/Import data with genfromtxt.ipynb is not trusted
+[I 17:39:53.407 NotebookApp] Kernel started: 36c58060-4661-4491-a77e-aff9f86d89e5
+[I 17:40:06.595 NotebookApp] Kernel shutdown: 22f44cc8-1b71-4cb7-ab6c-1ec63291e7db
+[I 17:40:07.424 NotebookApp] Kernel shutdown: 3483d771-8157-4d9a-a545-b82a6efc49cf
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 32, in run
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'getppid'
+[I 17:40:08.036 NotebookApp] Kernel shutdown: d587d4bf-4d0a-4ff9-8a05-1e190c1bc44f
+[I 17:40:08.764 NotebookApp] Kernel shutdown: 5a945e19-57e4-4ff9-9eb3-6ba5826fe9b6
+[I 17:40:10.094 NotebookApp] Kernel shutdown: d465838f-a66b-4462-81c0-1d5839b5ba06
+[I 17:40:10.937 NotebookApp] Kernel shutdown: 30b4dd35-7b55-44f9-aadb-3fb357ea75bb
+[I 17:40:11.713 NotebookApp] Kernel shutdown: 36c58060-4661-4491-a77e-aff9f86d89e5
+[I 17:40:40.949 NotebookApp] Creating new notebook in /numpy/
+[I 17:40:41.582 NotebookApp] Kernel started: d472a3b3-6e24-47b0-9d33-dbcbe007b6b0
+[W 17:41:59.638 NotebookApp] Notebook numpy/advanced index.ipynb is not trusted
+[I 17:42:00.086 NotebookApp] Kernel started: 5a435fd2-9726-4502-861d-9610094580c3
+[W 17:43:04.147 NotebookApp] Notebook numpy/fibonacci number.ipynb is not trusted
+[I 17:43:04.365 NotebookApp] Kernel started: 40a1add3-54f5-4f34-ba50-22288af405c5
+[I 17:43:58.795 NotebookApp] Creating new notebook in /numpy/
+[I 17:43:59.429 NotebookApp] Kernel started: 5099c260-af8a-42ec-b08e-9cd5e8742ca3
+[I 17:45:59.804 NotebookApp] Kernel shutdown: 40a1add3-54f5-4f34-ba50-22288af405c5
+[I 17:45:59.806 NotebookApp] Saving notebook at /numpy/General functions.ipynb
+[I 17:46:08.880 NotebookApp] Saving notebook at /numpy/General functions.ipynb
+[W 17:46:24.581 NotebookApp] Notebook numpy/find prime factor.ipynb is not trusted
+[I 17:46:24.786 NotebookApp] Kernel started: a966b77b-1465-451c-967a-7fd4b2fe6d55
+[I 17:47:59.437 NotebookApp] Saving notebook at /numpy/General functions.ipynb
+[I 17:48:15.806 NotebookApp] Kernel shutdown: a966b77b-1465-451c-967a-7fd4b2fe6d55
+[W 17:48:57.816 NotebookApp] Notebook numpy/fourier.ipynb is not trusted
+[I 17:48:57.986 NotebookApp] Kernel started: 3763c0b9-a1b5-4768-ae67-9754ff6e768c
+[W 17:49:12.389 NotebookApp] Notebook numpy/power law.ipynb is not trusted
+[I 17:49:12.707 NotebookApp] Kernel started: bebceaec-2c69-43d4-9522-366c408e9600
+[I 17:50:00.359 NotebookApp] Saving notebook at /numpy/General functions.ipynb
+[W 17:50:09.677 NotebookApp] Notebook numpy/chararray.ipynb is not trusted
+[I 17:50:10.367 NotebookApp] Kernel started: f98c5476-4282-43f3-bd89-e605e000c91f
+[I 17:50:37.822 NotebookApp] Kernel shutdown: f98c5476-4282-43f3-bd89-e605e000c91f
+[I 17:52:44.336 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[I 17:54:44.328 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[I 17:56:44.334 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[W 17:57:53.791 NotebookApp] Notebook numpy/overturn image.ipynb is not trusted
+[I 17:57:55.115 NotebookApp] Kernel started: 2022e8db-7339-4fb8-998b-90a7392c6c93
+[I 17:58:44.332 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[I 18:00:44.323 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[I 18:01:52.198 NotebookApp] Kernel shutdown: 2022e8db-7339-4fb8-998b-90a7392c6c93
+[W 18:02:07.630 NotebookApp] Notebook numpy/advanced index.ipynb is not trusted
+[I 18:02:45.116 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[I 18:03:45.554 NotebookApp] Kernel shutdown: 5a435fd2-9726-4502-861d-9610094580c3
+[I 18:04:45.386 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[W 18:05:22.204 NotebookApp] Notebook numpy/bool index.ipynb is not trusted
+[I 18:05:23.051 NotebookApp] Kernel started: 79c5dc48-091e-4d2d-9d97-4d3bb5d48439
+[I 18:06:29.342 NotebookApp] Kernel shutdown: 79c5dc48-091e-4d2d-9d97-4d3bb5d48439
+[I 18:06:48.069 NotebookApp] Saving notebook at /numpy/Senior index and array concept.ipynb
+[W 18:06:58.911 NotebookApp] Notebook numpy/lognormaldist.ipynb is not trusted
+[I 18:06:59.106 NotebookApp] Kernel started: 7608b8aa-274f-4992-a730-0eac3703e85e
+[I 18:07:16.491 NotebookApp] Kernel started: fc2255f4-3dfd-4f32-b04d-df92eedec103
