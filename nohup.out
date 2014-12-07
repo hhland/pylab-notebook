@@ -316,3 +316,78 @@ Traceback (most recent call last):
 [W 18:06:58.911 NotebookApp] Notebook numpy/lognormaldist.ipynb is not trusted
 [I 18:06:59.106 NotebookApp] Kernel started: 7608b8aa-274f-4992-a730-0eac3703e85e
 [I 18:07:16.491 NotebookApp] Kernel started: fc2255f4-3dfd-4f32-b04d-df92eedec103
+[I 18:09:25.062 NotebookApp] Saving notebook at /shell.ipynb
+[I 18:28:12.218 NotebookApp] Kernel started: c0847c8d-0dac-44fc-98ad-f8de9d035938
+[W 18:28:33.399 NotebookApp] Notebook sklearn/Model selection with Probabilistic (PCA) and Factor Analysis (FA).ipynb is not trusted
+[I 18:28:34.157 NotebookApp] Kernel started: 14100904-c247-4406-a735-d953f004f638
+[I 20:40:49.235 tornado.access] 302 GET / (61.153.0.166) 25.10ms
+[I 20:40:57.867 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 52.46ms
+[I 20:40:57.872 tornado.access] 302 GET / (61.153.0.166) 0.62ms
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 32, in run
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'getppid'
+[I 20:43:31.758 NotebookApp] Kernel shutdown: d472a3b3-6e24-47b0-9d33-dbcbe007b6b0
+[I 20:43:32.839 NotebookApp] Kernel shutdown: 5099c260-af8a-42ec-b08e-9cd5e8742ca3
+[I 20:43:33.790 NotebookApp] Kernel shutdown: 3763c0b9-a1b5-4768-ae67-9754ff6e768c
+[I 20:43:34.738 NotebookApp] Kernel shutdown: bebceaec-2c69-43d4-9522-366c408e9600
+[I 20:43:35.814 NotebookApp] Kernel shutdown: 7608b8aa-274f-4992-a730-0eac3703e85e
+[I 20:43:39.119 NotebookApp] Kernel shutdown: fc2255f4-3dfd-4f32-b04d-df92eedec103
+[I 20:43:42.158 NotebookApp] Kernel shutdown: c0847c8d-0dac-44fc-98ad-f8de9d035938
+[I 20:43:43.614 NotebookApp] Kernel shutdown: 14100904-c247-4406-a735-d953f004f638
+[I 20:43:55.090 NotebookApp] Creating new notebook in /numpy/
+[I 20:44:04.373 NotebookApp] Kernel started: d31d87c6-3727-4ec8-a2f1-de20e2ef72e4
+[I 20:46:04.355 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:48:04.354 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:50:04.352 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:52:04.347 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:54:04.346 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:56:04.336 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:58:28.879 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 20:59:02.263 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 21:00:28.871 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 21:02:28.956 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 21:04:28.935 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 21:06:28.986 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[I 21:08:28.992 NotebookApp] Saving notebook at /numpy/Matrix and General functions.ipynb
+[W 21:17:38.501 NotebookApp] Notebook numpy/lissajous.ipynb is not trusted
+[I 21:17:38.634 NotebookApp] Kernel started: 431c12c4-01e0-4f48-9314-d717c968cad3
+[I 21:17:48.186 NotebookApp] Kernel shutdown: 431c12c4-01e0-4f48-9314-d717c968cad3
+[W 21:17:58.147 NotebookApp] Notebook numpy/power law.ipynb is not trusted
+[I 21:17:58.363 NotebookApp] Kernel started: 404eb323-5ecb-45bf-9d31-b0fcf62d14b2
+[W 21:18:29.787 NotebookApp] Notebook numpy/urn.ipynb is not trusted
+[I 21:18:29.979 NotebookApp] Kernel started: d52931a4-eeda-41c1-b579-d711d1cf5513
+[I 21:26:06.849 NotebookApp] Kernel started: a7613a04-fe1f-44a8-8ebb-5bfe39c02a51
+[I 21:28:06.873 NotebookApp] Saving notebook at /shell.ipynb
+[I 21:36:55.350 NotebookApp] Creating new notebook in /DataScienceAtTheCommandLine/
+[I 21:36:56.151 NotebookApp] Kernel started: 74973868-7162-4e81-9e09-c3eaada7d8e6
+[I 21:38:56.148 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:40:56.142 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:42:56.140 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:46:56.814 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:48:56.809 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:50:56.807 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:51:54.437 NotebookApp] Creating new notebook in /DataScienceAtTheCommandLine/
+[I 21:51:55.472 NotebookApp] Kernel started: 06fc514d-6405-47f8-b392-2d14934f6060
+[I 21:52:56.801 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Getting Started.ipynb
+[I 21:58:23.977 NotebookApp] Creating new notebook in /DataScienceAtTheCommandLine/data/
+[I 21:58:24.867 NotebookApp] Kernel started: 8645e607-cda1-4513-aae6-356000b65c70
+[I 21:59:55.780 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:00:25.780 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/data/shell.ipynb
+[I 22:01:55.772 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:03:55.771 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:05:55.775 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:07:55.786 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:11:55.746 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:12:24.935 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:13:55.741 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:15:55.733 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:17:55.731 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:19:55.726 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:21:55.719 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:23:55.722 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Obtaining Data.ipynb
+[I 22:24:47.047 NotebookApp] Creating new notebook in /DataScienceAtTheCommandLine/
+[I 22:24:47.871 NotebookApp] Kernel started: 196aaffe-42ad-497b-9a2e-f4f8157cb37b
+[I 22:26:47.866 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Creating Reusable Command-Line Tools.ipynb
+[I 22:27:25.294 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Creating Reusable Command-Line Tools.ipynb
