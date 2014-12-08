@@ -623,3 +623,66 @@ OSError: [Errno 2] No such file or directory
 [I 16:29:51.813 NotebookApp] Kernel shutdown: 7365d4fc-e688-42e2-802f-b80db8625b1f
 [I 16:29:52.828 NotebookApp] Kernel shutdown: 9ffa8603-a768-4e2d-b63a-85a7f4ddf21f
 [I 16:30:04.268 NotebookApp] Kernel started: f3e4b654-94b9-462e-b29e-0e8c7cafe580
+[I 16:30:58.659 NotebookApp] Saving notebook at /ThinkBayes/Chapter 2 Computational Statistics.ipynb
+[I 16:32:04.358 NotebookApp] Saving notebook at /shell.ipynb
+[I 16:37:49.447 NotebookApp] Creating new notebook in /example/
+[I 16:37:49.840 NotebookApp] Kernel started: cbaf0499-ca98-4e5d-9c03-8f4b22b0294a
+[I 16:39:49.862 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:41:50.333 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:43:50.332 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:45:50.316 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:49:50.311 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:51:51.299 NotebookApp] Saving notebook at /example/R.ipynb
+[I 16:55:42.294 NotebookApp] Creating new notebook in /CookbookForR/
+[I 16:55:42.692 NotebookApp] Kernel started: 3be8f2a6-fb62-4865-9d48-82d11bb474ca
+[I 16:56:06.277 NotebookApp] Saving notebook at /shell.ipynb
+[I 16:57:42.715 NotebookApp] Saving notebook at /CookbookForR/Basics.ipynb
+[I 16:59:42.705 NotebookApp] Saving notebook at /CookbookForR/Basics.ipynb
+[I 17:01:42.703 NotebookApp] Saving notebook at /CookbookForR/Basics.ipynb
+[I 17:03:42.719 NotebookApp] Saving notebook at /CookbookForR/Basics.ipynb
+[I 17:05:04.037 NotebookApp] Saving notebook at /CookbookForR/Basics.ipynb
+[I 17:06:06.277 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:06:21.497 NotebookApp] Creating new notebook in /CookbookForR/
+[I 17:06:21.833 NotebookApp] Kernel started: 9956633b-9022-498e-919a-50486388763e
+[I 17:08:21.862 NotebookApp] Saving notebook at /CookbookForR/Graphs.ipynb
+[I 17:10:21.926 NotebookApp] Saving notebook at /CookbookForR/Graphs.ipynb
+[I 17:11:06.291 NotebookApp] Creating new notebook in /PracticalDataScienceWithR/
+[I 17:11:06.693 NotebookApp] Kernel started: 427f42d8-342b-49c0-a754-73e0f3d4b067
+[I 17:15:07.251 NotebookApp] Saving notebook at /PracticalDataScienceWithR/5 Choosing and evaluating models.ipynb
+[I 17:18:06.267 NotebookApp] Saving notebook at /shell.ipynb
+[W 17:20:10.314 NotebookApp] Notebook spark/wordcount.ipynb is not trusted
+[I 17:20:10.392 NotebookApp] Kernel started: bfaa7eca-3761-4c35-9773-92b83f7cd84f
+[I 17:20:26.066 NotebookApp] Kernel shutdown: bfaa7eca-3761-4c35-9773-92b83f7cd84f
+[W 17:20:31.904 NotebookApp] Notebook spark/shell.ipynb is not trusted
+[I 17:20:31.954 NotebookApp] Kernel started: 0ec43c1d-70d6-4d0f-b6b0-35f1cc53547b
+[I 17:20:42.624 NotebookApp] Kernel shutdown: 0ec43c1d-70d6-4d0f-b6b0-35f1cc53547b
+[W 17:22:12.520 NotebookApp] directory does not exist: u'/d/git/mypylab/spark'
+[W 17:22:12.521 tornado.access] 404 GET /api/notebooks/spark?_=1418030388137 (124.160.105.37) 0.95ms referer=http://115.29.243.145:8686/tree/spark
+[W 17:22:12.551 NotebookApp] directory does not exist: u'/d/git/mypylab/spark'
+[W 17:22:12.552 tornado.access] 404 GET /api/notebooks/spark?_=1418030388138 (124.160.105.37) 1.35ms referer=http://115.29.243.145:8686/tree/spark
+[W 17:22:39.613 NotebookApp] Notebook sympy/Gotchas.ipynb is not trusted
+[I 17:22:39.724 NotebookApp] Kernel started: 4b7c83cc-95a2-4019-8218-fd39b7cd885d
+[I 17:22:55.985 NotebookApp] Creating new notebook in /example/
+[I 17:22:56.390 NotebookApp] Kernel started: 39e7cc00-fb6a-4074-bccb-b8c1779b9d00
+[I 17:24:06.945 NotebookApp] Kernel shutdown: 4b7c83cc-95a2-4019-8218-fd39b7cd885d
+[W 17:24:10.921 NotebookApp] Notebook sympy/Printing.ipynb is not trusted
+[I 17:24:11.088 NotebookApp] Kernel started: 289b5c35-0e7d-4b35-92ef-4dc445aa367b
+[I 17:24:56.402 NotebookApp] Saving notebook at /example/sympy.ipynb
+[I 17:26:11.262 NotebookApp] Saving notebook at /sympy/Printing.ipynb
+[W 17:26:11.263 NotebookApp] Saving untrusted notebook sympy/Printing.ipynb
+[I 17:26:41.285 NotebookApp] Saving notebook at /example/sympy.ipynb
+[I 17:26:56.425 NotebookApp] Saving notebook at /example/sympy.ipynb
+[I 17:26:56.525 NotebookApp] Saving notebook at /example/sympy.ipynb
+[I 17:29:25.637 NotebookApp] Saving notebook at /example/sympy.ipynb
+[W 17:30:20.667 NotebookApp] directory does not exist: u'/d/git/mypylab/sympy'
+[W 17:30:20.668 tornado.access] 404 GET /api/notebooks/sympy?_=1418030643163 (124.160.105.37) 0.95ms referer=http://115.29.243.145:8686/tree/sympy
+[W 17:30:20.711 NotebookApp] directory does not exist: u'/d/git/mypylab/sympy'
+[W 17:30:20.712 tornado.access] 404 GET /api/notebooks/sympy?_=1418030643164 (124.160.105.37) 0.99ms referer=http://115.29.243.145:8686/tree/sympy
+[I 17:31:47.581 NotebookApp] Creating new notebook in /ThinkPython/
+[I 17:31:48.029 NotebookApp] Kernel started: a939107c-a07b-4f25-a354-a094445a36f3
+[I 17:33:48.018 NotebookApp] Saving notebook at /ThinkPython/Fruitful Functions.ipynb
+[I 17:35:48.016 NotebookApp] Saving notebook at /ThinkPython/Fruitful Functions.ipynb
+[I 17:37:14.768 NotebookApp] Creating new notebook in /ThinkPython/
+[I 17:37:15.063 NotebookApp] Kernel started: 391b43eb-ddd4-4ebb-9f3c-485a391191ad
+[I 17:37:48.178 NotebookApp] Saving notebook at /ThinkPython/Fruitful Functions.ipynb
+[I 17:38:48.661 NotebookApp] Saving notebook at /ThinkPython/Lists.ipynb
