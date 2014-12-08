@@ -391,3 +391,235 @@ Traceback (most recent call last):
 [I 22:24:47.871 NotebookApp] Kernel started: 196aaffe-42ad-497b-9a2e-f4f8157cb37b
 [I 22:26:47.866 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Creating Reusable Command-Line Tools.ipynb
 [I 22:27:25.294 NotebookApp] Saving notebook at /DataScienceAtTheCommandLine/Creating Reusable Command-Line Tools.ipynb
+[I 22:29:40.703 NotebookApp] Saving notebook at /shell.ipynb
+[I 09:57:52.824 tornado.access] 302 GET / (124.160.105.37) 41.31ms
+[I 10:00:00.256 NotebookApp] Creating new notebook in /AgileDataScience/
+[I 10:00:00.680 NotebookApp] Kernel started: 42406848-af48-4829-9e0d-60010033ed1c
+[I 10:10:20.717 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:12:20.681 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:14:20.738 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:16:20.699 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:18:20.730 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:20:20.666 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:22:20.671 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:24:20.660 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:26:20.656 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:28:20.696 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:30:20.652 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:32:21.187 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:36:22.169 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:38:22.171 NotebookApp] Saving notebook at /AgileDataScience/Data Agile Tools.ipynb
+[I 10:49:09.202 NotebookApp] Creating new notebook in /DataAnalysisWithOpenSourceTools/
+[I 10:49:09.594 NotebookApp] Kernel started: b9eee245-287a-4c1b-a5c1-619124d10e2a
+[I 10:52:48.457 tornado.access] 302 GET /tree/ (124.160.105.37) 0.55ms
+[I 10:54:55.115 NotebookApp] Saving notebook at /shell.ipynb
+[W 10:56:32.152 NotebookApp] Notebook dejavu/test.ipynb is not trusted
+[I 10:56:32.265 NotebookApp] Kernel started: bae6f0f5-2fb8-4876-928b-04913d5b9bf8
+[I 10:56:55.106 NotebookApp] Saving notebook at /shell.ipynb
+[I 12:16:33.678 tornado.access] 302 GET /api/sessions?_=1418007388439 (119.147.146.189) 0.77ms
+[I 12:16:40.795 tornado.access] 302 GET /tree/BuildingProbabilisticGraphicalModelsWithPython (119.147.146.189) 0.79ms
+[I 12:16:41.889 NotebookApp] Creating new notebook in /BuildingProbabilisticGraphicalModelsWithPython/
+[I 12:16:42.429 NotebookApp] Kernel started: 7a94e3f3-4850-4e6b-bf1c-46ed80958774
+[I 12:16:42.774 tornado.access] 302 GET /notebooks/BuildingProbabilisticGraphicalModelsWithPython/Untitled0.ipynb (119.147.146.194) 0.81ms
+[I 12:18:42.450 NotebookApp] Saving notebook at /BuildingProbabilisticGraphicalModelsWithPython/Directed Graphical Models.ipynb
+[I 12:20:42.476 NotebookApp] Saving notebook at /BuildingProbabilisticGraphicalModelsWithPython/Directed Graphical Models.ipynb
+[I 12:32:43.895 NotebookApp] Saving notebook at /BuildingProbabilisticGraphicalModelsWithPython/Directed Graphical Models.ipynb
+[I 12:33:18.758 NotebookApp] Kernel shutdown: d31d87c6-3727-4ec8-a2f1-de20e2ef72e4
+[I 12:33:19.642 NotebookApp] Kernel shutdown: 404eb323-5ecb-45bf-9d31-b0fcf62d14b2
+[I 12:33:20.379 NotebookApp] Kernel shutdown: d52931a4-eeda-41c1-b579-d711d1cf5513
+[I 12:33:21.124 NotebookApp] Kernel shutdown: a7613a04-fe1f-44a8-8ebb-5bfe39c02a51
+[I 12:33:21.762 NotebookApp] Kernel shutdown: 74973868-7162-4e81-9e09-c3eaada7d8e6
+[I 12:33:22.515 NotebookApp] Kernel shutdown: 06fc514d-6405-47f8-b392-2d14934f6060
+[I 12:33:23.251 NotebookApp] Kernel shutdown: 8645e607-cda1-4513-aae6-356000b65c70
+[I 12:33:23.931 NotebookApp] Kernel shutdown: 196aaffe-42ad-497b-9a2e-f4f8157cb37b
+[I 12:33:24.815 NotebookApp] Kernel shutdown: 42406848-af48-4829-9e0d-60010033ed1c
+[I 12:33:25.402 NotebookApp] Kernel shutdown: b9eee245-287a-4c1b-a5c1-619124d10e2a
+[I 12:33:26.198 NotebookApp] Kernel shutdown: bae6f0f5-2fb8-4876-928b-04913d5b9bf8
+[I 12:33:26.968 NotebookApp] Kernel shutdown: 7a94e3f3-4850-4e6b-bf1c-46ed80958774
+[W 12:34:40.688 NotebookApp] Kernel does not exist: 7a94e3f3-4850-4e6b-bf1c-46ed80958774
+[W 12:34:40.689 tornado.access] 404 POST /api/kernels/7a94e3f3-4850-4e6b-bf1c-46ed80958774/restart (124.160.105.37) 1.33ms referer=http://115.29.243.145:8686/notebooks/BuildingProbabilisticGraphicalModelsWithPython/Directed%20Graphical%20Models.ipynb
+[I 12:34:43.869 NotebookApp] Saving notebook at /BuildingProbabilisticGraphicalModelsWithPython/Directed Graphical Models.ipynb
+[I 12:34:51.814 NotebookApp] Kernel started: 872f894e-fae3-4816-ab52-eb43b5647e1f
+[I 12:36:51.869 NotebookApp] Saving notebook at /BuildingProbabilisticGraphicalModelsWithPython/Directed Graphical Models.ipynb
+[W 12:41:26.792 NotebookApp] Notebook avro/test.ipynb is not trusted
+[I 12:41:26.933 NotebookApp] Kernel started: c8836096-6e21-42d8-b41d-bcee2ac2552b
+[W 12:42:36.956 NotebookApp] Notebook matplotlib/Visualizing the content of a 2D array.ipynb is not trusted
+[I 12:42:38.357 NotebookApp] Kernel started: 4935b3a0-c08e-498d-a52d-9018122544ac
+[I 13:09:30.904 NotebookApp] Kernel started: 2e081cc1-8d91-43f8-9832-200af2cbadc9
+[I 13:59:39.707 NotebookApp] Saving notebook at /shell.ipynb
+[W 13:59:44.442 NotebookApp] Notebook test/avro.ipynb is not trusted
+[I 13:59:44.660 NotebookApp] Kernel started: 395e4e13-8f30-43a2-b442-ffd70f948f0d
+[W 14:01:33.821 NotebookApp] Notebook test/avro.ipynb is not trusted
+[I 14:01:40.689 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:03:34.690 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:03:36.191 NotebookApp] Kernel started: a5efb404-9b3d-4739-b76e-e77e2ca7fddd
+[I 14:05:34.765 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:07:34.967 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:09:34.708 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:11:34.701 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:13:34.693 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:15:34.686 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:17:35.655 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:18:10.819 NotebookApp] Saving notebook at /test/avro.ipynb
+[I 14:18:17.151 NotebookApp] Saving notebook at /test/avro.ipynb
+[W 14:19:01.322 NotebookApp] Notebook erlang/test.ipynb is not trusted
+[I 14:19:01.548 NotebookApp] Kernel started: 630aeba3-ab4e-4a97-9ab6-2f5380e10994
+[I 14:19:43.649 NotebookApp] Saving notebook at /shell.ipynb
+[W 14:20:37.396 NotebookApp] Notebook example/erlang.ipynb is not trusted
+[I 14:20:37.609 NotebookApp] Kernel started: d75475f8-7512-42e2-a529-f727ec5e49a7
+[I 14:21:43.642 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:22:43.280 NotebookApp] Kernel started: 01ea7c20-46d5-4634-825d-1d2cdef47e45
+[I 14:23:44.643 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:24:43.365 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:26:43.291 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:28:43.362 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:30:43.538 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:32:43.465 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:34:43.500 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:36:43.448 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:38:43.313 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 14:39:38.236 NotebookApp] Kernel shutdown: 01ea7c20-46d5-4634-825d-1d2cdef47e45
+[I 14:39:41.294 NotebookApp] Kernel started: 03bf1e91-68ff-4a76-ac2e-d74d3b3f7175
+[I 14:41:41.630 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 15:51:42.473 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 15:53:42.478 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 15:55:42.444 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 15:57:43.831 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[W 15:58:12.454 NotebookApp] Notebook dejavu/test.ipynb is not trusted
+[I 15:58:12.677 NotebookApp] Kernel started: 9a335a1f-096e-42d4-a4e9-8c7e2aa7dff5
+[I 16:00:39.307 NotebookApp] Creating new notebook in /example/
+[I 16:00:39.826 NotebookApp] Kernel started: ce4b0b0c-c6a4-45c4-b086-7cd1d38d6923
+[W 16:02:38.804 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:02:38.804 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707035 (124.160.105.37) 1.17ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[W 16:02:38.808 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:02:38.808 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707036 (124.160.105.37) 0.78ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[I 16:02:40.291 NotebookApp] Saving notebook at /example/dejavu.ipynb
+[W 16:03:36.653 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:03:36.654 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707041 (124.160.105.37) 0.94ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[W 16:03:36.672 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:03:36.672 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707042 (124.160.105.37) 0.82ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[W 16:03:38.127 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:03:38.127 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707047 (124.160.105.37) 1.01ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[W 16:03:38.153 NotebookApp] directory does not exist: u'/d/git/mypylab/dejavu/dejavu'
+[W 16:03:38.154 tornado.access] 404 GET /api/notebooks/dejavu/dejavu?_=1418025707048 (124.160.105.37) 0.84ms referer=http://115.29.243.145:8686/tree/dejavu/dejavu
+[I 16:03:44.188 NotebookApp] Kernel shutdown: 872f894e-fae3-4816-ab52-eb43b5647e1f
+---------------------------------------------------------------------------
+OSError                                   Traceback (most recent call last)
+/usr/lib/python2.7/atexit.pyc in _run_exitfuncs()
+     22         func, targs, kargs = _exithandlers.pop()
+     23         try:
+---> 24             func(*targs, **kargs)
+        func = <function shutdown at 0x7f4694db35f0>
+        targs = ()
+        kargs = {}
+     25         except SystemExit:
+     26             exc_info = sys.exc_info()
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in atexit_operations(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>)
+   3221 
+   3222         # Clear all user namespaces to release all references cleanly.
+-> 3223         self.reset(new_session=False)
+        self.reset = <bound method ZMQInteractiveShell.reset of <IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object at 0x17760d0>>
+        global new_session = undefined
+        global False = undefined
+   3224 
+   3225         # Run user hooks
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in reset(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>, new_session=False)
+   1221         """
+   1222         # Clear histories
+-> 1223         self.history_manager.reset(new_session)
+        self.history_manager.reset = <bound method HistoryManager.reset of <IPython.core.history.HistoryManager object at 0x17767d0>>
+        new_session = False
+   1224         # Reset counter used to index all histories
+   1225         if new_session:
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/history.pyc in reset(self=<IPython.core.history.HistoryManager object>, new_session=False)
+    537         self.output_hist.clear()
+    538         # The directory history can't be completely empty
+--> 539         self.dir_hist[:] = [py3compat.getcwd()]
+        self.dir_hist = [u'/d/git/mypylab/avro']
+        global py3compat.getcwd = <built-in function getcwdu>
+    540         
+    541         if new_session:
+
+OSError: [Errno 2] No such file or directory
+[I 16:03:44.878 NotebookApp] Kernel shutdown: c8836096-6e21-42d8-b41d-bcee2ac2552b
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 32, in run
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'getppid'
+[I 16:03:45.764 NotebookApp] Kernel shutdown: 4935b3a0-c08e-498d-a52d-9018122544ac
+[I 16:03:46.487 NotebookApp] Kernel shutdown: 2e081cc1-8d91-43f8-9832-200af2cbadc9
+[I 16:03:47.240 NotebookApp] Kernel shutdown: 395e4e13-8f30-43a2-b442-ffd70f948f0d
+[W 16:03:47.413 NotebookApp] Session not found: session_id=u'e97d0fa3-50a0-4904-91ed-321f27f1b406'
+[W 16:03:47.413 tornado.access] 404 DELETE /api/sessions/e97d0fa3-50a0-4904-91ed-321f27f1b406 (124.160.105.37) 0.91ms referer=http://115.29.243.145:8686/tree
+[I 16:03:47.970 NotebookApp] Kernel shutdown: a5efb404-9b3d-4739-b76e-e77e2ca7fddd
+---------------------------------------------------------------------------
+OSError                                   Traceback (most recent call last)
+/usr/lib/python2.7/atexit.pyc in _run_exitfuncs()
+     22         func, targs, kargs = _exithandlers.pop()
+     23         try:
+---> 24             func(*targs, **kargs)
+        func = <function shutdown at 0x7f1feb8325f0>
+        targs = ()
+        kargs = {}
+     25         except SystemExit:
+     26             exc_info = sys.exc_info()
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in atexit_operations(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>)
+   3221 
+   3222         # Clear all user namespaces to release all references cleanly.
+-> 3223         self.reset(new_session=False)
+        self.reset = <bound method ZMQInteractiveShell.reset of <IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object at 0x26f4110>>
+        global new_session = undefined
+        global False = undefined
+   3224 
+   3225         # Run user hooks
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in reset(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>, new_session=False)
+   1221         """
+   1222         # Clear histories
+-> 1223         self.history_manager.reset(new_session)
+        self.history_manager.reset = <bound method HistoryManager.reset of <IPython.core.history.HistoryManager object at 0x26f4810>>
+        new_session = False
+   1224         # Reset counter used to index all histories
+   1225         if new_session:
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/history.pyc in reset(self=<IPython.core.history.HistoryManager object>, new_session=False)
+    537         self.output_hist.clear()
+    538         # The directory history can't be completely empty
+--> 539         self.dir_hist[:] = [py3compat.getcwd()]
+        self.dir_hist = [u'/d/git/mypylab/erlang']
+        global py3compat.getcwd = <built-in function getcwdu>
+    540         
+    541         if new_session:
+
+OSError: [Errno 2] No such file or directory
+[I 16:03:48.536 NotebookApp] Kernel shutdown: 630aeba3-ab4e-4a97-9ab6-2f5380e10994
+[I 16:03:49.240 NotebookApp] Kernel shutdown: d75475f8-7512-42e2-a529-f727ec5e49a7
+[I 16:03:50.062 NotebookApp] Kernel shutdown: 03bf1e91-68ff-4a76-ac2e-d74d3b3f7175
+[I 16:03:50.990 NotebookApp] Kernel shutdown: 9a335a1f-096e-42d4-a4e9-8c7e2aa7dff5
+[I 16:05:53.134 NotebookApp] Saving notebook at /example/dejavu.ipynb
+[I 16:07:53.209 NotebookApp] Saving notebook at /example/dejavu.ipynb
+[I 16:09:48.624 NotebookApp] Kernel shutdown: ce4b0b0c-c6a4-45c4-b086-7cd1d38d6923
+[W 16:10:29.415 NotebookApp] Notebook example/dejavu/test.ipynb is not trusted
+[I 16:10:29.537 NotebookApp] Kernel started: 94d6cbf9-17b9-4f3c-a789-19a2bd713540
+[W 16:11:26.784 NotebookApp] directory does not exist: u'/d/git/mypylab/cython'
+[W 16:11:26.784 tornado.access] 404 GET /api/notebooks/cython?_=1418026257511 (124.160.105.37) 0.97ms referer=http://115.29.243.145:8686/tree/cython
+[W 16:11:26.793 NotebookApp] directory does not exist: u'/d/git/mypylab/cython'
+[W 16:11:26.794 tornado.access] 404 GET /api/notebooks/cython?_=1418026257512 (124.160.105.37) 0.76ms referer=http://115.29.243.145:8686/tree/cython
+[W 16:11:49.446 NotebookApp] Notebook graphlab/hello world.ipynb is not trusted
+[I 16:11:49.652 NotebookApp] Kernel started: 7365d4fc-e688-42e2-802f-b80db8625b1f
+[I 16:12:30.428 NotebookApp] Saving notebook at /example/dejavu/test.ipynb
+[I 16:16:56.447 NotebookApp] Creating new notebook in /ThinkBayes/
+[I 16:16:56.969 NotebookApp] Kernel started: 9ffa8603-a768-4e2d-b63a-85a7f4ddf21f
+[I 16:24:57.524 NotebookApp] Saving notebook at /ThinkBayes/Chapter 2 Computational Statistics.ipynb
+[I 16:26:57.495 NotebookApp] Saving notebook at /ThinkBayes/Chapter 2 Computational Statistics.ipynb
+[I 16:28:57.363 NotebookApp] Saving notebook at /ThinkBayes/Chapter 2 Computational Statistics.ipynb
+[I 16:29:19.932 NotebookApp] Kernel restarted: 9ffa8603-a768-4e2d-b63a-85a7f4ddf21f
+[I 16:29:50.740 NotebookApp] Kernel shutdown: 94d6cbf9-17b9-4f3c-a789-19a2bd713540
+[I 16:29:51.813 NotebookApp] Kernel shutdown: 7365d4fc-e688-42e2-802f-b80db8625b1f
+[I 16:29:52.828 NotebookApp] Kernel shutdown: 9ffa8603-a768-4e2d-b63a-85a7f4ddf21f
+[I 16:30:04.268 NotebookApp] Kernel started: f3e4b654-94b9-462e-b29e-0e8c7cafe580
