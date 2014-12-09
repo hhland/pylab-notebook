@@ -857,3 +857,83 @@ OSError: [Errno 2] No such file or directory
 [I 17:20:37.618 NotebookApp] Creating new notebook in /SedAwk2nd/
 [I 17:20:37.933 NotebookApp] Kernel started: f0e32f1c-9bef-45a6-bb90-ff993d58dafe
 [I 17:21:12.264 NotebookApp] Kernel started: b61518af-1b68-4439-82de-abc5f555f029
+[I 17:23:12.330 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:25:12.303 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:27:13.282 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:27:31.106 NotebookApp] Creating new notebook in /DataMingAlgorithms/
+[I 17:27:31.615 NotebookApp] Kernel started: 1e8e9693-7049-4c12-a932-71c42899d138
+[I 17:29:31.639 NotebookApp] Saving notebook at /DataMingAlgorithms/Decision trees.ipynb
+[I 17:49:34.253 NotebookApp] Saving notebook at /DataMingAlgorithms/Decision trees.ipynb
+[I 18:11:35.210 NotebookApp] Saving notebook at /DataMingAlgorithms/Decision trees.ipynb
+[I 18:13:35.191 NotebookApp] Saving notebook at /DataMingAlgorithms/Decision trees.ipynb
+[I 18:15:35.198 NotebookApp] Saving notebook at /DataMingAlgorithms/Decision trees.ipynb
+[I 20:48:47.383 tornado.access] 302 GET / (61.153.0.166) 0.81ms
+[I 20:48:55.837 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 1.35ms
+[I 20:48:55.843 tornado.access] 302 GET / (61.153.0.166) 0.62ms
+[I 20:52:49.686 NotebookApp] Kernel shutdown: 060540ca-c15c-44c8-91c5-8de6c19124dd
+[I 20:52:51.116 NotebookApp] Kernel shutdown: 89260f91-1337-4b4d-866c-d993dd0e7d41
+[I 20:52:51.945 NotebookApp] Kernel shutdown: e02efcd3-6f8e-47a5-93c6-5846ed2a5e80
+[I 20:52:52.761 NotebookApp] Kernel shutdown: e999e9c3-0f4a-4f48-8f12-02b48e9f2191
+[I 20:52:53.577 NotebookApp] Kernel shutdown: f0e32f1c-9bef-45a6-bb90-ff993d58dafe
+[I 20:52:54.386 NotebookApp] Kernel shutdown: b61518af-1b68-4439-82de-abc5f555f029
+[I 20:52:55.479 NotebookApp] Kernel shutdown: 1e8e9693-7049-4c12-a932-71c42899d138
+[I 20:55:10.108 NotebookApp] Creating new notebook in /
+[I 20:56:02.520 tornado.access] 302 GET / (61.153.0.166) 0.78ms
+[I 20:56:02.545 tornado.access] 302 GET / (61.153.0.166) 0.79ms
+[W 20:57:30.952 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.67ms referer=http://115.29.243.145:8686/notebooks/shell.ipynb
+[W 20:57:53.913 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.65ms referer=http://115.29.243.145:8686/notebooks/shell.ipynb
+[W 20:57:54.307 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.48ms referer=http://115.29.243.145:8686/notebooks/shell.ipynb
+[W 20:57:54.525 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.63ms referer=http://115.29.243.145:8686/notebooks/shell.ipynb
+[I 20:57:54.683 NotebookApp] Kernel started: 6d530ade-626d-4ebd-a278-e1f5636431d0
+[I 20:59:22.175 NotebookApp] Creating new notebook in /MATLABOptimizationTechniques/
+[I 20:59:48.527 NotebookApp] Kernel started: 59e9dd59-4e74-4b7b-bcc1-a27f4f020df3
+[I 20:59:55.064 NotebookApp] Saving notebook at /shell.ipynb
+[I 21:01:48.523 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:03:48.521 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:05:48.519 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[W 21:09:11.515 tornado.general] error on read
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 404, in _handle_read
+        if self._read_to_buffer() == 0:
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 460, in _read_to_buffer
+        chunk = self.read_from_fd()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 696, in read_from_fd
+        chunk = self.socket.recv(self.read_chunk_size)
+    error: [Errno 110] Connection timed out
+[W 21:09:21.755 tornado.general] error on read
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 404, in _handle_read
+        if self._read_to_buffer() == 0:
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 460, in _read_to_buffer
+        chunk = self.read_from_fd()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 696, in read_from_fd
+        chunk = self.socket.recv(self.read_chunk_size)
+    error: [Errno 110] Connection timed out
+[I 21:09:49.048 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:23:49.035 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:25:49.038 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:27:49.034 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:29:36.147 NotebookApp] Kernel started: 78166794-4b1a-4806-a271-45b432e65222
+[I 21:29:49.034 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:31:49.033 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:37:49.323 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:39:49.024 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:41:49.018 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:43:49.020 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:45:49.018 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:49:37.033 NotebookApp] Saving notebook at /example/oct2py.ipynb
+[I 21:49:49.007 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:51:49.004 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[W 21:53:41.541 tornado.access] 404 GET /static/components/backbone/backbone-min.map (61.153.0.166) 0.65ms referer=http://115.29.243.145:8686/notebooks/MATLABOptimizationTechniques/Optimization%20by%20Numerical%20Methods%20Solving%20Equations.ipynb
+[W 21:53:41.550 tornado.access] 404 GET /static/components/underscore/underscore-min.map (61.153.0.166) 0.47ms referer=http://115.29.243.145:8686/notebooks/MATLABOptimizationTechniques/Optimization%20by%20Numerical%20Methods%20Solving%20Equations.ipynb
+[W 21:53:41.551 tornado.access] 404 GET /static/components/jquery/jquery.min.map (61.153.0.166) 0.42ms referer=http://115.29.243.145:8686/notebooks/MATLABOptimizationTechniques/Optimization%20by%20Numerical%20Methods%20Solving%20Equations.ipynb
+[I 21:54:59.451 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 21:56:59.448 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 22:00:59.445 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 22:02:59.445 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization by Numerical Methods Solving Equations.ipynb
+[I 22:04:51.204 NotebookApp] Creating new notebook in /MATLABOptimizationTechniques/
+[I 22:04:53.710 NotebookApp] Kernel started: f67267d1-7127-4a0f-9c1f-00869b4567ba
+[I 22:05:37.811 NotebookApp] Saving notebook at /MATLABOptimizationTechniques/Optimization Using Symbolic  Computation.ipynb
+[I 22:08:00.985 NotebookApp] Saving notebook at /shell.ipynb
+[I 22:08:04.689 NotebookApp] Creating new notebook in /PracticalDataScienceCookbook/
+[I 22:08:25.860 NotebookApp] Kernel started: 12de5b84-3da1-46f6-a07a-8147f4ba6381
