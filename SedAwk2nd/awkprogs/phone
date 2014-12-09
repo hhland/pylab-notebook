@@ -1,0 +1,18 @@
+nawk '# phone - find phone number for person 
+# supply name of person on command line or at prompt.
+BEGIN { FS ="," 
+	# look for parameter
+	if ( ARGC > 2 ){ 
+		name = ARGV[1]
+		delete ARGV[1]
+	}
+	else{ 
+		# loop until we get a name
+		while (! name) { 
+			printf "Enter a name?"
+			getline name <"-"
+		}
+	}
+}
+$1 ~ name { print $1, $NF 
+}' $* phones.data 

@@ -1,0 +1,29 @@
+Problem: scrunch cpp output to make it more readable.
+
+Compress runs of "#" lines and blank lines, or runs of two or more
+blank lines:
+
+	(\n*# lineno "file"\n+)+  or  \n\n\n+
+
+into a single line:
+
+	# lineno "file"\n
+
+which is output before the next line of program text (corresponding to
+line "lineno" of the source "file").  The values of "lineno" and "file"
+are adjusted for changes in source resulting from #include statements.
+
+Two solutions: an awk version (by Stephen Peckham) and a Lex version
+(by myself).
+
+Both solutions are comparably simple.  Here the character-stream processing
+of Lex has no advantage over the line-oriented processing of awk. Thus,
+IMHO, awk is preferable.  C-code or sed-script solutions would be more
+complicated.
+
+
+John Rupley
+ uucp: ..{uunet | ucbvax | cmcl2 | noao}!arizona!rupley!local
+ internet: rupley!local@cs.arizona.edu
+ (H) 30 Calle Belleza, Tucson AZ 85716 - (602) 325-4533
+ (O) Dept. Biochemistry, Univ. Arizona, Tucson AZ 85721 - (602) 621-3929

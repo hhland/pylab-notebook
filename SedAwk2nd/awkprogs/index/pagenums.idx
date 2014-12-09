@@ -1,0 +1,112 @@
+#!/usr/bin/nawk -f
+# ------------------------------------------------
+# pagenums.idx -- collect pages for common entries 
+# Author:  Dale Dougherty
+# Version 1.1   7/10/90
+# 
+# input should be PRIMARY:SECONDARY:PAGE:VOLUME
+# ------------------------------------------------
+
+BEGIN { FS=":"; OFS=""}
+
+# main routine -- apply to all input lines
+{
+   # assign fields to variables
+	PRIMARY = $1
+	SECONDARY = $2
+	PAGE = $3
+	VOLUME = $4
+
+   # check for a see also and collect it in array
+	if (SECONDARY ~ /\([Ss]ee [Aa]lso/) {
+	# create tmp copy & remove "~zz" from copy 
+		tmpSecondary = SECONDARY
+		sub(/~zz\([Ss]ee [Aa]lso */,"",tmpSecondary)
+		sub(/\) */,"",tmpSecondary)
+	# remove secondary key along with "~zz"
+		sub(/^.*~zz\([Ss]ee [Aa]lso */,"",SECONDARY)
+		sub(/\) */,"",SECONDARY)
+	# assign to next element of seeAlsoList
+		seeAlsoList[++eachSeeAlso] = SECONDARY "; "
+		prevPrimary = PRIMARY
+	# assign copy to previous secondary key
+		prevSecondary = tmpSecondary 
+		next
+	} # end test for see Also
+
+   # Conditionals to compare keys of current record to previous
+   #  record.  If Primary and Secondary keys are the same, only
+   #  the page number is printed. 
+
+   # test to see if each PRIMARY key matches previous key
+	if (PRIMARY == prevPrimary) {
+	# test to see if each SECONDARY key matches previous key
+		if (SECONDARY == prevSecondary)
+		# test to see if VOLUME matches;
+		# print only VOLUME:PAGE
+			if (VOLUME == prevVolume)
+				printf (",%s", PAGE)
+			else{
+				printf ("; ")
+				volpage(VOLUME, PAGE)
+			}
+		else{
+		# if array of See Alsos, output them now
+			if (eachSeeAlso) outputSeeAlso(2)
+		# print PRIMARY:SECONDARY:VOLUME:PAGE
+			printf ("\n%s:%s:", PRIMARY, SECONDARY)
+			volpage(VOLUME, PAGE)
+		}
+	 } # end of test for PRIMARY == prev
+	else { # PRIMARY != prev
+		# if we have an array of See Alsos, output them now
+		if (eachSeeAlso) outputSeeAlso(1)
+		if (NR != 1) 
+			printf ("\n")
+		if (NF == 1){
+			printf ("%s:", $0)
+			}
+		else{
+			printf ("%s:%s:", PRIMARY, SECONDARY)
+			volpage(VOLUME, PAGE)
+			}
+	}
+   	prevPrimary = PRIMARY
+	prevSecondary = SECONDARY
+	prevVolume = VOLUME
+
+} # end of main routine
+
+# at end, print newline
+END { 
+   # in case last entry has "see Also"
+if (eachSeeAlso) outputSeeAlso(1)
+printf("\n")
+}
+
+   # outputSeeAlso function -- list elements of seeAlsoList 
+function outputSeeAlso(LEVEL) {
+	# LEVEL - indicates which key we need to output
+	if (LEVEL == 1)
+		printf ("\n%s:(See also ", prevPrimary)
+	else {
+		sub(/;.*$/,"",prevSecondary)
+		printf ("\n%s:%s; (See also ", prevPrimary, prevSecondary)
+	}
+	sub(/; $/,".):", seeAlsoList[eachSeeAlso])
+	for (i = 1; i <= eachSeeAlso; ++i)
+		printf ("%s", seeAlsoList[i]) 
+	eachSeeAlso=0
+}
+   # volpage function -- determine whether or not to print volume info 
+   # 	two args: volume & page
+ 
+function volpage(v,p) {
+
+   # if VOLUME is empty then print PAGE only 
+	if (v == "" ) 
+		printf ("%s", p)
+	else
+   # otherwise print VOLUME^PAGE
+		printf ("%s^%s",v, p)  
+}

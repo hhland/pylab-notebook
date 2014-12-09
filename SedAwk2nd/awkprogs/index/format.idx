@@ -1,0 +1,127 @@
+#!/usr/bin/nawk -f
+# ------------------------------------------------
+# format.idx -- prepare formatted index
+# Author:  Dale Dougherty
+# Version 1.1   7/10/90
+# 
+# input should be PRIMARY:SECONDARY:PAGE:VOLUME
+# Args:  FMT = 0 (default) format for screen
+#        FMT = 1 output with troff macros
+#        MACDIR = pathname of index troff macro file 
+# ------------------------------------------------
+BEGIN { 	FS=":"
+		upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		lower="abcdefghijklmnopqrstuvwxyz" 
+}
+
+# Output initial macros if troff FMT 
+NR == 1 && FMT == 1 {
+		if (MACDIR)
+			printf (".so %s/indexmacs\n", MACDIR) 
+		else
+			printf (".so indexmacs\n") 
+		printf (".Se \"\" \"Index\"\n") 
+		printf (".XC\n") 
+} # end of NR == 1
+ 
+
+# main routine - apply to all lines
+# determine which fields to output
+{
+   # convert octal colon to "literal" colon 
+   # make sub for each field, not $0, so that fields are not parsed
+	gsub(/\3a/,":",$1)
+	gsub(/\3a/,":",$2)
+	gsub(/\3a/,":",$3)
+
+   # assign field to variables
+	PRIMARY = $1
+	SECONDARY = $2
+	TERTIARY = ""
+	PAGE = $3
+	if (NF == 2) {
+		SECONDARY = ""
+		PAGE = $2
+	}
+ # Look for empty fields to determine what to output
+   if (! PRIMARY) {  
+	if (! SECONDARY) {
+		TERTIARY = $3
+		PAGE = $4	
+		if (FMT == 1)
+			printf (".XF 3 \"%s", TERTIARY)
+		else
+			printf ("  %s", TERTIARY)
+	}
+	else
+	if (FMT == 1)
+		printf (".XF 2 \"%s", SECONDARY)
+	else
+		printf ("  %s", SECONDARY)
+ }
+ else { # if primary entry exists
+
+     # extract first char of primary entry
+	firstChar = substr($1,1,1)
+     # see if it is in lower string.
+	char = index(lower,firstChar) 
+     # char is an index to lower or upper letter 
+	if (char == 0)  
+	# if char not found, see if it is upper
+		char = index(upper,firstChar)
+			if ( char == 0 )
+				char = prevChar
+	# if new char, then start group for new letter of alphabet
+	if (char != prevChar) 
+		{
+		if (FMT == 1)
+			printf(".XF A \"%s\"\n", substr(upper,char,1))
+		else
+			printf("\n\t\t%s\n", substr(upper,char,1))
+		prevChar = char
+		}
+	# now output primary and secondary entry
+	if (FMT == 1)
+		if (SECONDARY)
+			printf (".XF 1 \"%s\" \"%s", PRIMARY, SECONDARY)
+		else
+			printf (".XF 1 \"%s\" \"", PRIMARY)
+	else
+		if (SECONDARY)
+			printf ("%s, %s", PRIMARY, SECONDARY)
+		else
+			printf ("%s", PRIMARY)
+ }
+
+ # if page number, call pageChg to replace "^" with ":"
+ #  for multi-volume page lists.
+ if (PAGE) {
+	if (FMT == 1) {
+		# added to omit comma after bold entry
+		if (! SECONDARY && ! TERTIARY)
+			printf ("%s\"", pageChg(PAGE))
+		else
+			printf (", %s\"", pageChg(PAGE))
+	}
+	else
+		printf (", %s", pageChg(PAGE))
+ }
+ else if (FMT == 1) printf("\"")
+
+ printf ("\n")
+
+} # End of main routine
+
+# Supporting function
+
+# pageChg -- convert "^" to ":" in list of volume^page 
+#	Arg: pagelist -- list of numbers 
+
+function pageChg(pagelist){
+	 gsub(/\^/,":",pagelist)
+	 if (FMT == 1) {
+		gsub(/[1-9]+\*/,"\\fB&\\fP", pagelist)
+		gsub(/\*/,"",pagelist)
+	}
+	return pagelist
+}# End of pageChg function 

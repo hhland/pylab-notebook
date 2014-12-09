@@ -1,0 +1,29 @@
+ls -l $* | awk '
+# filesum: list files and total size in bytes
+# input: long listing produced by "ls -l"
+
+#1 output column headers
+BEGIN { printf("%-15s\t%10s\n","FILE","BYTES" )
+}
+#2 test for 9 fields; files begin with "-"
+NF == 9 && /^-/ {
+        sum += $5       # accumulate size of file
+        ++filenum       # count number of files
+        printf("%-15s\t%10d\n", $9, $5)       # print filename and size
+}
+
+#3 test for 9 fields; directory begins with "d"
+NF == 9 && /^d/ {
+        print "<dir>", "\t", $9  #print <dir> and name
+}
+
+#4 test for ls -lR line ./dir:
+$1 ~ /^\..*:$/ {
+        print "\t" $0 # print that line preceded by tab
+}
+
+#5 once all is done,
+END {
+        #print total file size and number of files
+        printf("Total: %d bytes  (%d files)\n", sum, filenum)
+}' -

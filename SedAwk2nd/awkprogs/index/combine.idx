@@ -1,0 +1,196 @@
+#!/usr/bin/nawk -f
+# ------------------------------------------------
+# combine.idx -- merge keys with same PRIMARY key
+#		and combine consecutive page numbers
+# Author:  Dale Dougherty
+# Version 1.1   7/10/90
+# 
+# input should be PRIMARY:SECONDARY:PAGELIST
+# ------------------------------------------------
+
+BEGIN   { FS = ":"; OFS=""}
+
+# main routine -- applies to all input lines
+#  It compares the keys and merges the duplicates.
+{
+   # assign first field
+	PRIMARY=$1
+   # split second field, getting SEC and TERT keys.
+	sizeOfArray = split ($2, array, ";") 
+	SECONDARY=array[1]
+	TERTIARY=array[2]
+   # test that tertiary key exists
+	if (sizeOfArray > 1) {
+	# tertiary key exists
+		isTertiary=1 
+	# two cases where ";" might turn up
+	# check SEC key for list of "see also" 
+		if (SECONDARY ~ /\([sS]ee also/){
+			SECONDARY = $2
+			isTertiary=0
+		}
+	# check TERT key for "see also" 
+		if (TERTIARY ~ /\([sS]ee also/){
+			TERTIARY = substr($2,(index($2,";")+1))
+		}	
+	}
+	else # tertiary key does not exist
+		isTertiary=0
+   # assign third field
+	PAGELIST = $3
+
+   # Conditional to compare primary key of this entry to that of
+   #  of previous entry. Then compare secondary keys.  This 
+   #  determines which non-duplicate keys to output.
+
+	if (PRIMARY == prevPrimary){
+		if (isTertiary && SECONDARY == prevSecondary)
+			printf (";\n::%s", TERTIARY)
+		else
+			if (isTertiary)
+				printf ("\n:%s; %s", SECONDARY, TERTIARY)
+			else
+				printf ("\n:%s", SECONDARY)
+	 }
+	 else {
+		if (NR != 1) 
+			printf ("\n")
+		if ($2 != "") 
+			printf ("%s:%s", PRIMARY, $2)
+		else 
+			printf ("%s", PRIMARY)
+
+		prevPrimary = PRIMARY
+	 }
+prevSecondary = SECONDARY
+} # end of main procedure
+
+# routine for "See" entries (primary key only)
+NF == 1 { printf ("\n") }
+
+# routine for all other entries
+#  It handles output of the page number.
+
+NF > 1  {
+	if (PAGELIST)
+	# calls function numrange to look for 
+        #  consecutive page numbers.
+		printf (":%s", numrange(PAGELIST))  
+	else
+		if (! isTertiary || (TERTIARY && SECONDARY))  printf (":")  
+
+} # end of NF > 1
+
+# END procedure outputs newline
+END { 
+printf ("\n") }
+
+# Supporting Functions
+
+# numrange -- read list of Volume^Page numbers, detach Volume
+# 		from Page for each Volume and call rangeOfPages 
+#		to combine consecutive page numbers in the list. 
+#	PAGE = volumes separated by semicolons; volume and page
+#		separated by ^.
+
+function numrange(PAGE,     listOfPages, sizeOfArray) {
+
+  # Split up list by volume.
+     sizeOfArray = split (PAGE, howManyVolumes,";") 
+  # Check to see if more than 1 volume.
+     if ( sizeOfArray > 1)
+
+     # if more than 1 volume, loop through list 
+ 	for (i = 1; i <= sizeOfArray; ++i){
+		# for each Volume^Page element, detach Volume 
+		# and call rangeOfPages function on Page to separate page
+		# numbers and compare to find consecutive numbers.
+     		if (split (howManyVolumes[i],volPage,"^") == 2 )  
+			listOfPages=volPage[1] "^" rangeOfPages(volPage[2])
+		# collect output in listOfPages
+		if (i == 1) 
+			result=listOfPages
+		else { 
+			result=result ";" listOfPages 
+		}
+	} # end for loop
+
+     else { # not more than 1 volume
+
+   # check for single volume index with volume number 
+   #  if so, detach volume number.
+   #  Both call split page on the list of page numbers.
+     	if (split (PAGE,volPage,"^") == 2 )  
+	# if Volume^Page, detach volume and then call rangeOfPages 
+		listOfPages=volPage[1] "^" rangeOfPages(volPage[2])
+	else # No volume number involved 
+		listOfPages=rangeOfPages(volPage[1])
+	result=listOfPages
+	} # end of else
+
+return result  # Volume^Page list
+
+} # End of numrange function
+
+# rangeOfPages -- read list of comma-separated page numbers,  
+#		load them into an array, and compare each one
+#		to the next, looking for consecutive numbers.
+#	PAGENUMBERS = comma-separated list of page numbers
+
+function rangeOfPages (PAGENUMBERS, pagesAll,sizeOfArray,pages,listOfPages,d,p,j) {
+   # close-up space on troff-generated ranges
+	gsub(/ - /,",-",PAGENUMBERS)
+
+   # split list up into eachpage array.
+	sizeOfArray = split (PAGENUMBERS, eachpage, ",")
+   # if more than 1 page number
+	if (sizeOfArray > 1){
+	# for each page number, compare it to previous number + 1
+		p=0  # flag indicates assignment to pagesAll 
+	# for loop starts at 2
+		for (j=2; j-1 <= sizeOfArray; ++j){
+		# start by saving first page in sequence (firstpage)    
+		# and loop until we find last page (lastpage)
+			firstpage=eachpage[j-1]
+			d=0  # flag indicates consecutive numbers found  
+		# loop while page numbers are consecutive
+			while ((eachpage[j-1]+1) == eachpage[j] || eachpage[j] ~/^-/) {
+			# remove "-" from troff-generated range
+				if (eachpage[j] ~ /^-/){
+					sub(/^-/,"",eachpage[j])
+					}
+				lastpage=eachpage[j]
+			# increment counters
+				++d
+				++j
+			} # end of while loop
+		# use values of firstpage and lastpage to make range.
+			if (d >= 1){
+			# there is a range
+				pages=firstpage "-" lastpage 
+			}
+			else # no range; only read firstpage 
+				pages=firstpage 
+		# assign range to pagesAll 
+			if (p == 0){
+				pagesAll=pages 
+				p=1
+				}
+			else {
+				pagesAll=pagesAll "," pages
+			}
+		}# end of for loop
+
+	# assign pagesAll to listofPages
+		listOfPages = pagesAll
+
+	} # end of sizeOfArray > 1
+
+	else # only one page 
+		listOfPages = PAGENUMBERS
+
+   # remove space following comma
+	gsub(/,/, ", ", listOfPages)
+   # return changed list of page numbers
+	return listOfPages
+} # End of rangeOfPages function

@@ -1,0 +1,29 @@
+awk '# date-month -- convert mm/dd/yy to month day, year
+
+# build list of months and put in array. 
+BEGIN { 
+	listmonths="January,February,March,April,May,June,July,August,September,November,December" 
+	split( listmonths,month,"," )
+}
+
+# check that there is input
+$1 != "" {
+
+# split on "/" the first input field into elements of array
+	z = split($1,date,"/")
+
+# check that only one field is returned
+	if (z == 1)
+		# try to split on "-"
+		z = split($1,date,"-")
+
+# must be invalid
+	if (z == 1)
+		exit
+
+# add 0 to number of month to ensure numeric type 
+	date[1] += 0
+
+# print month day, year
+	print month[date[1]], date[2]", 19" date[3] 
+}' -

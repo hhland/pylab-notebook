@@ -1,0 +1,10 @@
+:
+#\- delete empty lines from filelist or pipe
+#usage: %blout filelist
+#delete blank lines (space or tab only)
+#j.a. rupley, tucson, arizona
+#rupley!local@cs.arizona.edu
+
+SPACETAB=`echo " \t\c"`
+
+sed -e "/^[${SPACETAB}]*$/d" $*

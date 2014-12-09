@@ -1,0 +1,78 @@
+: loop
+/^$/{
+	x
+	p
+	n
+	b loop
+}
+/^"/{
+	: double
+	/^$/{
+		x
+		p
+		n
+		b double
+	}
+	H
+	x
+	s/\n\(.\).*/\1/
+	x
+	s/.//
+	/^"/b break
+	/^\\/{
+		H
+		x
+		s/\n\(.\).*/\1/
+		x
+		s/.//
+	}
+	b double
+}
+/^'/{
+	: single
+	/^$/{
+		x
+		p
+		n
+		b single
+	}
+	H
+	x
+	s/\n\(.\).*/\1/
+	x
+	s/.//
+	/^'/b break
+	/^\\/{
+		H
+		x
+		s/\n\(.\).*/\1/
+		x
+		s/.//
+	}
+	b single
+}
+/^\\/{
+	H
+	x
+	s/\n\(.\).*/\1/
+	x
+	b break
+}
+/^\/\*/{
+	s/.//
+	: comment
+	s/.//
+	/^$/n
+	/^*\//{
+		s/..//
+		b loop
+	}
+	b comment
+}
+: break
+H
+x
+s/\n\(.\).*/\1/
+x
+s/.//
+b loop

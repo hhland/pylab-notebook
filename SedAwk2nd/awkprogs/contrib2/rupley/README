@@ -1,0 +1,28 @@
+The directories "misc" and "roff" have several scripts that I expect
+are commonly found but I wish I had been given me when I started using
+UNIX. They are useful, at least to me. I expect you already have them
+or something like them in your manuscript.
+
+The directories "uncomment" and "scrunch" perhaps deserve some comment.
+Each addresses a problem - respectively, the removal of comments from 
+C code and making readable the output of the UNIX preprocessor.
+Both give an awk or sed solution to the problem, and also one or more 
+other solutions. 
+
+In a text presumably centered on awk and sed, is it proper to compare
+the virtues of different approaches: C vs Lex vs awk vs sed?  Clearly,
+I hope you will do this. And thus the stuff in "uncomment" and "scrunch".
+
+Most sed and awk scripts are pretty targeted and personal.  If you
+find the attached stuff of interest, I would be happy to send along
+another batch.
+
+Hope this helps.
+
+
+John Rupley
+ uucp: ..{uunet | ucbvax | cmcl2 | noao}!arizona!rupley!local
+ internet: rupley!local@cs.arizona.edu
+ (H) 30 Calle Belleza, Tucson AZ 85716 - (602) 325-4533
+ (O) Dept. Biochemistry, Univ. Arizona, Tucson AZ 85721 - (602) 621-3929
+

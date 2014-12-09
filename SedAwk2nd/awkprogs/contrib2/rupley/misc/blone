@@ -1,0 +1,12 @@
+:
+#\- replace sequences of empty lines from filelist or pipe with one empty line
+#usage: %blone filelist
+#replace runs of blank lines (space , form feed, or tab only) 
+#with single blank line
+#Allyn Fratkin            allyn@sdd.hp.com San Diego Division       - or -
+#                          Hewlett-Packard Company  uunet!ucsd!hp-sdd!allyn
+
+chars=`echo '\040\011\014\c'`	# use -n with bsd echo
+sed "s/^[$chars]*$//; /^$/N; /^\n[$chars]*$/D" $*
+
+

@@ -1,0 +1,27 @@
+   File Name		Archive #	Description
+-----------------------------------------------------------
+ ./README                   1	
+ ./misc                     1	
+ ./misc/blone               1	
+ ./misc/blout               1	
+ ./misc/free                1	
+ ./misc/intounix            1	
+ ./roff                     1	
+ ./roff/README              1	
+ ./roff/roff                1	
+ ./roff/roff.awk            1	
+ ./scrunch                  1	
+ ./scrunch/Makefile         1	
+ ./scrunch/README           1	
+ ./scrunch/post.awk         1	
+ ./scrunch/scrunchAwk       1	
+ ./scrunch/scrunchLex.l     1	
+ ./uncomment                1	
+ ./uncomment/Makefile       1	
+ ./uncomment/README         1	
+ ./uncomment/eatC.c         1	
+ ./uncomment/eatLex.l       1	
+ ./uncomment/eatSed         1	
+ ./uncomment/post.litmaath  1	
+ ./uncomment/uncomment.tst2  1	
+ MANIFEST                   1	This shipping list

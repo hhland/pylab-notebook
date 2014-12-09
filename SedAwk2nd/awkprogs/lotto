@@ -1,0 +1,54 @@
+echo "Do it once" | gawk '# lotto - pick x random numbers out of y 
+# sort numbers in ascending order
+function sort(ARRAY,ELEMENTS, 	temp,i,j) {
+	for ( i = 2; i <= ELEMENTS; ++i ) 
+		for ( j = i; ARRAY[j-1] > ARRAY[j]; --j ) { 
+			temp = ARRAY[j]
+			ARRAY[j] = ARRAY[j-1]
+			ARRAY[j-1] = temp
+	}
+return 
+}
+# main routine
+{
+# test command line args; NUM = $1, how many numbers to pick 
+# 	              TOPNUM = $2, last number in series
+	if ( NUM <= 0) 
+		NUM = 6
+	if ( TOPNUM <= 0 ) 
+		TOPNUM = 30
+# print "Pick x of y"
+	printf("Pick %d of %d\n", NUM, TOPNUM) 
+# load TOPNUM numbers into array
+	for ( k = 1; k <= TOPNUM; ++k )
+		range[k] = k
+# seed random number using time and date; do this once
+	srand() 
+# loop until we have NUM selections
+	for ( j = 1; j <= NUM; ++j ) {
+		select = 1 + int(rand() * TOPNUM)
+		# this conditional checks for duplicates
+		if ( range[select] == "") { 
+			--j
+			continue
+		}
+		pick[j] = range[select]
+		delete range[select]
+	}
+
+# sort numbers in ascending order
+	#for ( i = 2; i <= NUM; ++i ) 
+		#for ( j = i; pick[j-1] > pick[j]; --j ) { 
+			#temp = pick[j]
+			#pick[j] = pick[j-1]
+			#pick[j-1] = temp
+	#}
+# call sort function to sort pick array
+	sort(pick,NUM) 
+
+# loop through array and print picks.
+	for ( j = 1; j <= NUM; ++j ) 
+		printf("%s ", pick[j])
+	printf("\n")
+
+}' NUM=$1 TOPNUM=$2 

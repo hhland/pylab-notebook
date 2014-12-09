@@ -1,0 +1,43 @@
+:
+#	Copyright 1990, Chris Lewis, All Rights Reserved
+MAPDIR=/usr/spool/news/maps
+WHEREFILE=$MAPDIR/where.db
+COMPRESS=/usr2/clewis/maps/compress12
+
+if [ $1 = "-v" ]
+then
+    verbose=1
+    shift
+fi
+for i
+do
+    echo Searching for $i
+    if [ -n "$verbose" ]
+    then
+	list=`sed -n -e "/^$i/s/[ 	][ 	]*/:/gp" $WHEREFILE`
+	for j in $list
+	do
+	    eval `echo $j | sed -e 's/\([^:]*\):\([^:]*\):\(.*\)/s=\1 f=\2 l=\3/p'`
+	    echo $s $f $l
+	    numlist=`echo $l | sed -e 's/[, ][, ]*/ /g'`
+	    for l in $numlist
+	    do
+		echo "Found $s in $f at line $l"
+		if [ -n "$f" -a -n "$l" ]
+		then
+		    if [ -r $MAPDIR/$f ]
+		    then
+			cat $MAPDIR/$f
+		    elif [ -r $MAPDIR/$f.Z ]
+		    then
+			$COMPRESS -dc $MAPDIR/$f.Z
+		    else
+			echo "No such file $f" >&2
+		    fi | sed -n -e "$l,/^#N/p"
+		fi
+	    done
+	done
+    else
+	grep "^$i" $WHEREFILE
+    fi
+done

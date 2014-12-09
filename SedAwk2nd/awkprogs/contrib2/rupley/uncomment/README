@@ -1,0 +1,29 @@
+Three solutions to the problem of uncommenting C code - one written in C
+(by Chris Torek), another a Lex source (by myself), and the third a sed
+script (by Maarten Litmaath).
+
+It is instructive to compare the examples. 
+
+The C code is fast and straightforward but difficult to get right (Chris
+Torek wrote it in 10 minutes, correctly, but several other posters did
+not do so well).
+
+Maarten Litmaath's sed script is a tour de force, and worth study for
+its techniques that might be used elsewhere.  The posting
+(post.litmaath) comments on the method.  But it is not the simplest or
+the fastest way to uncomment.
+
+Lex is preferred, IMHO - simple, easy to write and get right, and in
+time of execution close to the C-code solution. Lex is character-stream
+oriented, as distinguished from the line orientation of sed and awk,
+so it serves well for matching patterns that cross line boundaries.
+
+For a trial of all three:
+	make test
+
+
+John Rupley
+ uucp: ..{uunet | ucbvax | cmcl2 | noao}!arizona!rupley!local
+ internet: rupley!local@cs.arizona.edu
+ (H) 30 Calle Belleza, Tucson AZ 85716 - (602) 325-4533
+ (O) Dept. Biochemistry, Univ. Arizona, Tucson AZ 85721 - (602) 621-3929

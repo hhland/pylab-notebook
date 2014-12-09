@@ -1,0 +1,15 @@
+#From: peckham@svax.cs.cornell.edu (Stephen Peckham)
+#Subject: Scrunch blank lines
+#Organization: Cornell Univ. CS Dept, Ithaca NY
+
+awk '
+{if (NF == 0) blanks++
+ else if ($1=="#") {l_no = $2-1; f = $3; blanks = 2;}
+ else {
+	if (blanks > 1) print "#", l_no, f;
+	else if (blanks == 1) print "";
+	blanks = 0;
+	print $0;
+      }
+ l_no++;
+}'

@@ -1,0 +1,15 @@
+if [ $# -lt "3" ] 
+then 
+	echo Usage: gres pattern replacement file
+	exit
+fi
+pattern=$1
+replacement=$2
+if [ -f $3 ] 
+then 
+	file=$3
+else
+	echo $3 is not a file.
+	exit
+fi
+sed -e 's/'$pattern'/'$replacement'/' $file

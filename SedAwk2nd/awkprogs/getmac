@@ -1,0 +1,15 @@
+:
+# getmac -- print macro definition for $1 in package $2
+if [ $# -gt 1 ]; then
+	case $1 in
+	 -mS) file="/work/macros/current/tmac.S";;
+	 -ms) file="/work/macros/current/tmac.s";;
+	 -mm) file="/usr/lib/macros/mmt";;
+	 -man) file="/usr/lib/macros/an";;
+	esac
+	mac="$2"
+else
+	file=/work/macros/current/tmac.S
+	mac="$1"
+fi
+soelim $file | sed -n "/^\.de *$mac/,/^\.\.$/p" 

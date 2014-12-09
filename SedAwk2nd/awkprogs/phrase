@@ -1,0 +1,18 @@
+search=$1
+shift
+for file 
+do
+sed '
+/'"$search"'/b
+N
+h
+s/.*\n//
+/'"$search"'/b
+g
+s/ *\n/ /
+/'"$search"'/{
+g
+b
+}
+d' $file 
+done

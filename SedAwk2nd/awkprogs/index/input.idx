@@ -1,0 +1,129 @@
+#!/usr/bin/nawk -f
+# ------------------------------------------------
+# input.idx -- standardize input before sorting
+# Author:  Dale Dougherty
+# Version 1.1   7/10/90
+# 
+# input is "entry" tab "page_number"
+# ------------------------------------------------
+BEGIN { FS="\t"; OFS="" }
+
+#1 Match entries that need rotating that contain a single tilde
+   # $1 ~ /~[^~]/  # regexp does not work and I do not know why 
+$1 ~ /~/ && $1 !~ /~~/ { 
+   # split first field into array named subfield 
+	n = split($1,subfield,"~")
+	if (n == 2) {
+	# print entry without "~" and then rotated
+		printf("%s %s::%s\n", subfield[1], subfield[2], $2)
+		printf("%s:%s:%s\n", subfield[2], subfield[1], $2)
+		next
+		}
+	next
+}# End of 1
+
+#2 Match entries that contain two tildes 
+$1 ~ /~~/ { 
+   # replace ~~ with ~	
+	gsub(/~~/,"~",$1)
+} # End of 2
+
+#3  Match entries that use "::" for literal ":". 
+$1 ~ /::/ { 
+   # substitute octal value for "::"
+	gsub(/::/, "\3a", $1) 
+}# End of 3
+
+#4 Clean up entries 
+{
+   # look for second colon, which might be used instead of ";"
+	if (sub(/:.*:/,"&;",$1)) {
+		sub(/:;/,";",$1)	
+	}
+   # remove blank space if any after colon.
+	sub(/: */,":",$1)
+   # if comma is used as delimiter, convert to colon. 
+	if ( $1 !~ /:/ ){
+	# On see also & see, try to put delimiter before "(" 
+		if ($1 ~ /\([sS]ee/) {
+			if (sub(/, *.*\(/,":&",$1)) 
+				sub(/:, */, ":", $1)
+			else
+				sub(/  *\(/,":(",$1)
+			}
+		else{ # otherwise, just look for comma
+			sub(/, */,":",$1)
+		}
+	}
+	else
+		# added to insert semicolon in "See"
+		if ($1 ~ /:[^;]+ *\([sS]ee/) 
+			sub(/  *\(/,";(",$1)
+		
+}# End of 4
+
+#5 match See Alsos and fix for sort at end
+$1 ~ / *\([Ss]ee [Aa]lso/ { 
+  # add "~zz" for sort at end
+	sub(/\([Ss]ee [Aa]lso/,"~zz(see also",$1) 
+	if ($1 ~ /:[^; ]+ *~zz/) {
+		sub(/ *~zz/,"; ~zz",$1)
+	}
+  # if no page number
+	if ($2 == "") {
+		print $0 ":" 
+		next
+	}
+	else {
+	# output two entries: 
+	# print See Also entry w/out page number
+		print $1 ":"
+	# remove See Also 
+		sub(/ *~zz\(see also.*$/,"", $1) 
+		sub(/;/,"", $1)
+	# print as normal entry
+		if ( $1 ~ /:/ )
+			print $1 ":" $2
+		else
+			print $1 "::" $2
+		next
+	}
+}# End of 5
+
+#6 Process entries without page number (See entries)
+(NF == 1 || $2 == "" || $1 ~ /\([sS]ee/) { 
+   # if a "See" entry
+	if ( $1 ~ /\([sS]ee/ ) { 
+		if ( $1 ~ /:/ ) 
+			print $1 ":"
+		else {  
+			print $1 ":" 
+		}
+		next
+	}
+	else # if not a See entry, generate error
+		printerr("No page number")
+		next
+}# End of 6
+
+#7 If the colon is used as the delimiter 
+$1 ~ /:/ { 
+   # output entry:page
+	print $1 ":" $2
+	next
+}# End of 7
+
+#8  Match entries with only primary keys.
+{
+	print $1 "::" $2
+}# End of 8
+
+# supporting functions
+# 
+# printerr -- print error message and current record
+#		Arg: message to be displayed
+
+function printerr ( message ) {
+   # print message, record number and record
+	print "ERROR:" message " (" NR ") "  $0 > "/dev/tty"
+}

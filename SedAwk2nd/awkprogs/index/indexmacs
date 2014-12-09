@@ -1,0 +1,392 @@
+'\" These macros are used for coding index entries.
+.de XX  \" index entry; $1 = text of entry; $2 non-null = no page number
+.ie "\\$2"" .tm ><INDEX:\\$1\t\\*(RF
+.el .tm ><INDEX:\\$1 \\$2
+..
+.de XN  \" index entry, cross-reference (no page number)
+.XX "\\$1" "\&\\$2"
+..
+.de XC
+.in +4n
+.ie !'\\$1'2' .MC 1.8i 0.2i
+.el .MC 2.5i 0.25i
+.ps 9
+.vs 11
+.nr PS 9
+.nr VS 11
+.am NP
+.ie !'\\$1'2' .MC 1.8i 0.2i
+.el .MC 2.5i 0.25i
+\\..
+.na
+..
+.de XS
+.ie "\\*(X1"" \{\
+.               ds X1 \\$1
+.               ds x1 \\*(RF
+.               NU\}
+.el .ie "\\*(X2"" \{\
+.               ds X2 \\$1
+.               ds x2 \\*(RF
+.               NU\}
+.el .ie "\\*(X3"" \{\
+.               ds X3 \\$1
+.               ds x3 \\*(RF
+.               NU\}
+.el .ie "\\*(X4"" \{\
+.               ds X4 \\$1
+.               ds x4 \\*(RF
+.               NU\}
+.el .ie "\\*(X5"" \{\
+.               ds X5 \\$1
+.               ds x5 \\*(RF
+.               NU\}
+.el .ie "\\*(X6"" \{\
+.               ds X6 \\$1
+.               ds x6 \\*(RF
+.               NU\}
+.el .ie "\\*(X7"" \{\
+.               ds X7 \\$1
+.               ds x7 \\*(RF
+.               NU\}
+.el .ie "\\*(X8"" \{\
+.               ds X8 \\$1
+.               ds x8 \\*(RF
+.               NU\}
+.el .ie "\\*(X9"" \{\
+.               ds X9 \\$1
+.               ds x9 \\*(RF
+.               NU\}
+.el .ie "\\*(X0"" \{\
+.               ds X0 \\$1
+.               ds x0 \\*(RF
+.               NU\}
+.el .ie "\\*(Xa"" \{\
+.               ds Xa \\$1
+.               ds xa \\*(RF
+.               NU\}
+.el .ie "\\*(Xb"" \{\
+.               ds Xb \\$1
+.               ds xb \\*(RF
+.               NU\}
+.el .ie "\\*(Xc"" \{\
+.               ds Xc \\$1
+.               ds xc \\*(RF
+.               NU\}
+.el .ie "\\*(Xd"" \{\
+.               ds Xd \\$1
+.               ds xd \\*(RF
+.               NU\}
+.el .ie "\\*(Xz"" \{\
+.               ds Xz \\$1
+.               ds xz \\*(RF
+.               NU\}
+.el .ie "\\*(Xf"" \{\
+.               ds Xf \\$1
+.               ds xf \\*(RF
+.               NU\}
+.el .ie "\\*(Xg"" \{\
+.               ds Xg \\$1
+.               ds xg \\*(RF
+.               NU\}
+.el .ie "\\*(Xh"" \{\
+.               ds Xh \\$1
+.               ds xh \\*(RF
+.               NU\}
+.el .ie "\\*(Xi"" \{\
+.               ds Xi \\$1
+.               ds xi \\*(RF
+.               NU\}
+.el .ie "\\*(Xj"" \{\
+.               ds Xj \\$1
+.               ds xj \\*(RF
+.               NU\}
+.el .ie "\\*(Xk"" \{\
+.               ds Xk \\$1
+.               ds xk \\*(RF
+.               NU\}
+.el .ie "\\*(Xl"" \{\
+.               ds Xl \\$1
+.               ds xl \\*(RF
+.               NU\}
+.el .ie "\\*(Xm"" \{\
+.               ds Xm \\$1
+.               ds xm \\*(RF
+.               NU\}
+.el .ie "\\*(Xn"" \{\
+.               ds Xn \\$1
+.               ds xn \\*(RF
+.               NU\}
+.el .ie "\\*(Xo"" \{\
+.               ds Xo \\$1
+.               ds xo \\*(RF
+.               NU\}
+.el .ie "\\*(Xp"" \{\
+.               ds Xp \\$1
+.               ds xp \\*(RF
+.               NU\}
+.el .ie "\\*(Xq"" \{\
+.               ds Xq \\$1
+.               ds xq \\*(RF
+.               NU\}
+.el .ie "\\*(Xr"" \{\
+.               ds Xr \\$1
+.               ds xr \\*(RF
+.               NU\}
+.el .ie "\\*(Xs"" \{\
+.               ds Xs \\$1
+.               ds xs \\*(RF
+.               NU\}
+.el .ie "\\*(Xt"" \{\
+.               ds Xt \\$1
+.               ds xt \\*(RF
+.               NU\}
+.el .ie "\\*(Xu"" \{\
+.               ds Xu \\$1
+.               ds xu \\*(RF
+.               NU\}
+.el .ie "\\*(Xv"" \{\
+.               ds Xv \\$1
+.               ds xv \\*(RF
+.               NU\}
+.el .ie "\\*(Xw"" \{\
+.               ds Xw \\$1
+.               ds xw \\*(RF
+.               NU\}
+.el .ie "\\*(Xx"" \{\
+.               ds Xx \\$1
+.               ds xx \\*(RF
+.               NU\}
+.el .ie "\\*(Xy"" \{\
+.               ds Xy \\$1
+.               ds xy \\*(RF
+.               NU\}
+.el .ie "\\*(Xz"" \{\
+.               ds Xz \\$1
+.               ds xz \\*(RF
+.               NU\}
+.el .tm More than 36 index entries - entry "\\$1" abandoned.
+..
+.de XE
+.ie "\\$1"\\*(X1"\{\
+.               ie !"\\*(x1"\\*(RF" .tm ><INDEX:\\$1\t\\*(x1- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X1
+.               NU\}
+.el .ie "\\$1"\\*(X2"\{\
+.               ie !"\\*(x2"\\*(RF" .tm ><INDEX:\\$1\t\\*(x2- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X2
+.               NU\}
+.el .ie "\\$1"\\*(X3"\{\
+.               ie !"\\*(x3"\\*(RF" .tm ><INDEX:\\$1\t\\*(x3- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X3
+.               NU\}
+.el .ie "\\$1"\\*(X4"\{\
+.               ie !"\\*(x4"\\*(RF" .tm ><INDEX:\\$1\t\\*(x4- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X4
+.               NU\}
+.el .ie "\\$1"\\*(X5"\{\
+.               ie !"\\*(x5"\\*(RF" .tm ><INDEX:\\$1\t\\*(x5- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X5
+.               NU\}
+.el .ie "\\$1"\\*(X6"\{\
+.               ie !"\\*(x6"\\*(RF" .tm ><INDEX:\\$1\t\\*(x6- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X6
+.               NU\}
+.el .ie "\\$1"\\*(X7"\{\
+.               ie !"\\*(x7"\\*(RF" .tm ><INDEX:\\$1\t\\*(x7- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X7
+.               NU\}
+.el .ie "\\$1"\\*(X8"\{\
+.               ie !"\\*(x8"\\*(RF" .tm ><INDEX:\\$1\t\\*(x8- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X8
+.               NU\}
+.el .ie "\\$1"\\*(X9"\{\
+.               ie !"\\*(x9"\\*(RF" .tm ><INDEX:\\$1\t\\*(x9- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X9
+.               NU\}
+.el .ie "\\$1"\\*(X0"\{\
+.               ie !"\\*(x0"\\*(RF" .tm ><INDEX:\\$1\t\\*(x0- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds X0
+.               NU\}
+.el .ie "\\$1"\\*(Xa"\{\
+.               ie !"\\*(xa"\\*(RF" .tm ><INDEX:\\$1\t\\*(xa- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xa
+.               NU\}
+.el .ie "\\$1"\\*(Xb"\{\
+.               ie !"\\*(xb"\\*(RF" .tm ><INDEX:\\$1\t\\*(xb- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xb
+.               NU\}
+.el .ie "\\$1"\\*(Xc"\{\
+.               ie !"\\*(xc"\\*(RF" .tm ><INDEX:\\$1\t\\*(xc- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xc
+.               NU\}
+.el .ie "\\$1"\\*(Xd"\{\
+.               ie !"\\*(xd"\\*(RF" .tm ><INDEX:\\$1\t\\*(xd- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xd
+.               NU\}
+.el .ie "\\$1"\\*(Xz"\{\
+.               ie !"\\*(xz"\\*(RF" .tm ><INDEX:\\$1\t\\*(xz- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xz
+.               NU\}
+.el .ie "\\$1"\\*(Xf"\{\
+.               ie !"\\*(xf"\\*(RF" .tm ><INDEX:\\$1\t\\*(xf- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xf
+.               NU\}
+.el .ie "\\$1"\\*(Xg"\{\
+.               ie !"\\*(xg"\\*(RF" .tm ><INDEX:\\$1\t\\*(xg- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xg
+.               NU\}
+.el .ie "\\$1"\\*(Xh"\{\
+.               ie !"\\*(xh"\\*(RF" .tm ><INDEX:\\$1\t\\*(xh- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xh
+.               NU\}
+.el .ie "\\$1"\\*(Xi"\{\
+.               ie !"\\*(xi"\\*(RF" .tm ><INDEX:\\$1\t\\*(xi- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xi
+.               NU\}
+.el .ie "\\$1"\\*(Xj"\{\
+.               ie !"\\*(xj"\\*(RF" .tm ><INDEX:\\$1\t\\*(xj- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xj
+.               NU\}
+.el .ie "\\$1"\\*(Xk"\{\
+.               ie !"\\*(xk"\\*(RF" .tm ><INDEX:\\$1\t\\*(xk- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xk
+.               NU\}
+.el .ie "\\$1"\\*(Xl"\{\
+.               ie !"\\*(xl"\\*(RF" .tm ><INDEX:\\$1\t\\*(xl- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xl
+.               NU\}
+.el .ie "\\$1"\\*(Xm"\{\
+.               ie !"\\*(xm"\\*(RF" .tm ><INDEX:\\$1\t\\*(xm- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xm
+.               NU\}
+.el .ie "\\$1"\\*(Xn"\{\
+.               ie !"\\*(xn"\\*(RF" .tm ><INDEX:\\$1\t\\*(xn- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xn
+.               NU\}
+.el .ie "\\$1"\\*(Xo"\{\
+.               ie !"\\*(xo"\\*(RF" .tm ><INDEX:\\$1\t\\*(xo- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xo
+.               NU\}
+.el .ie "\\$1"\\*(Xp"\{\
+.               ie !"\\*(xp"\\*(RF" .tm ><INDEX:\\$1\t\\*(xp- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xp
+.               NU\}
+.el .ie "\\$1"\\*(Xq"\{\
+.               ie !"\\*(xq"\\*(RF" .tm ><INDEX:\\$1\t\\*(xq- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xq
+.               NU\}
+.el .ie "\\$1"\\*(Xr"\{\
+.               ie !"\\*(xr"\\*(RF" .tm ><INDEX:\\$1\t\\*(xr- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xr
+.               NU\}
+.el .ie "\\$1"\\*(Xs"\{\
+.               ie !"\\*(xs"\\*(RF" .tm ><INDEX:\\$1\t\\*(xs- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xs
+.               NU\}
+.el .ie "\\$1"\\*(Xt"\{\
+.               ie !"\\*(xt"\\*(RF" .tm ><INDEX:\\$1\t\\*(xt- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xt
+.               NU\}
+.el .ie "\\$1"\\*(Xu"\{\
+.               ie !"\\*(xu"\\*(RF" .tm ><INDEX:\\$1\t\\*(xu- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xu
+.               NU\}
+.el .ie "\\$1"\\*(Xv"\{\
+.               ie !"\\*(xv"\\*(RF" .tm ><INDEX:\\$1\t\\*(xv- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xv
+.               NU\}
+.el .ie "\\$1"\\*(Xw"\{\
+.               ie !"\\*(xw"\\*(RF" .tm ><INDEX:\\$1\t\\*(xw- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xw
+.               NU\}
+.el .ie "\\$1"\\*(Xx"\{\
+.               ie !"\\*(xx"\\*(RF" .tm ><INDEX:\\$1\t\\*(xx- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xx
+.               NU\}
+.el .ie "\\$1"\\*(Xx"\{\
+.               ie !"\\*(xx"\\*(RF" .tm ><INDEX:\\$1\t\\*(xx- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xx
+.               NU\}
+.el .ie "\\$1"\\*(Xy"\{\
+.               ie !"\\*(xy"\\*(RF" .tm ><INDEX:\\$1\t\\*(xy- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xy
+.               NU\}
+.el .ie "\\$1"\\*(Xz"\{\
+.               ie !"\\*(xz"\\*(RF" .tm ><INDEX:\\$1\t\\*(xz- \\*(RF
+.		el .tm ><INDEX:\\$1\t\\*(RF
+.               ds Xz
+.               NU\}
+.el .tm Entry "\\$1" - start not found.
+..
+.de XB  \" bold index entry; $1 = text of entry; 
+.tm ><INDEX:\\$1\t\\*(RF*
+..
+'\" These macros format the generated index entries.
+.de XF
+'\" Index Format Macro: $1= Formatting Code; $2 = Entry
+'\" $1= A = Alphabetic letter (A-Z); 1= 1st level; 2= 2nd level; 3= 3rd level
+'\" if $1= 1 $2 = bold key; $3 rest of entry in Roman.
+.ie '\\$1'1'\{\
+.ne 2
+.ti -4n
+.br
+.ie '\\$3' \fB\\$2\fR, \\$3
+.el \\$2
+.NU\}
+.el .ie '\\$1'2'\{\
+.br
+.ti -4n
+   \\$2
+.br
+.NU\}
+.el .ie '\\$1'3'\{\
+.br
+.ti -3n
+   \\$2
+.br
+.NU\}
+.el\{\
+.sp 2
+.ne 4
+.ti -4n
+\fB\t\\$2\fR
+.sp 1
+.NU\}
+..

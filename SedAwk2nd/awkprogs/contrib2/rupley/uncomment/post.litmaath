@@ -1,0 +1,37 @@
+Path: arizona!noao!ncar!unmvax!pprg.unm.edu!hc!lll-winken!uunet!mcvax!hp4nl!botter!star.cs.vu.nl!maart
+From: maart@cs.vu.nl (Maarten Litmaath)
+Newsgroups: comp.lang.c,comp.unix.wizards
+Subject: Sed wins! It IS possible to strip C comments with 1 sed command!
+Message-ID: <2186@solo11.cs.vu.nl>
+Date: 21 Mar 89 01:22:14 GMT
+References: <7150@siemens.UUCP> <9900010@bradley> <4221@omepd.UUCP> <981@philmds.UUCP> <982@philmds.UUCP>
+Organization: V.U. Informatica, Amsterdam, the Netherlands
+Lines: 120
+Xref: arizona comp.lang.c:17795 comp.unix.wizards:15880
+
+leo@philmds.UUCP (Leo de Wit) writes:
+\Can it be proven to be impossible (that is, deleting the comments
+\with one sed command - multi-line comments not considered) ?
+
+No, because the script below WILL do it. It won't touch "/*...*/" inside
+strings. Multi-line comments ARE considered and handled OK.
+One can either use "sed -f script" or "sed -n '<contents of script>'".
+After the script some test input follows (an awful but valid C program).
+Spoiler: the sequence
+
+	H
+	x
+	s/\n\(.\).*/\1/
+	x
+	s/.//
+
+deletes the first character of the pattern space and appends it to the hold
+space; this space contains the characters not to be deleted.
+----------8<----------8<----------8<----------8<----------8<----------
+
+[sed script deleted - moved to eatSed]
+
+-- 
+ Modeless editors and strong typing:   |Maarten Litmaath @ VU Amsterdam:
+   both for people with weak memories. |maart@cs.vu.nl, mcvax!botter!maart
+

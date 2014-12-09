@@ -1,0 +1,15 @@
+It is convenient to have a script that does a good bit of the option
+setting for nroff (or troff).  The settings are likely to be very system
+and user-specific.  Thus the attached is at best a framework or loose
+and kludgy model.
+
+Why awk?  Convenient pattern matching and string handling, which would
+be possible but more difficult in a pure shell script or in C code.
+Also, easy to modify, once the framework is there.
+
+
+John Rupley
+ uucp: ..{uunet | ucbvax | cmcl2 | noao}!arizona!rupley!local
+ internet: rupley!local@cs.arizona.edu
+ (H) 30 Calle Belleza, Tucson AZ 85716 - (602) 325-4533
+ (O) Dept. Biochemistry, Univ. Arizona, Tucson AZ 85721 - (602) 621-3929

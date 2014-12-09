@@ -1,0 +1,306 @@
+.\" masterindex 
+.de Ps
+.nf
+.ft CW
+.sp .5
+.ps 9
+..
+.de Pe
+.ps 10
+.fi
+.ft R
+.sp .5
+..
+.TH masterindex "30 November 1989"
+.SH NAME
+masterindex \- indexing program for single and multi-volume indexing. 
+.SH SYNOPSIS
+.B masterindex
+[
+.B \-master
+[
+.I " volume"
+]]  [
+.B \-page
+] [
+.B \-screen
+] [
+.IR filename ".\|.\|. ]" 
+.SH DESCRIPTION
+\f(CWmasterindex\fP generates a formatted index based 
+on structured index entries output by \f(CWtroff\fR.
+Unless you re-direct output, it comes to the screen. 
+.SH OPTIONS
+.TP
+.B \-m
+or \f(CW-master\fP indicates that you are 
+compiling a multi-volume index.
+The index entries for each volume should be in a single
+file and the filenames should be listed in
+sequence.  If the first file is not the first volume,
+then specify the volume number as a separate argument.
+The volume number is converted to a Roman numeral 
+and pre-pended to all the pages numbers of entries in 
+that file.
+.TP
+.B \-p
+or \f(CW-page\fP produces a listing of index entries for each page number.
+It can be used to proof the entries against hard
+copy.  
+.TP
+.B \-s
+or \f(CW-screen\fP specifies that the unformatted index 
+will be viewed on the "screen".  The default is to
+prepare output that contains \f(CWtroff\fR macros for 
+formatting.
+.SH "Background Details"
+Tim recommends \fIThe Joy of Cooking\fP index as an ideal
+index. I examined the "JofC"
+index quite thoroughly and set out to write a new indexing
+program that duplicated its features. 
+I did not wholly duplicate the JofC format as well but this could be
+done fairly easily if it is ever desired.
+Please look at the JofC index yourself to examine its features.
+
+I also tried to do a few other things to improve on the 
+previous index program and provide more support for the person
+coding the index. 
+.SH "Coding Index Entries"
+This section describes the coding of index entries in the document
+file.  We use the \&.XX macro for placing index entries in a file. 
+The simplest case is:
+.Ps
+\&.XX "entry"
+.Pe
+If the entry consists of primary and secondary sort keys, then
+we can code it as:
+.Ps
+\&.XX "primary, secondary" 
+.Pe
+A comma delimits the two keys.
+We also have a \&.XN macro for generating "See" references
+without a page number.  It is specified as:
+.Ps
+\&.XN "entry (See anotherEntry)"
+.Pe
+While these coding forms continue to work as they have,
+\f(CWmasterindex\fP provides greater flexibility: 
+it allows three levels of keys: primary, secondary and tertiary. 
+You'd specify the entry like so:
+.Ps
+\&.XX "primary: secondary; tertiary"
+.Pe
+Note that the comma is not used as a delimiter.
+A colon delimits the primary and secondary entry and
+the semicolon delimits the secondary and tertiary entry.
+This means that commas can be a part of key using this syntax. 
+Don't worry, though, you can continue to use a comma 
+to delimit the primary and secondary keys.  (Be aware that the
+first comma in a line is converted to a colon, if no
+colon delimiter is found.) 
+I'd recommend that new books be coded using the above syntax,
+even if you are only specifying a primary and secondary key.
+.LP
+Another feature is automatic rotation of primary and secondary
+keys if a tilde (~) is used as the delimiter.  Thus,
+the following entry
+.Ps
+\&.XX "cat~command"
+.Pe
+is equivalent to the following two entries:
+.Ps
+\&.XX "cat command"
+\&.XX "command: cat"
+.Pe
+You can think of the secondary key as a classification (command,
+attribute, function, etc.) of the primary entry.
+Be careful not to reverse the two, as "command cat" does
+not make much sense.
+To use a tilde in an entry, enter "~~".
+.LP
+I added a new macro XB that is the same as .XX except
+that the page number for this index entry will be output in bold
+to indicate that it is the most significant page number in a range.
+.Ps
+\&.XB "cat command"
+.Pe
+When \f(CWtroff\fR processes the index entries, it outputs the page
+number followed by an asterisk.   This is how it appears
+when output is seen in screen format.  When coded for \f(CWtroff\fR formatting,
+the page number is surrounded by the bold font change escape sequences. 
+By the way, in the JofC index, I
+noticed that they allowed having the same page number in Roman
+and in Bold.  Also, this page number will not be combined
+in a range of consecutive numbers.
+.LP
+One other feature of the JofC index is that the very first secondary key
+appears on the same line with the primary key.  The old index
+program placed any secondary key on the next line.  The one advantage of
+doing it the JofC way is that entries containing only one secondary
+key will be output on the same line and look much better.  Thus,
+you'd have "line justification, definition of" rather than having
+"definition of" indented on the next line.  The next secondary key
+would be indented.  Note that if the primary key exists as a separate
+entry (it has page numbers associated with it), the page references for
+the primary key will be output on the same line and the first secondary entry
+will be output on the next line. 
+.LP
+To re-iterate, while
+the syntax of the three-level entries is different, the index entry
+.Ps
+\&.XX "line justification, definition of"
+.Pe
+is perfectly valid and produces the same result as
+.Ps
+\&.XX "line justification: definition of"
+.Pe
+(The colon disappears in the output.)  Similarly, you could write
+an entry, such as 
+.Ps
+\&.XX "justification, lines, defined"
+.Pe
+or
+.Ps
+\&.XX "justification: lines, defined"
+.Pe
+where the comma between "lines" and "defined" does not serve as
+a delimiter but is part of the secondary key.
+.LP
+The previous example could be written as an entry with three
+levels.  
+.Ps
+\&.XX "justification: lines; defined"
+.Pe
+where the semicolon delimits the tertiary key.  The semicolon is
+output with the key and multiple tertiary keys may follow immediately
+after the secondary key.
+.LP 
+The main thing, though, is that page numbers are collected for
+all primary, secondary, and tertiary keys.  Thus, you could have
+output such as:
+.sp
+.in +4n
+  justification  4-9
+    lines 4,6; defined, 5
+.in -4n
+.sp
+.SH "Sorting"
+One advantage of the new syntax 
+is that sorting is more reliable.  The old program included
+the comma in the sort key, so you'd get
+anomalies in the sort.  The sort program was looking at the entry
+as a whole sequence, not really performing sorts based on the
+primary and secondary keys.  If this doesn't make sense to you,
+well, then, just take it for granted.
+.SH "Output Format"
+One thing I wanted to do that our previous program did not
+do is generate an index without
+the \f(CWtroff\fR codes. \f(CWmasterindex\fP has 3 output modes: \f(CWtroff\fR,
+screen and page.
+.LP
+The default output is intended for processing by \f(CWtroff\fR 
+(via \f(CWfmt\fP).  It contains macros that are defined in
+\fI/work/macros/current/indexmacs\fP.  These macros should
+produce the same index format as before, which was largely
+done directly through \f(CWtroff\fR requests.  Here's a few lines
+off the top:
+.Ps
+$ \f(CBmasterindex ch01\fP
+\&.so /work/macros/current/indexmacs
+\&.Se "" "Index"
+\&.XC
+\&.XF A "A"
+\&.XF 1 "applications, structure of  2;  program  1"
+\&.XF 1 "attribute, WIN_CONSUME_KBD_EVENTS  13"
+\&.XF 2 "WIN_CONSUME_PICK_EVENTS  13"
+\&.XF 2 "WIN_NOTIFY_EVENT_PROC  13"
+\&.XF 2 "XV_ERROR_PROC  14"
+\&.XF 2 "XV_INIT_ARGC_PTR_ARGV  5,6"
+.Pe
+The top two lines should be obvious.  The \f(CW.XC\fP macro
+produces multi-column output.  (It will print out in
+two columns for smaller books the page width is 's not smart enough to 
+take arguments specifying the width of columns but that 
+should be done.)  The \f(CW.XF\fP macro has 3 possible
+values for its first argument.  An "A" indicates that
+the second argument is a letter of the alphabet that
+should be output as a divider.  A "1" indicates that
+the second argument contains a primary entry.  A "2"
+indicates that the entry begins with a secondary entry,
+which is indented.
+.LP
+When invoked with the \f(CW-s\fP argument, the program
+prepares the index for viewing on the screen (or printing
+as an ASCII file).  Again, here are a few lines:
+.Ps
+$ \f(CBmasterindex -s ch01\fP
+
+		A
+applications, structure of  2;  program  1
+attribute, WIN_CONSUME_KBD_EVENTS  13
+  WIN_CONSUME_PICK_EVENTS  13
+  WIN_NOTIFY_EVENT_PROC  13
+  XV_ERROR_PROC  14
+  XV_INIT_ARGC_PTR_ARGV  5,6
+  XV_INIT_ARGS  6
+  XV_USAGE_PROC  6
+.Pe
+Obviously, this is useful for quickly proofing the index.
+The third type of format is also used for proofing the index.
+Invoked using \f(CW-p\fP, it
+provides a page-by-page listing of the index entries.
+.Ps
+$ \f(CBmasterindex -p ch01\fP
+
+Page 1
+ 	structure of XView applications
+	applications, structure of; program
+	XView applications
+	XView applications, structure of
+	XView interface
+	compiling XView programs
+	XView, compiling programs
+Page 2
+ 	XView libraries
+.Pe
+.SH "Compiling a Master Index"
+A multi-volume master index is 
+invoked by specifying \f(CW-m\fP option. 
+Each set of index entries for a particular volume must be
+placed in a separate file.
+.Ps
+$ \f(CBmasterindex -m -s book1 book2 book3\fP
+xv_init() procedure  II: 4; III: 5
+XV_INIT_ARGC_PTR_ARGV attribute  II: 5,6
+XV_INIT_ARGS attribute  I: 6
+.Pe
+Files must be specified in consecutive order.
+If the first file is not Volume 1, you can specify the number
+as an argument. 
+.Ps
+$ \f(CBmasterindex -m 4 -s book4 book5 \fP
+.Pe
+.SH FILES
+.PD 0
+.TP 20
+.B /work/bin/masterindex
+.B /work/bin/romanum 
+.B /work/bin/pagenums.idx
+.B /work/bin/combine.idx
+.B /work/bin/format.idx
+.B /work/bin/page.idx
+.B /work/bin/rotate.idx
+.B /work/macros/current/indexmacs
+.PD
+.SH "SEE ALSO"
+Note that these programs require "nawk" (new awk).
+.BR nawk (1),
+.BR sed (1V)
+.SH BUGS
+The new index program is modular, invoking a series of smaller programs. 
+This should allow me to connect different modules to implement
+new features as well as isolate and fix problems
+more easily.
+.LP
+Index entries should not contain any
+\f(CWtroff\fR font changes.  The program does not handle them. 

@@ -1,0 +1,67 @@
+:
+#\- reformat sys5 df report of file system usage
+#usage: %free [-i] [filesys_name | mounted_directory_name] [..] ..
+#report file system usage in more user-friendly format than df;
+#output is somewhat like that of bsd df:
+#FILESYS  KBYTES  USED  FREE  %FREE  INODES  IFREE  %IFREE  MOUNTED ON
+#                                    ^^^^^^^optional^^^^^^
+#options: -i -> output inode information also
+#	  filesys/dir list -> restrict output to members of list
+#examples:
+#	free -i /dev/dsk/0s2 /
+#	free
+#
+#j.a. rupley, tucson, arizona
+#rupley!local@cs.arizona.edu
+
+#first, take sys5 df output and combine it into one line per file system, as:
+#MOUNTED_ON FILESYS BLKS_USED INODES_USED BLOCKS_TOTAL INODES_TOTAL
+#(note-- some editing has to be done, so might as well clean the line well);
+#then throw the cleaned up df line into the output format you want, 
+#with header and summary lines
+
+#NOTE: set BYTES_PER_BLOCK (bytes/disk block) to value for your hardware
+
+BYTES_PER_BLOCK="512"
+
+if [ "x"$1 = "x-i" ]
+then
+	IPRINT="1"
+	shift
+fi
+
+df -t $* | 
+sed -e "s|/dev/dsk/| |g
+	N
+	s|\n[^0-9]*| |g
+	s|[():]||g
+	s|blocks||g
+	s|i-nodes||g
+	s|\ \{2,\}| |g" |
+awk '
+#if use BEGIN instead of NR == 1, get header output on df error
+NR == 1		{
+	kb_blk = bytes / 1000
+	if (iprint) printf "Filesys    kbytes    used    free  %%free  inodes   ifree  %%ifree  Mounted on\n"
+	else printf "Filesys    kbytes    used    free  %%free  Mounted on\n"
+}
+
+		{
+	blkavail += $3
+	blk += $5
+	ifree += $4
+	inodes += $6
+	if (iprint) printf "%-9s %7d %7d %7d   %3d%% %7d %7d  %5d%%  %-12s\n",
+		$2, $5 * kb_blk, ($5 - $3) * kb_blk, $3 * kb_blk, $3 * 100 /$5, $6, $4, $4 * 100 / $6, $1
+	else printf "%-9s %7d %7d %7d   %3d%%  %-12s\n",
+		$2, $5 * kb_blk, ($5 - $3) * kb_blk, $3 * kb_blk, $3 * 100 /$5, $1
+}
+
+END	{
+	if (NR > 1) {
+		if (iprint) printf "%-9s %7d %7d %7d   %3d%% %7d %7d  %5d%%\n",
+			"TOTAL", blk * kb_blk, (blk - blkavail) * kb_blk, blkavail * kb_blk, (blkavail * 100 / blk), inodes, ifree, (ifree * 100 / inodes)
+		else printf "%-9s %7d %7d %7d   %3d%%\n",
+			"TOTAL", blk * kb_blk, (blk - blkavail) * kb_blk, blkavail * kb_blk, (blkavail * 100 / blk)
+	}
+}' bytes=$BYTES_PER_BLOCK iprint=$IPRINT 

@@ -1,0 +1,329 @@
+:
+#	Unpackmaps Copyright 1990, Chris Lewis, All Rights Reserved
+trap "rm -f /tmp/unp?$$; exit" 0 1 2 3 15
+IFS="	 
+"
+export IFS
+PATH=/bin:/usr/bin
+export PATH
+
+#	The name of the file that you've caused your news system to
+#	batch the file names of the map articles.
+# Eg: C-news
+#BATCH=/usr/lib/news/batch/b.maps/togo
+#Modern C-news (directory other than /usr/spool/news/out.going)
+BATCH=/usr/spool/news/out.special/maps/togo
+# Eg: B-news
+#BATCH=/usr/spool/batch/maps
+#	News spool directory
+NEWSSPOOL=/usr/spool/news
+#	Where you want the maps to go.
+#	I like using /usr/spool/maps, but on our system, /usr/spool/news
+#	is a separate file system, and /usr runs close to the limit...
+MAPDIR=/usr/spool/news/maps
+#	Person to send results and error messages to
+NOTIFY=clewis
+#	pathalias binary
+PATHALIAS=/usr/lbin/pathalias
+#	where you want the path files to go:
+#	A convenient place is /usr/lib/uucp/paths which is the smail
+#	default.  If you're going to put this in /usr/lib/uucp, I suggest
+#	(rather than make /usr/lib/uucp writeable by everybody), doing
+#	the following:
+#		su root
+#		cd /usr/lib/uucp
+#		touch paths
+#		chown news paths	(or usenet)
+#		chmod 644 paths
+PATHFILE=/usr/lib/uucp/paths
+#	Auxiliary options to pathalias.  Tune to local tastes....
+PATHOPTS="-dwatmath"
+#	If you have a version[s] of your machine's map entry that is different 
+#	from what's published, change this variable to point at it/them.
+#	(Eg: I publish the first entry here, and the second one is local tuning
+#	and hidden connections)
+PATHLOCAL="/usr2/clewis/maps/path.local /usr2/clewis/maps/path.nonpublic"
+#	If this variable is set to the compress binary, maps will be
+#	compressed.
+COMPRESS=/usr2/clewis/maps/compress12
+#	1 to strip comments from maps - don't do this if you want to use
+#	uuwhere.  However, this is a great space saver...
+NOCOMMENTS=0
+#	Define to the name of a file where you want the where database
+#	to be kept.  Undef if you don't want uuwhere at all.
+WHEREFILE=$MAPDIR/where.db
+#	Uncomment this if you want the map unpacker to remove the
+#	News articles after the maps have been extracted from them.
+#	DO NOT DO THIS IF YOU FORWARD MAP ARTICLES TO OTHER SITES!
+#	This also relies on your awk returning "exit" codes properly.
+#	Yours may not...
+#UNLINK=1
+#	PS: there is *one* possible edit that you might want to make
+#	below - the maps used to generate wierd domains, but most of that
+#	appears to be gone now (don't ask me, I never particularly understood
+#	it, but since Peter Honeyman recommended it...).  If you object
+#	to these wierd domains, uncomment the egrep.
+
+#	Edit no more....
+
+umask 022
+
+if test ! -d $MAPDIR -o ! -w $MAPDIR
+then
+    echo "$MAPDIR missing, unwritable or not a directory" >&2
+    exit 1
+fi
+
+if test $# = 1
+then
+    case $1 in
+	-p)
+	    forcepath=true
+	    ;;
+	-P)
+	    forcepath=false
+	    ;;
+	-i)
+	    cd /
+	    rm -f $BATCH.work
+	    # using find/sort instead of ls just in case there's lots of
+	    # articles....
+	    find $NEWSSPOOL/comp/mail/maps -type f -print | sort > $BATCH
+	    ;;
+	*)
+	    echo "usage: unpackmaps [-i] [-p]" >&2
+	    exit 1
+	    ;;
+    esac
+fi
+
+cd $MAPDIR
+WHERETMP=/tmp/WHERE$$
+rm -f $WHERETMP
+	    
+while test -f $BATCH -o -f $BATCH.work
+do
+    # There is no window of vulnerability here as long as noone else is
+    # creating $BATCH.work.
+    if test ! -f $BATCH.work
+    then
+	mv $BATCH $BATCH.work
+    fi
+
+    while read i stuff
+    do
+	#	Using stuff to capture remaining junk on line.
+	#	Eg: C-news article sizes.
+
+	if test -z "$i"
+	then
+	    break
+	fi
+
+	if test ! -r $i
+	then
+	    echo "$i apparently superseded or expired"
+	    continue
+	fi
+
+	# This awk script depends on the following map article format:
+	# <don't cares>
+	# cat << 'something' > filename
+	# map body
+	# something
+	# <don't cares>
+	# "something" doesn't have to be enclosed in quotes in the cat line.
+	# This isn't particularly fast - could be dramatically speeded up
+	# if written in C, but I was trying to ensure that this is as simple
+	# and self-evident as possible.
+
+	awk '
+	BEGIN	{
+		where = "'"$WHEREFILE"'"
+	    }
+	$1 == "cat" && collecting == 0 {
+		recno = 1
+		endtoken=$3;
+		if (substr(endtoken, 1, 1) == "'"'"'")
+		    endtoken=substr(endtoken, 2, length(endtoken)-2);
+		collecting = 1;
+		foundone = 1;
+		name = $5;
+		if (index(name, "/") != 0) {
+		    printf("Security violation attempt in %s!\n", "'$i'");
+		    exit 1;
+		} else
+		    printf("extracting %s from %s\n", name, "'$i'");
+		next;
+	    }
+
+	    {
+		if (!collecting)
+		    next;
+		if ($1 == endtoken) {
+		    line = "rm -f " name ".Z"
+		    print "" | line
+		    collecting = 0;
+		    next
+		}
+		if ($1 ~ /^#N/ && where) {
+		    for (i = 2; i <= NF; i++) {
+			sname = $i
+			if (p = index(sname, ","))
+			    sname = substr(sname, 1, p-1)
+			printf "@%s %s %d\n", sname, name, recno >> \
+			    "'$WHERETMP'";
+		    }
+		}
+		if ("'$NOCOMMENTS'" == 1 && $0 ~ /#/)
+		    print substr($0, 1, index($0, "#")) > name
+		else {
+		    print $0 > name
+		}
+		recno++
+	    }
+	    
+	    END {
+		if (collecting) {
+		    printf("Non-terminated map in %s\n", "'$i'");
+		    exit 1;
+		}
+		if (!foundone) {
+		    printf("%s does not contain a properly formed map\n", "'$i'");
+		    exit 1;
+		}
+	    }' $i
+
+	if test $? = 0 -a -n "$UNLINK"
+	then
+	    rm -f $i
+	fi
+
+    done < $BATCH.work
+    rm $BATCH.work
+done > /tmp/unpA$$ 2>&1
+
+if test -n "$COMPRESS"
+then
+    files=`ls ?.* | sed -e '/\.Z$/d'`
+    if test -n "$files"
+    then
+	$COMPRESS -f $files
+    fi
+fi
+
+if test -f "$PATHALIAS" -a "$forcepath" != false
+then
+    if test -s /tmp/unpA$$ -o "$forcepath" = true
+    then
+	cd $MAPDIR
+
+	(
+	if test -n "$COMPRESS"
+	then
+	    $COMPRESS -dc [ud].*.Z | cat - $PATHLOCAL
+	else
+	    cat [ud].* $PATHLOCAL
+	fi |
+
+	$PATHALIAS -f $PATHOPTS |
+
+	# format of the pathalias -f output is
+	# cost	host	route
+	#
+	# format of a 'paths' file for smail is
+	# host	route	first_hop_cost
+	#
+	# move cost field to end of line:
+
+	sed 's/\(.*\)	\(.*\)	\(.*\)/\2	\3	\1/' |
+
+	# convert target domain/host to lower case:
+
+	#lcasep |
+	
+	# remove some additional wierdnesses (per Peter Honeyman):
+	# You can leave it in or not.
+
+	# egrep -v '(\.(com|edu|mil|gov|net|org|arpa|[a-z][a-z])	.*!.*!)|(.\.(com|edu|mil|gov|net|org|arpa|[a-z][a-z])	)' |
+
+	# sort the stream:
+	
+	sort > /tmp/paths ) > /tmp/unpB$$ 2>&1
+
+	if test ! -s /tmp/paths
+	then
+	    echo "Pathalias failed no map file created" >> /tmp/unpB$$
+	else
+	    cat /tmp/paths > $PATHFILE 2>> /tmp/unpB$$
+	    if test $? != 0
+	    then
+		echo "Copy to $PATHFILE failed" >> /tmp/unpB$$
+	    else
+		rm /tmp/paths
+	    fi
+	    echo "Map remade" >> /tmp/unpB$$
+	    ls -l $PATHFILE >> /tmp/unpB$$
+	fi
+
+	if test -s /tmp/unpB$$
+	then
+	    echo "Pathalias output:" >> /tmp/unpA$$
+	    cat /tmp/unpB$$ >> /tmp/unpA$$
+	fi
+    fi
+fi
+
+if test -n "$WHEREFILE" -a -s $WHERETMP
+then
+    if test ! -f $WHEREFILE
+    then
+	touch $WHEREFILE
+    fi
+
+    # First awk: throws away WHERE references in $WHEREFILE that
+    #	are now in $WHERETMP
+    # Sort: sort by site name
+    # Second awk: coalesce references to same site/file to one line.
+    awk '
+	BEGIN {
+	    mapseen[""] = 1
+	}
+	$1 ~ /^@/ {
+	    printf("%s %s %s\n", substr($1, 2), $2, $3);
+	    mapseen[$2] = 1
+	    next;
+	}
+	{
+	    if (mapseen[$2])
+		next
+	    printf("%s %s %s\n", $1, $2, $3);
+	}' $WHERETMP $WHEREFILE | 
+	sort | 
+	awk '
+	{
+	    if (site != $1 || map != $2) {
+		if (site)
+		    printf("\n");
+		site = $1
+		map = $2
+		printf("%s %s %s", $1, $2, $3);
+	    } else
+		printf(",%s", $3);
+	}
+	END {
+	    printf("\n");
+	}' > /tmp/TMP2
+    
+    if test -s /tmp/TMP2
+    then
+	cat /tmp/TMP2 > $WHEREFILE
+    fi
+    echo "Where database ($WHEREFILE) rebuilt" >> /tmp/unpA$$
+fi
+rm -f /tmp/TMP2 $WHERETMP
+
+if test -s /tmp/unpA$$
+then
+    mail $NOTIFY < /tmp/unpA$$
+fi

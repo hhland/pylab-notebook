@@ -686,3 +686,174 @@ OSError: [Errno 2] No such file or directory
 [I 17:37:15.063 NotebookApp] Kernel started: 391b43eb-ddd4-4ebb-9f3c-485a391191ad
 [I 17:37:48.178 NotebookApp] Saving notebook at /ThinkPython/Fruitful Functions.ipynb
 [I 17:38:48.661 NotebookApp] Saving notebook at /ThinkPython/Lists.ipynb
+[I 17:55:22.171 NotebookApp] Saving notebook at /shell.ipynb
+[I 09:32:42.311 tornado.access] 302 GET / (124.160.105.37) 41.49ms
+[I 09:34:36.983 NotebookApp] Creating new notebook in /EffectiveAwkProgramming3rd/
+[I 09:34:37.501 NotebookApp] Kernel started: d7a6db2e-0279-42ec-9a10-f3922dc38e03
+[I 09:36:37.465 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 09:38:37.495 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 09:42:04.400 NotebookApp] Creating new notebook in /EffectiveAwkProgramming3rd/
+[I 09:42:04.820 NotebookApp] Kernel started: 9fb1f928-8ac2-4621-823b-7682209377c0
+[I 09:42:37.479 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 09:43:14.101 NotebookApp] Kernel shutdown: f3e4b654-94b9-462e-b29e-0e8c7cafe580
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 34, in run
+<type 'exceptions.TypeError'>: 'NoneType' object is not callable
+[I 09:43:15.642 NotebookApp] Kernel shutdown: cbaf0499-ca98-4e5d-9c03-8f4b22b0294a
+[I 09:43:17.298 NotebookApp] Kernel shutdown: 3be8f2a6-fb62-4865-9d48-82d11bb474ca
+[I 09:43:18.849 NotebookApp] Kernel shutdown: 9956633b-9022-498e-919a-50486388763e
+[I 09:43:19.926 NotebookApp] Kernel shutdown: 427f42d8-342b-49c0-a754-73e0f3d4b067
+[I 09:43:27.462 NotebookApp] Kernel shutdown: 39e7cc00-fb6a-4074-bccb-b8c1779b9d00
+---------------------------------------------------------------------------
+OSError                                   Traceback (most recent call last)
+/usr/lib/python2.7/atexit.pyc in _run_exitfuncs()
+     22         func, targs, kargs = _exithandlers.pop()
+     23         try:
+---> 24             func(*targs, **kargs)
+        func = <function shutdown at 0x7f5de18235f0>
+        targs = ()
+        kargs = {}
+     25         except SystemExit:
+     26             exc_info = sys.exc_info()
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in atexit_operations(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>)
+   3221 
+   3222         # Clear all user namespaces to release all references cleanly.
+-> 3223         self.reset(new_session=False)
+        self.reset = <bound method ZMQInteractiveShell.reset of <IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object at 0x2bb9110>>
+        global new_session = undefined
+        global False = undefined
+   3224 
+   3225         # Run user hooks
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc in reset(self=<IPython.kernel.zmq.zmqshell.ZMQInteractiveShell object>, new_session=False)
+   1221         """
+   1222         # Clear histories
+-> 1223         self.history_manager.reset(new_session)
+        self.history_manager.reset = <bound method HistoryManager.reset of <IPython.core.history.HistoryManager object at 0x2bb9810>>
+        new_session = False
+   1224         # Reset counter used to index all histories
+   1225         if new_session:
+
+/usr/local/lib/python2.7/dist-packages/IPython/core/history.pyc in reset(self=<IPython.core.history.HistoryManager object>, new_session=False)
+    537         self.output_hist.clear()
+    538         # The directory history can't be completely empty
+--> 539         self.dir_hist[:] = [py3compat.getcwd()]
+        self.dir_hist = [u'/d/git/mypylab/sympy']
+        global py3compat.getcwd = <built-in function getcwdu>
+    540         
+    541         if new_session:
+
+OSError: [Errno 2] No such file or directory
+[I 09:43:28.505 NotebookApp] Kernel shutdown: 289b5c35-0e7d-4b35-92ef-4dc445aa367b
+[I 09:43:29.668 NotebookApp] Kernel shutdown: a939107c-a07b-4f25-a354-a094445a36f3
+[I 09:43:30.860 NotebookApp] Kernel shutdown: 391b43eb-ddd4-4ebb-9f3c-485a391191ad
+[I 09:43:32.350 NotebookApp] Kernel shutdown: d7a6db2e-0279-42ec-9a10-f3922dc38e03
+[I 09:43:33.244 NotebookApp] Kernel shutdown: 9fb1f928-8ac2-4621-823b-7682209377c0
+[W 09:43:46.874 NotebookApp] Kernel does not exist: d7a6db2e-0279-42ec-9a10-f3922dc38e03
+[W 09:43:46.874 tornado.access] 404 POST /api/kernels/d7a6db2e-0279-42ec-9a10-f3922dc38e03/interrupt (124.160.105.37) 1.38ms referer=http://115.29.243.145:8686/notebooks/EffectiveAwkProgramming3rd/Getting%20Started%20with%20awk.ipynb
+[W 09:43:49.730 NotebookApp] Kernel does not exist: d7a6db2e-0279-42ec-9a10-f3922dc38e03
+[W 09:43:49.731 tornado.access] 404 POST /api/kernels/d7a6db2e-0279-42ec-9a10-f3922dc38e03/interrupt (124.160.105.37) 1.79ms referer=http://115.29.243.145:8686/notebooks/EffectiveAwkProgramming3rd/Getting%20Started%20with%20awk.ipynb
+[I 09:43:56.948 NotebookApp] Kernel started: 40f5e271-9cff-4c39-ab48-6fe8a3973d6d
+[I 09:45:56.952 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 09:46:25.480 NotebookApp] Creating new notebook in /SedAwk2nd/
+[I 09:46:25.948 NotebookApp] Kernel started: 73a18484-eaf1-40cf-912b-05c200f7355a
+[W 09:59:36.411 tornado.general] error on read
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 404, in _handle_read
+        if self._read_to_buffer() == 0:
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 460, in _read_to_buffer
+        chunk = self.read_from_fd()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 696, in read_from_fd
+        chunk = self.socket.recv(self.read_chunk_size)
+    error: [Errno 110] Connection timed out
+[W 09:59:42.555 tornado.general] error on read
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 404, in _handle_read
+        if self._read_to_buffer() == 0:
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 460, in _read_to_buffer
+        chunk = self.read_from_fd()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 696, in read_from_fd
+        chunk = self.socket.recv(self.read_chunk_size)
+    error: [Errno 110] Connection timed out
+[W 09:59:46.651 tornado.general] error on read
+    Traceback (most recent call last):
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 404, in _handle_read
+        if self._read_to_buffer() == 0:
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 460, in _read_to_buffer
+        chunk = self.read_from_fd()
+      File "/usr/local/lib/python2.7/dist-packages/tornado/iostream.py", line 696, in read_from_fd
+        chunk = self.socket.recv(self.read_chunk_size)
+    error: [Errno 110] Connection timed out
+[I 11:32:41.394 NotebookApp] Creating new notebook in /MATLABMatrixAlgebra/
+[I 11:32:41.829 NotebookApp] Kernel started: 46806ce6-c6f6-4799-b4d2-9a53ea7bed19
+[I 11:34:41.852 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 1 Matrix and Vector Variables (Numeric and Symbolic).ipynb
+[I 11:36:41.869 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 1 Matrix and Vector Variables (Numeric and Symbolic).ipynb
+[I 11:38:41.845 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 1 Matrix and Vector Variables (Numeric and Symbolic).ipynb
+[I 11:40:41.847 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 1 Matrix and Vector Variables (Numeric and Symbolic).ipynb
+[W 12:47:39.888 NotebookApp] Notebook example/erlang.ipynb is not trusted
+[I 12:47:40.174 NotebookApp] Kernel started: 6fdc3c6e-7cc6-4da6-b6d6-34f57e3e16d7
+[I 12:49:40.195 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 14:45:40.069 tornado.access] 302 GET / (124.160.105.37) 0.95ms
+[I 14:46:29.277 NotebookApp] Kernel shutdown: 40f5e271-9cff-4c39-ab48-6fe8a3973d6d
+[I 14:46:30.334 NotebookApp] Kernel shutdown: 73a18484-eaf1-40cf-912b-05c200f7355a
+[I 14:46:31.505 NotebookApp] Kernel shutdown: 46806ce6-c6f6-4799-b4d2-9a53ea7bed19
+[I 14:46:33.727 NotebookApp] Kernel shutdown: 6fdc3c6e-7cc6-4da6-b6d6-34f57e3e16d7
+[I 14:46:37.633 NotebookApp] Kernel started: 986ee90a-a775-4483-b74c-a31db8598204
+[I 14:48:27.453 NotebookApp] Creating new notebook in /MATLABMatrixAlgebra/
+[I 14:48:27.984 NotebookApp] Kernel started: c29e31b6-95b9-41ee-a142-2e7ddebae5ef
+[I 14:48:37.666 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 1 Matrix and Vector Variables (Numeric and Symbolic).ipynb
+[I 14:50:28.114 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 14:52:27.982 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 14:54:27.989 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 14:56:27.979 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 14:58:27.973 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:00:28.661 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:02:28.622 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:04:28.645 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:06:28.621 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:07:43.528 NotebookApp] Kernel shutdown: 986ee90a-a775-4483-b74c-a31db8598204
+[I 15:07:45.826 NotebookApp] Kernel started: 273af21c-8e17-4258-a2ac-4845f3e52879
+[I 15:08:06.310 NotebookApp] Kernel shutdown: c29e31b6-95b9-41ee-a142-2e7ddebae5ef
+[W 15:08:11.046 NotebookApp] Kernel does not exist: c29e31b6-95b9-41ee-a142-2e7ddebae5ef
+[W 15:08:11.046 tornado.access] 404 POST /api/kernels/c29e31b6-95b9-41ee-a142-2e7ddebae5ef/restart (124.160.105.37) 1.25ms referer=http://115.29.243.145:8686/notebooks/MATLABMatrixAlgebra/Chapter%202%20Matrix%20Algebra.ipynb
+[I 15:08:33.768 NotebookApp] Kernel shutdown: 273af21c-8e17-4258-a2ac-4845f3e52879
+[I 15:08:38.688 NotebookApp] Kernel started: 060540ca-c15c-44c8-91c5-8de6c19124dd
+[I 15:10:38.735 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:12:38.662 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:14:38.674 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:16:38.661 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:18:38.673 NotebookApp] Saving notebook at /MATLABMatrixAlgebra/Chapter 2 Matrix Algebra.ipynb
+[I 15:22:53.772 NotebookApp] Kernel started: 89260f91-1337-4b4d-866c-d993dd0e7d41
+[I 15:24:54.574 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 15:30:54.631 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 15:32:54.652 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 15:34:54.633 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 15:36:54.633 NotebookApp] Saving notebook at /example/erlang.ipynb
+[I 16:40:54.507 tornado.access] 302 GET / (124.160.105.37) 0.91ms
+[I 16:41:20.197 NotebookApp] Kernel started: e02efcd3-6f8e-47a5-93c6-5846ed2a5e80
+[I 16:43:20.210 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 16:51:20.177 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[W 16:53:17.410 tornado.access] 404 GET /8686 (123.249.26.221) 50.16ms referer=None
+[W 16:53:17.420 tornado.access] 404 GET /8686 (123.249.26.221) 1.03ms referer=None
+[I 16:53:20.165 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 16:55:20.181 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 16:57:20.168 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 16:59:20.151 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:01:20.187 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:03:20.184 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:05:20.140 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:07:20.142 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:09:20.138 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:11:20.130 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:13:20.137 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:15:20.126 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:17:20.166 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:19:20.127 NotebookApp] Saving notebook at /SedAwk2nd/2 Understanding Basic Operations.ipynb
+[I 17:19:48.419 NotebookApp] Creating new notebook in /SedAwk2nd/
+[I 17:19:48.736 NotebookApp] Kernel started: e999e9c3-0f4a-4f48-8f12-02b48e9f2191
+[I 17:20:37.618 NotebookApp] Creating new notebook in /SedAwk2nd/
+[I 17:20:37.933 NotebookApp] Kernel started: f0e32f1c-9bef-45a6-bb90-ff993d58dafe
+[I 17:21:12.264 NotebookApp] Kernel started: b61518af-1b68-4439-82de-abc5f555f029

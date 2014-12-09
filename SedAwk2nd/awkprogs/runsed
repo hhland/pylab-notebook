@@ -1,0 +1,19 @@
+for x
+do 
+echo "editing $x: \c"
+if test "$x" = sedscr; then
+	echo "not editing sedscript!"
+elif test -s $x; then
+	sed -f sedscr $x > /tmp/$x
+	if test -s /tmp/$x
+	then
+	cmp -s $x /tmp/$x && echo "file not changed: \c"; 
+		cp /tmp/$x $x; echo "done"
+	else
+	echo "sed produced an empty file."
+	fi
+else
+	echo "original file is empty"
+fi
+done
+echo "all done"

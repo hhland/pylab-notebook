@@ -1,0 +1,15 @@
+:
+# index.edit -- compile list of index entries for editing
+#		new version that matches metacharacters
+grep "^\.XX" $* | sort -u |
+sed '
+h
+s/[][\\*.]/\\&/g
+x
+s/[\\&]/\\&/g
+s/^\.XX //
+s/$/\//
+x
+s/^\\\.XX \(.*\)$/\/^\\.XX \/s\/\1\//
+G
+s/\n//'

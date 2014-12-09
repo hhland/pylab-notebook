@@ -1,0 +1,33 @@
+The following files are found in this directory:
+
+README --  this file.
+acronyms -- program to read and substitute acronyms; Chapter 7 & 8.   
+awkro -- acronym processor from Chapter 8.
+bitmap.awk -- awk script that demonstrates multi-dimensional arrays; Chapter 8.
+contrib/ -- subdirectory containing programs from Chapter 12.
+contrib2/ -- subdirectory containing additional contributed programs.
+date-month -- convert numeric month to name of month; Chapter 8.
+do.outline.awk -- awk script to create numbered outline.
+do.outline.sed -- sed script to extract outline from document; Chapter 4.
+factorial -- program to derive factorials; Chapter 8.
+filesum -- program to list size of files in directory; Chapter 7.  
+getmac -- program for extracting troff macro definitions; Chapter 4.
+glossary -- sample glossary file for lookup program.
+grades.awk -- script to average student grades; Chapter 8.
+gres -- sed script for command line substitution command; Chapter 3.
+index.edit -- sed script for correcting index entries; Chapter 5.
+index/ -- subdirectory that contains index programs in Chapter 11.
+invoke -- nawk menu-based command generator; Chapter 10.
+lookup -- program to read glossary file and print definition; Chapter 8.
+lotto  -- quick-pick lottery program; Chapter 9.
+match -- nawk program that outputs string matched by regular expresssion; Chapter 9.
+phone -- nawk program that looks up phone number; Chapter 8.
+phones.data -- data file for phone program.
+phrase -- sed script to match more than one word over more than one line; Chapter 6.
+romanum -- decimal to Roman numeral conversion; Chapter 8.
+runsed -- shell script to invoke sed; Chapter 4.
+sedman -- sed script to strip nroff'd man pages; Chapter 5. 
+soelim.awk -- nawk script that simulates soelim program; Chapter 10.
+spellcheck -- shell script that involves spellcheck.awk; Chapter 11.
+spellcheck.awk -- nawk script for interactive spellchecker; Chapter 11.
+words -- awk program for stripping macros prior to word count; Chapter 10.

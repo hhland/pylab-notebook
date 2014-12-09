@@ -1,0 +1,6 @@
+#\- build and execute an nroff command 
+#usage: %[pipe commands|] roff [{.|+}long.man.lp.lp1.null.rup] [opts] [files]
+#j.a. rupley, tucson, arizona
+#rupley!local@cs.arizona.edu
+
+/usr/bin/awk -f /usr/local/words/new/roff.awk "DDD=$*"

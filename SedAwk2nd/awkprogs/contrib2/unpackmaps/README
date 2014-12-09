@@ -1,0 +1,165 @@
+			UNPACKMAPS V3.0
+			  May 14 1990
+			  Chris Lewis
+
+    This README, unpackmaps and uuwhere are Copyright 1990 Chris Lewis,
+    All Rights Reserved.
+
+    You can do anything you want with it, provided that this copyright
+    notice remains intact, you don't claim you wrote it yourself, and you 
+    don't make money selling it directly.  You may redistribute this as
+    you wish, but if you modify it, you should clearly indicate in this
+    README file that it has been modified, by whom, and describe what
+    has been changed.  Reasonable copying charges are okay.
+
+    Though I have taken pains to ensure that this program is reasonably 
+    reliable and secure, I cannot make any warrantee as to the reliability 
+    or security of this software when used on any computer.  It is up to
+    the user of this software to determine its suitability for their
+    purposes and take responsibility for its operation.
+
+This is source for a simple, *secure*, map unpacking facility.
+
+It is much simpler than uuhosts, has roughly the same functionality,
+is easier to install, probably faster and more efficient (at least
+the versions I've seen w.r.t. compression), and is considerably less 
+vulnerable to trojan maps than most map unpackers that other people use.
+(It has fewer vulnerabilities than uuhosts)
+
+The intent is that any UNIX/XENIX/BSD system that can run news will
+be able to run this too, so I'm attempting to keep to greatest-common-
+denominator except for pathalias and things that I implement myself.
+
+This release includes:
+
+	- map unpacking
+	- pathalias operation plus hooks for path customization.
+	- a mechanism for viewing map entries for arbitrary sites.
+	  ("uuwhere")
+	- automatic map article deletion if desired.
+
+This had been posted to comp.sources.misc about a year ago.  The
+prime differences here are that compress is run as a pipeline as stdin to
+pathalias, so you don't need to modify pathalias anymore, and the
+new "uuwhere" tool.  There is still no makefile because it wouldn't
+do anything useful.
+
+Regarding security: as many may remember, there's been a fair bit of
+discussion on security of map unpacking on the net.  Rather than play
+around with trying to make a secure *true* unshar, which probably noone would
+trust because it would be so big, I simply made a few simplifying assumptions
+about the map format and use an awk script to unpack a map article into
+a map file.  It checks for and refuses to unpack articles which have
+slashes in their names.  I sent off some mail to Mel asking whether the
+assumptions I've made about map format are true, but never got any
+response.  I believe that this is *pretty* secure, in that it doesn't
+have to be run as root, doesn't use the Bourne shell for unpacking, and 
+is careful about the file names it creates.  Please let me know if there 
+are any holes I didn't think of.
+
+General operation:
+	- your news is modified to batch incoming map article file names
+	  to a specific batch file (analogous to normal news batching).  
+	  C-news users take note: you may have to utter magic incantations 
+	  (hint "classes" in C-news Alpha) to get sendbatches to avoid 
+	  trying to uux these...  Another way is to use an explicit batch 
+	  file name in the sys file that isn't under the usual "out.going"
+	  directories and point unpackmaps at it.
+	- unpackmaps wakes up, usually once per day, and extracts the
+	  maps specified (if any) in the batch file into the map directory.
+	  Maps are extracted using a secure awk script without resort
+	  to setuid root or other wierdnesses.  If you want the uuwhere
+	  facility, unpackmaps will extract site->map file correspondences.
+	- If any maps were extracted, pathalias is fired off, and the 
+	  resultant file put in the place specified.
+	- If you've specified uuwhere, the where database will be regenerated.
+	- if anything was done, unpackmaps sends you mail telling you
+	  what happened.
+
+Installation:
+	- If you want to compress the stored map files, set the COMPRESS
+	  variable to point your compress program.  You should be using
+	  compress versions 3 or 4.  A copy will have come with your
+	  news software.
+
+	- I STRONGLY recommend that you build a special version of compress
+	  with 12 bit compression instead of 16 for this.  When this
+	  is done, compress is considerably smaller (eg: bss of 32K instead
+	  of 400K+).  The reason for this is obvious - pathalias is enormous
+	  when it's running, and so is a 16 bit compress.  God help you if
+	  it starts to swap.
+
+	  Advantages:
+		- the whole thing runs considerably faster
+		- much less swap/paging
+		- on our machine, 16 bit compress practically hangs
+		  everyone else when run at the same time as pathalias.
+
+	  Disadvantages:
+		- the map directory is 10% (really!  only 10%!) bigger.
+
+	  What I did was the following:
+		- go to the source directory for compress
+		- remove the binary if it is there.
+		- say:
+			make compress CFLAGS=-DUSERMEM=0
+		- rename this to something like /usr/bin/compress12
+		- make sure that uuwhere and unpackmaps shell scripts
+		  have the same name.  Eg: /usr/bin/compress12
+
+	- edit unpackmaps to set the variables at the beginning of
+	  the shell script.  Note especially the batch file name
+	  (see below)
+	- make the directory for the map files, owned by news.
+	- put unpackmaps in a suitable place.  Eg: /usr/lib/news
+	- put uuwhere in a suitable place.  Eg: /usr/local/bin.
+	- unpackmaps should be run from the userid that owns and runs news.
+	- su to the news userid, and run:
+		unpackmaps -i
+	  This will build the initial path file.
+	- insert into your crontab something like:
+	    30 3 * * * /bin/su news -c "<path to unpackmaps>/unpackmaps > /dev/null"
+	- insert into your news sys file something like:
+
+	    (C-news)
+
+	    maps:comp.mail.maps/all:f:/usr/spool/news/out.special/maps
+
+	    (B-news)
+
+	    maps:world,comp.mail.maps:F:/usr/spool/batch/maps
+
+	- copy uuwhere to an accessible bin directory after modifying
+	  the configuration section at the beginning.
+    
+uuwhere "sitename" will give you the map name and line numbers where
+the site is defined (with #N comments).  Adding a -v option will
+invoke compress (if necessary) and show you the map entry itself.
+The uuwhere mechanism *only* works using the "#N" entries, and will
+not search for macro reassignments and other namings.  One other drawback
+is that uuwhere won't display whole map files directly, but that was
+never particularly useful anyways.
+
+unpackmaps -i: will extract all map articles into the map spool area - useful
+for the first time you use it.
+
+unpackmaps -p: runs pathalias even if no map articles were extracted.
+
+In order to push the paths file into /usr/lib/uucp, I created a file called
+paths in /usr/lib/uucp, with 644 permissions, owned by the userid that runs
+unpackmaps.
+
+The package will send mail to who you specify indicating which maps were
+unpacked, and any error returns from pathalias.
+
+The uuwhere database is built from the maps as they are unpacked.  After
+installation, it may take a while for the where database to be complete.
+(same as for path files themselves too).  I have implemented a binary
+search routine to make uuwhere go faster, but frankly, the sed's fast
+enough on all but the slowest machine.
+
+Let me know of any changes you needed to make to get this to work.
+I'm also open to suggestions for new features....
+----------
+Chris Lewis, Markham, Ontario, Canada
+{uunet!attcan,utgpu,yunexus,utzoo}!lsuc!{ecicrl|eci386}!clewis

@@ -1,0 +1,41 @@
+/*
+ * tests for ``uncomment''
+ * assume C-code conventions:
+ * 	strings start and end on one line
+ * 		(but allow for strings with newline escaped)
+ * 	comments can be multi-line
+ * 	allow varieties of:	'"'   '\"'   etc
+ * all lines are related to correct C code
+ */
+string1		"/*\"hi there\"*/"
+string2		"/*hi \"there*/"
+string3		"/*hi there\"*/"
+string4		"\"/*hi there*/\""
+string5		"hi\
+		/*\*/ /**/\
+		there"
+string8		'"'"/*hi there*/"
+comment2		/*\"hi there"*/"*/"
+comment3		/*\"hi there*/
+comment4		/* hello/*hello/*hello/*hello*/
+comment5		/*******/
+comment6		/*/*/ a /**/ b /***/ c /****/ d /*////*/
+comment7		/*/*// a /**// b /***// c /****// d /*////*//
+comment9		'"' /*\*/ hi there /**/ '"'
+comment8		'\"' /*\*/ hi there /**/ '\"'
+comment11		'\''"' /*\*/ hi there /**/ '\'''"
+comment13		'\123'"' /*\*/ hi there /**/ '\123'"
+comment13		'\x23'"' /*\*/ hi there /**/ '\x23'"
+
+1. /*****//"hello world */"				ok   /"hello world */"
+2. /* hello /* /* world */				ok	
+3. /* */ hello /* */					ok	hello
+4. /**// /* this should produce "/ \n" for output */	ok	/ 
+5. /* */ hello */					ok	hello */
+6. /*/*/ hello						ok	hello
+7. /*////*/						ok	
+8. /*//*/						ok	
+9. abc = "/* fake comment"; /* got who ? */		ok	abc = "STRING";
+10. /*   "start quote
+	"then next line end quote, after more characters than on line 1"
+	more more more */  "				ok	"

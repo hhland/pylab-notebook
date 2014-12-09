@@ -1,0 +1,19 @@
+echo $1 | 
+awk '# romanum -- convert number 1-10 to Roman numeral"
+
+# define romanlist as list of roman numerals 1-10
+BEGIN { 
+	romanlist = "I,II,III,IV,V,VI,VII,VIII,IX,X"
+	# create array named numerals from romanlist
+	split(romanlist,numerals,",")
+}
+
+# look for number between 1 and 10
+$1 > 0 && $1 < 10 {
+	# print specified element
+	print numerals[$1]
+	exit
+	}
+{ 	print "invalid number"
+  	exit
+}' - 
