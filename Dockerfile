@@ -11,10 +11,13 @@ WORKDIR /d/download
 #R
 RUN wget http://cran.rstudio.com/src/base/R-3/R-$R_VERSION.tar.gz && tar -xvf R-$R_VERSION.tar.gz && cd R-$R_VERSION && ./configure && make && make install 
 
+
 #octave
 #RUN wget ftp://ftp.gnu.org/gnu/octave/octave-$OCTAVE_VERSION.tar.gz && tar -xvf octave-$OCTAVE_VERSION.tar.gz && cd octave-$OCTAVE_VERSION && ./configure && make && make install 
 
-RUN pip install numpy scipy matplotlib sympy pandas oct2py rpy2 cython
+RUN pip install numpy scipy matplotlib sympy pandas oct2py  cython
+
+RUN wget https://pypi.python.org/packages/source/r/rpy2/rpy2-2.5.2.tar.gz && tar -xvf rpy2-2.5.2.tar.gz && python rpy2-2.5.2/setup.py install 
 
 WORKDIR /d
 
