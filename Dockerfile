@@ -16,6 +16,8 @@ RUN wget ftp://ftp.gnu.org/gnu/octave/octave-$OCTAVE_VERSION.tar.gz && tar -xvf 
 
 RUN pip install numpy scipy matplotlib sympy pandas oct2py rpy2 cython
 
+WORKDIR /d
+
 RUN ipython profile create mypylab
 
 CMD ipython notebook --ip 0.0.0.0 --profile mypylab
