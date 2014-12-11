@@ -3,7 +3,7 @@ FROM ipython/ipython
 ENV R_VERSION 3.1.2
 ENV OCTAVE_VERSION 3.8.2
 
-RUN mkdir -p /d/download && mkdir /d/program && /d/git 
+RUN mkdir -p /d/download && mkdir /d/program && mkdir /d/git 
 
 RUN apt-get update && apt-get install -y cmake g++ gcc git vim gfortran xpdf  libbz2-dev libgdbm-dev liblzma-dev libreadline-dev libsqlite3-dev libssl-dev tcl-dev tk-dev dpkg-dev wget
 
