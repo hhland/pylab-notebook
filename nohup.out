@@ -937,3 +937,69 @@ OSError: [Errno 2] No such file or directory
 [I 22:08:00.985 NotebookApp] Saving notebook at /shell.ipynb
 [I 22:08:04.689 NotebookApp] Creating new notebook in /PracticalDataScienceCookbook/
 [I 22:08:25.860 NotebookApp] Kernel started: 12de5b84-3da1-46f6-a07a-8147f4ba6381
+[I 22:10:00.984 NotebookApp] Saving notebook at /shell.ipynb
+[I 22:12:01.886 NotebookApp] Saving notebook at /shell.ipynb
+[I 22:14:00.978 NotebookApp] Saving notebook at /shell.ipynb
+[I 09:34:49.815 tornado.access] 302 GET / (124.160.105.37) 15.93ms
+[I 09:37:36.111 NotebookApp] Creating new notebook in /CircuitAndSystemAnalysis/
+[I 09:37:36.525 NotebookApp] Kernel started: 0e2a11ab-02ba-4d63-82ea-d8083cc0fa44
+[I 09:37:42.357 NotebookApp] Saving notebook at /shell.ipynb
+[I 09:39:36.501 NotebookApp] Saving notebook at /CircuitAndSystemAnalysis/Resistance circuit.ipynb
+[I 09:41:36.500 NotebookApp] Saving notebook at /CircuitAndSystemAnalysis/Resistance circuit.ipynb
+[I 09:43:36.494 NotebookApp] Saving notebook at /CircuitAndSystemAnalysis/Resistance circuit.ipynb
+[I 09:45:06.976 NotebookApp] Creating new notebook in /CircuitAndSystemAnalysis/
+[I 09:45:07.293 NotebookApp] Kernel started: 3f1eec40-27cb-4d2a-bf97-6806013e69d2
+[I 09:47:02.441 NotebookApp] Creating new notebook in /CircuitAndSystemAnalysis/
+[I 09:47:02.743 NotebookApp] Kernel started: 2ada3c46-b3ee-4039-9f69-ef83426dd188
+[I 09:47:39.567 NotebookApp] Creating new notebook in /CircuitAndSystemAnalysis/
+[I 09:47:39.905 NotebookApp] Kernel started: 5c5752e0-8906-405a-9253-cfed722e7dac
+[I 09:47:55.112 NotebookApp] Kernel shutdown: 6d530ade-626d-4ebd-a278-e1f5636431d0
+[I 09:47:56.178 NotebookApp] Kernel shutdown: 59e9dd59-4e74-4b7b-bcc1-a27f4f020df3
+[I 09:47:57.920 NotebookApp] Kernel shutdown: 78166794-4b1a-4806-a271-45b432e65222
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 32, in run
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'getppid'
+[I 09:47:58.847 NotebookApp] Kernel shutdown: f67267d1-7127-4a0f-9c1f-00869b4567ba
+[I 09:47:59.730 NotebookApp] Kernel shutdown: 12de5b84-3da1-46f6-a07a-8147f4ba6381
+[I 09:48:00.810 NotebookApp] Kernel shutdown: 0e2a11ab-02ba-4d63-82ea-d8083cc0fa44
+[I 09:48:02.808 NotebookApp] Kernel shutdown: 3f1eec40-27cb-4d2a-bf97-6806013e69d2
+[I 09:48:03.912 NotebookApp] Kernel shutdown: 2ada3c46-b3ee-4039-9f69-ef83426dd188
+[I 09:48:04.819 NotebookApp] Kernel shutdown: 5c5752e0-8906-405a-9253-cfed722e7dac
+[I 09:49:45.559 NotebookApp] Saving notebook at /shell.ipynb
+[I 09:50:34.206 NotebookApp] Kernel started: 2fa9b50d-af7a-475d-ac19-674eea0e869d
+[I 09:51:55.377 NotebookApp] Creating new notebook in /LearningCythonProgramming/
+[I 09:51:55.817 NotebookApp] Kernel started: 3a9d4798-834d-490c-9876-a977dfbe41b0
+[I 09:52:34.300 NotebookApp] Saving notebook at /shell.ipynb
+[I 10:37:43.591 NotebookApp] Kernel started: 5e902d6e-376c-4e90-a005-6843b5bb29e9
+[I 10:41:43.585 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:43:43.620 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:45:43.707 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:47:43.573 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:49:43.569 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:55:43.581 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 10:57:43.551 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:03:44.153 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:05:44.157 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:07:44.146 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:11:44.133 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:13:44.137 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:15:44.133 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:17:44.123 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:19:44.121 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:21:44.113 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:23:44.112 NotebookApp] Saving notebook at /EffectiveAwkProgramming3rd/Getting Started with awk.ipynb
+[I 11:26:04.475 NotebookApp] Saving notebook at /shell.ipynb
+[I 18:52:05.929 tornado.access] 302 GET / (124.160.105.37) 1.03ms
+[I 22:32:17.569 tornado.access] 302 GET / (61.153.0.166) 0.64ms
+[I 22:32:18.513 tornado.access] 302 GET / (119.147.146.195) 0.70ms
+[I 22:32:33.858 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 1.70ms
+[I 22:32:33.865 tornado.access] 302 GET / (61.153.0.166) 0.94ms
+[I 22:36:26.297 NotebookApp] Saving notebook at /shell.ipynb
+[I 22:40:26.285 NotebookApp] Saving notebook at /shell.ipynb
+[W 22:45:06.566 tornado.access] 404 GET /favicon.ico (61.153.0.166) 0.69ms referer=None
+[W 13:59:52.978 tornado.access] 404 GET /favicon.ico (124.160.105.37) 37.58ms referer=None
+[I 14:51:43.293 tornado.access] 302 GET / (124.160.105.37) 1.49ms
+[I 14:53:23.214 NotebookApp] Kernel started: c3b55ddc-b8c2-463c-9aa8-2197da96247e
+[I 15:45:18.606 tornado.access] 302 GET / (124.160.105.37) 1.26ms
