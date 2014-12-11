@@ -1003,3 +1003,5 @@ Traceback (most recent call last):
 [I 14:51:43.293 tornado.access] 302 GET / (124.160.105.37) 1.49ms
 [I 14:53:23.214 NotebookApp] Kernel started: c3b55ddc-b8c2-463c-9aa8-2197da96247e
 [I 15:45:18.606 tornado.access] 302 GET / (124.160.105.37) 1.26ms
+[I 15:49:31.053 NotebookApp] Saving notebook at /shell.ipynb
+[I 15:51:31.881 NotebookApp] Saving notebook at /shell.ipynb
