@@ -1005,3 +1005,152 @@ Traceback (most recent call last):
 [I 15:45:18.606 tornado.access] 302 GET / (124.160.105.37) 1.26ms
 [I 15:49:31.053 NotebookApp] Saving notebook at /shell.ipynb
 [I 15:51:31.881 NotebookApp] Saving notebook at /shell.ipynb
+[I 15:53:33.830 NotebookApp] Saving notebook at /shell.ipynb
+[I 15:55:33.818 NotebookApp] Saving notebook at /shell.ipynb
+[I 10:08:04.049 tornado.access] 302 GET / (124.160.105.37) 20.19ms
+[I 10:10:28.380 NotebookApp] Saving notebook at /shell.ipynb
+[I 10:10:39.075 NotebookApp] Creating new notebook in /MasteringPythonRegularExpressions/
+[I 10:10:39.553 NotebookApp] Kernel started: a8963d51-34d1-4db7-ab23-7ef6dbe40d0c
+[I 10:12:39.557 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:14:39.517 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:16:39.528 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:18:39.511 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:20:39.511 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:22:39.503 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:24:39.500 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Regular Expressions with Python.ipynb
+[I 10:26:33.621 NotebookApp] Creating new notebook in /MasteringPythonRegularExpressions/
+[I 10:26:33.918 NotebookApp] Kernel started: 26734a78-6f45-404e-93c7-8eaf74c53003
+[I 10:28:34.338 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Grouping.ipynb
+[I 10:34:34.328 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Grouping.ipynb
+[I 10:35:47.812 NotebookApp] Kernel shutdown: 26734a78-6f45-404e-93c7-8eaf74c53003
+[I 10:35:50.049 NotebookApp] Kernel started: 96681774-ac37-43ba-aab2-ec6a6da84f60
+[I 10:37:50.057 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Grouping.ipynb
+[I 10:42:25.307 NotebookApp] Saving notebook at /MasteringPythonRegularExpressions/Grouping.ipynb
+[I 10:48:40.295 NotebookApp] Saving notebook at /shell.ipynb
+[I 10:50:32.055 NotebookApp] Creating new notebook in /LearningSciPyForNumericalAndScientifiComputing/
+[I 10:50:32.533 NotebookApp] Kernel started: e9a392cb-c04d-42ba-8b17-40acfc8a81d5
+[I 10:50:41.285 NotebookApp] Saving notebook at /shell.ipynb
+[I 10:50:44.146 NotebookApp] Kernel shutdown: 2fa9b50d-af7a-475d-ac19-674eea0e869d
+[I 10:50:45.003 NotebookApp] Kernel shutdown: 3a9d4798-834d-490c-9876-a977dfbe41b0
+[I 10:50:45.867 NotebookApp] Kernel shutdown: 5e902d6e-376c-4e90-a005-6843b5bb29e9
+[I 10:50:46.658 NotebookApp] Kernel shutdown: c3b55ddc-b8c2-463c-9aa8-2197da96247e
+[I 10:50:47.592 NotebookApp] Kernel shutdown: a8963d51-34d1-4db7-ab23-7ef6dbe40d0c
+[I 10:50:48.492 NotebookApp] Kernel shutdown: 96681774-ac37-43ba-aab2-ec6a6da84f60
+[I 10:50:49.313 NotebookApp] Kernel shutdown: e9a392cb-c04d-42ba-8b17-40acfc8a81d5
+[I 10:50:57.278 NotebookApp] Kernel started: 013ead15-8b06-40a3-bc00-8d4d67e3526c
+[I 10:52:57.270 NotebookApp] Saving notebook at /LearningSciPyForNumericalAndScientifiComputing/SciPy for Linear Algebra.ipynb
+[I 10:54:57.279 NotebookApp] Saving notebook at /LearningSciPyForNumericalAndScientifiComputing/SciPy for Linear Algebra.ipynb
+[I 10:56:57.309 NotebookApp] Saving notebook at /LearningSciPyForNumericalAndScientifiComputing/SciPy for Linear Algebra.ipynb
+[I 11:00:33.930 NotebookApp] Creating new notebook in /LearningSciPyForNumericalAndScientifiComputing/
+[I 11:00:34.584 NotebookApp] Kernel started: 17d547ae-fefe-4238-b1b2-4bed06a53ac4
+[I 11:05:14.882 tornado.access] 302 GET / (124.160.105.37) 1.02ms
+[I 11:10:30.635 NotebookApp] Kernel started: 99d317c5-3abb-4897-afa5-07638447c26c
+[I 11:12:31.240 NotebookApp] Saving notebook at /shell.ipynb
+[I 11:12:53.848 tornado.access] 302 GET / (124.160.105.37) 0.73ms
+[I 11:13:11.200 tornado.access] 302 POST /login?next=%2F (124.160.105.37) 1.47ms
+[I 11:13:11.223 tornado.access] 302 GET / (124.160.105.37) 0.77ms
+[I 11:13:27.012 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 11:16:14.775 tornado.access] 302 GET /api/sessions?_=1418353994296 (112.64.235.86) 0.72ms
+[I 11:16:31.295 NotebookApp] Kernel started: 8a51218f-1aaa-43f6-8466-0a80c054e6d0
+[I 11:16:45.276 tornado.access] 302 GET /api/sessions?_=1418353997567 (180.153.206.24) 0.84ms
+[I 11:16:45.296 tornado.access] 302 GET /clusters?_=1418353997568 (180.153.206.24) 0.51ms
+[I 11:18:34.603 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:20:33.751 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:22:27.215 tornado.access] 302 GET / (180.153.201.216) 0.78ms
+[I 11:22:33.722 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:22:44.285 tornado.general] Malformed HTTP request from ('101.226.33.203', 48515): Malformed HTTP request line
+[I 11:22:44.300 tornado.general] Malformed HTTP request from ('101.226.33.203', 48525): Malformed HTTP request line
+[I 11:23:03.215 tornado.access] 302 GET /api/notebooks/BuildingProbabilisticGraphicalModelsWithPython?_=1418353997572 (180.153.206.19) 0.82ms
+[I 11:23:05.362 tornado.access] 302 GET /tree/BuildingMachineLearningSystemWithPython (180.153.206.19) 0.82ms
+[I 11:23:06.675 tornado.access] 302 GET /clusters?_=1418353997571 (180.153.211.172) 0.74ms
+[I 11:23:11.242 tornado.access] 302 GET /notebooks/BuildingMachineLearningSystemWithPython/Untitled0.ipynb (180.153.206.31) 0.75ms
+[I 11:23:32.610 tornado.access] 302 GET /api/notebooks?_=1418354006040 (222.73.77.54) 0.73ms
+[I 11:24:33.604 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008247 (180.153.206.19) 0.70ms
+[I 11:24:33.749 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:25:03.760 tornado.access] 302 GET /api/notebooks?_=1418353994298 (112.65.193.14) 0.79ms
+[I 11:25:03.799 tornado.access] 302 GET /tree (180.153.206.24) 0.59ms
+[I 11:25:21.184 tornado.access] 302 GET /tree (112.64.235.86) 0.78ms
+[I 11:25:23.495 tornado.access] 302 GET /tree (180.153.206.24) 0.75ms
+[I 11:26:35.814 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:28:33.766 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:29:01.730 tornado.access] 302 GET /tree (180.153.206.31) 0.56ms
+[I 11:30:17.401 tornado.access] 302 GET /tree (180.153.206.19) 0.55ms
+[I 11:30:25.523 tornado.access] 302 GET /tree (180.153.201.216) 0.81ms
+[I 11:30:33.635 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:30:40.993 tornado.access] 302 GET /tree (180.153.206.19) 0.86ms
+[I 11:30:41.038 tornado.access] 302 GET /tree (180.153.211.172) 0.55ms
+[I 11:32:05.270 tornado.access] 302 GET /tree (180.153.206.19) 0.69ms
+[I 11:32:06.304 tornado.access] 302 GET /tree (222.73.77.54) 0.65ms
+[I 11:32:33.599 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:34:33.750 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:36:33.580 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 11:38:33.872 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:41:54.685 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:45:24.780 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:48:54.639 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:52:25.836 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:55:56.257 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 12:56:33.841 tornado.access] 302 GET /clusters?_=1418354008249 (101.226.65.107) 0.74ms
+[I 12:58:57.236 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008250 (101.226.66.181) 0.77ms
+[I 13:02:41.083 tornado.access] 302 GET /tree (101.226.65.107) 0.54ms
+[I 13:02:55.855 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:03:51.607 NotebookApp] Kernel shutdown: 8a51218f-1aaa-43f6-8466-0a80c054e6d0
+[I 13:03:54.870 NotebookApp] Kernel started: 0302739b-5166-4b5f-969d-10896406dfb5
+[I 13:03:59.700 tornado.general] Malformed HTTP request from ('180.153.201.66', 51930): Malformed HTTP request line
+[I 13:03:59.714 tornado.general] Malformed HTTP request from ('180.153.201.66', 51936): Malformed HTTP request line
+[I 13:04:39.402 tornado.access] 302 GET /tree (101.226.66.181) 0.82ms
+[I 13:05:55.672 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:06:33.103 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008252 (112.65.193.13) 0.80ms
+[I 13:07:55.032 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:09:06.663 tornado.general] Malformed HTTP request from ('101.226.33.219', 49923): Malformed HTTP request line
+[I 13:09:06.679 tornado.general] Malformed HTTP request from ('101.226.33.219', 49928): Malformed HTTP request line
+[I 13:09:55.041 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:11:55.372 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:13:35.311 tornado.access] 302 GET /tree (112.65.193.13) 0.69ms
+[I 13:13:55.044 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:15:00.872 tornado.general] Malformed HTTP request from ('101.226.33.206', 51539): Malformed HTTP request line
+[I 13:15:00.888 tornado.general] Malformed HTTP request from ('101.226.33.206', 51542): Malformed HTTP request line
+[I 13:15:55.033 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:15:58.417 NotebookApp] Kernel shutdown: 0302739b-5166-4b5f-969d-10896406dfb5
+[I 13:16:02.977 NotebookApp] Kernel started: 0475ccf7-d3e9-4cec-9579-73a61fc350aa
+[I 13:17:29.638 tornado.access] 302 GET /api/sessions?_=1418354008248 (101.226.33.221) 0.78ms
+[I 13:18:03.325 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:18:58.561 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008257 (101.226.33.240) 0.79ms
+[I 13:20:03.297 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:20:33.745 tornado.access] 302 GET /clusters?_=1418354008254 (180.153.214.199) 0.72ms
+[I 13:21:15.827 tornado.access] 302 GET /api/sessions?_=1418354008256 (180.153.214.198) 0.73ms
+[I 13:21:58.994 tornado.access] 302 GET /api/sessions?_=1418354008253 (180.153.206.21) 0.73ms
+[I 13:22:06.909 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:22:59.879 tornado.access] 302 GET /tree (101.226.33.221) 0.71ms
+[I 13:24:05.478 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/How to classify the real samples.ipynb
+[I 13:24:34.953 tornado.access] 302 GET /tree (180.153.214.199) 0.66ms
+[I 13:26:36.210 tornado.access] 302 GET /tree (101.226.33.240) 0.66ms
+[I 13:26:37.675 tornado.access] 302 GET /tree (180.153.214.198) 0.53ms
+[I 13:27:15.152 tornado.access] 302 GET /tree (180.153.206.21) 0.67ms
+[I 14:00:22.171 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 14:00:22.798 NotebookApp] Kernel started: 4ffea977-a542-44a2-870c-46897c00ed0c
+[I 14:02:22.795 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Clustering look for the relevant posts.ipynb
+[I 14:03:26.133 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython/Untitled0.ipynb?_=1418364025406 (180.153.163.191) 0.82ms
+[I 14:03:45.691 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 14:03:46.247 NotebookApp] Kernel started: 6b7feb29-d27c-44f1-8f66-6565e2380b98
+[I 14:04:22.787 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Clustering look for the relevant posts.ipynb
+[I 14:06:22.784 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Clustering look for the relevant posts.ipynb
+[I 14:07:34.479 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008263 (101.226.66.180) 0.81ms
+[I 14:08:15.703 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 14:08:16.209 NotebookApp] Kernel started: f315165f-b5d3-44ff-babd-4eda2d806f04
+[I 14:08:22.825 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Clustering look for the relevant posts.ipynb
+[I 14:08:41.453 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 14:08:41.859 NotebookApp] Kernel started: 0337b73b-be29-4358-8892-1aa3e2d9e1fd
+[I 14:08:57.372 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008260 (180.153.163.206) 0.79ms
+[I 14:09:21.539 NotebookApp] Creating new notebook in /BuildingMachineLearningSystemWithPython/
+[I 14:09:21.905 NotebookApp] Kernel started: af5d4e8e-a9c3-4790-a313-11ccb53b6752
+[I 14:09:38.044 NotebookApp] Kernel shutdown: 013ead15-8b06-40a3-bc00-8d4d67e3526c
+[I 14:09:38.735 NotebookApp] Kernel shutdown: 17d547ae-fefe-4238-b1b2-4bed06a53ac4
+[I 14:09:39.541 NotebookApp] Kernel shutdown: 99d317c5-3abb-4897-afa5-07638447c26c
+[I 14:09:40.320 NotebookApp] Kernel shutdown: 0475ccf7-d3e9-4cec-9579-73a61fc350aa
+[I 14:09:41.068 NotebookApp] Kernel shutdown: 4ffea977-a542-44a2-870c-46897c00ed0c
+[I 14:09:42.173 NotebookApp] Kernel shutdown: 6b7feb29-d27c-44f1-8f66-6565e2380b98
+[I 14:09:43.022 NotebookApp] Kernel shutdown: f315165f-b5d3-44ff-babd-4eda2d806f04
+[I 14:09:43.734 NotebookApp] Kernel shutdown: 0337b73b-be29-4358-8892-1aa3e2d9e1fd
+[I 14:09:46.148 NotebookApp] Kernel shutdown: af5d4e8e-a9c3-4790-a313-11ccb53b6752
+[I 14:10:08.484 NotebookApp] Kernel started: 28bb2471-bcbd-46fc-8032-1c9c68d9d118
