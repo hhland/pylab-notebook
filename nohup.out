@@ -1154,3 +1154,167 @@ Traceback (most recent call last):
 [I 14:09:43.734 NotebookApp] Kernel shutdown: 0337b73b-be29-4358-8892-1aa3e2d9e1fd
 [I 14:09:46.148 NotebookApp] Kernel shutdown: af5d4e8e-a9c3-4790-a313-11ccb53b6752
 [I 14:10:08.484 NotebookApp] Kernel started: 28bb2471-bcbd-46fc-8032-1c9c68d9d118
+[I 14:10:33.647 tornado.access] 302 GET /api/sessions?_=1418354008258 (101.226.33.201) 0.79ms
+[I 14:11:05.113 tornado.access] 302 GET /clusters?_=1418354008259 (101.226.33.220) 1.06ms
+[I 14:11:26.933 tornado.access] 302 GET /tree (180.153.163.191) 0.70ms
+[I 14:12:08.485 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:12:14.668 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython/Untitled0.ipynb?_=1418364228903 (101.226.33.225) 0.78ms
+[I 14:13:02.405 tornado.access] 302 GET /api/sessions?_=1418354008270 (112.65.193.14) 1.00ms
+[I 14:13:09.112 tornado.access] 302 GET /api/sessions?_=1418354008276 (180.153.214.197) 0.77ms
+[I 14:13:10.671 tornado.access] 302 GET /api/sessions?_=1418354008284 (180.153.214.197) 0.73ms
+[I 14:13:40.565 tornado.access] 302 GET /api/sessions?_=1418354008261 (180.153.163.191) 0.69ms
+[I 14:14:09.852 tornado.access] 302 GET /tree (101.226.66.180) 0.65ms
+[I 14:14:55.306 tornado.access] 302 GET /tree (101.226.33.201) 0.66ms
+[I 14:15:00.794 tornado.access] 302 GET /api/sessions?_=1418354008264 (112.64.235.250) 0.73ms
+[I 14:15:44.016 tornado.access] 302 GET /tree (180.153.163.206) 0.56ms
+[I 14:15:50.124 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008277 (222.73.77.54) 0.84ms
+[I 14:15:55.532 tornado.access] 302 GET /tree (101.226.33.220) 0.65ms
+[I 14:16:08.471 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:16:44.948 tornado.access] 302 GET /api/sessions?_=1418354008278 (180.153.206.22) 0.74ms
+[I 14:16:56.033 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008272 (101.226.89.122) 0.75ms
+[I 14:17:13.163 tornado.access] 302 GET /clusters?_=1418354008268 (180.153.206.36) 0.73ms
+[I 14:17:23.274 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008283 (101.226.33.223) 0.78ms
+[I 14:17:24.652 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008289 (101.226.33.223) 0.76ms
+[I 14:17:37.511 tornado.access] 302 GET /api/sessions?_=1418354008292 (180.153.161.55) 0.77ms
+[I 14:17:41.867 tornado.access] 302 GET /api/sessions?_=1418354008290 (180.153.206.33) 0.73ms
+[I 14:17:47.391 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython/Untitled0.ipynb?_=1418364524656 (101.226.66.192) 0.78ms
+[I 14:17:56.013 tornado.access] 302 GET /api/notebooks?_=1418364598340 (180.153.201.216) 0.71ms
+[I 14:18:04.970 tornado.access] 302 GET /clusters?_=1418354008274 (180.153.206.18) 0.69ms
+[I 14:18:08.471 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:18:33.169 tornado.access] 302 GET /api/notebooks?_=1418364598343 (180.153.214.152) 1.01ms
+[I 14:18:33.401 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008281 (101.226.33.203) 1.09ms
+[I 14:19:13.548 tornado.access] 302 GET /api/notebooks/shell.ipynb/checkpoints (112.64.235.248) 0.70ms
+[I 14:19:15.128 tornado.access] 302 GET /api/sessions?_=1418354008288 (180.153.201.217) 0.73ms
+[I 14:19:22.193 tornado.access] 302 GET /tree (180.153.214.197) 0.77ms
+[I 14:19:25.256 tornado.access] 302 GET /tree (180.153.214.197) 0.67ms
+[I 14:19:33.504 tornado.access] 302 GET /tree (101.226.33.225) 0.66ms
+[I 14:19:38.223 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008291 (101.226.33.239) 0.73ms
+[I 14:19:40.353 tornado.access] 302 GET /tree (180.153.163.191) 0.65ms
+[I 14:20:08.467 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:20:13.017 tornado.access] 302 GET /api/sessions?_=1418364598341 (180.153.211.172) 0.80ms
+[I 14:20:37.949 tornado.access] 302 GET /tree (112.64.235.250) 0.50ms
+[I 14:20:39.700 tornado.access] 302 GET /api/sessions?_=1418354008273 (180.153.163.189) 0.67ms
+[I 14:20:53.403 tornado.access] 302 GET /clusters?_=1418364598342 (180.153.163.189) 0.79ms
+[I 14:21:46.617 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008285 (180.153.114.199) 0.72ms
+[I 14:22:08.461 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:22:17.822 tornado.access] 302 GET /tree (180.153.206.36) 1.03ms
+[I 14:22:19.614 tornado.access] 302 GET /tree (112.65.193.14) 0.59ms
+[I 14:22:46.846 tornado.access] 302 GET /api/notebooks/BuildingMachineLearningSystemWithPython?_=1418354008269 (180.153.214.182) 0.82ms
+[I 14:22:57.961 tornado.access] 302 GET /tree (101.226.66.192) 0.98ms
+[I 14:22:59.926 tornado.access] 302 GET /tree (101.226.89.122) 0.47ms
+[I 14:23:05.958 tornado.access] 302 GET /tree (180.153.161.55) 0.98ms
+[I 14:23:16.061 tornado.access] 302 GET /tree (180.153.206.22) 0.51ms
+[I 14:23:54.854 tornado.access] 302 GET /tree (180.153.214.152) 0.67ms
+[I 14:23:58.585 tornado.access] 302 GET /tree (180.153.201.216) 0.52ms
+[I 14:24:00.692 tornado.access] 302 GET /tree (222.73.77.54) 0.68ms
+[I 14:24:03.850 tornado.access] 302 GET /tree (180.153.206.18) 0.50ms
+[I 14:24:09.498 NotebookApp] Saving notebook at /shell.ipynb
+[I 14:24:17.595 NotebookApp] Creating new notebook in /LinuxShellScriptingCookbook/
+[I 14:24:17.925 tornado.access] 302 GET /tree (180.153.206.33) 0.66ms
+[I 14:24:18.289 NotebookApp] Kernel started: d02f3eb8-e337-496c-b66d-8cad922d7eff
+[I 14:24:19.836 tornado.access] 302 GET /tree (101.226.33.223) 0.70ms
+[I 14:24:21.737 tornado.access] 302 GET /tree (101.226.33.223) 0.94ms
+[I 14:24:31.989 tornado.access] 302 GET /tree (180.153.201.217) 0.68ms
+[I 14:24:46.640 tornado.access] 302 GET /tree (101.226.33.203) 0.67ms
+[I 14:25:14.731 tornado.access] 302 GET /tree (180.153.211.172) 0.55ms
+[I 14:25:32.292 tornado.access] 302 GET /tree (112.64.235.248) 0.52ms
+[I 14:25:36.687 tornado.access] 302 GET /tree (180.153.163.189) 0.75ms
+[I 14:25:45.949 tornado.access] 302 GET /tree (101.226.33.239) 0.54ms
+[I 14:26:11.216 tornado.access] 302 GET /tree (180.153.163.189) 1.13ms
+[I 14:26:18.284 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:27:50.774 tornado.access] 302 GET /tree (180.153.214.182) 0.71ms
+[I 14:28:18.279 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:29:52.405 tornado.access] 302 GET /api/notebooks/LinuxShellScriptingCookbook/Untitled0.ipynb?_=1418365460897 (180.153.206.36) 0.75ms
+[I 14:30:18.275 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:30:32.435 tornado.access] 302 GET /clusters?_=1418354008262 (101.226.65.102) 0.69ms
+[I 14:31:11.160 tornado.access] 302 GET /clusters?_=1418365458547 (180.153.214.180) 0.69ms
+[I 14:31:36.254 tornado.access] 302 GET /clusters?_=1418354008271 (101.226.66.179) 0.70ms
+[I 14:31:43.914 tornado.access] 302 GET /clusters?_=1418364598345 (101.226.51.230) 0.68ms
+[I 14:32:18.267 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:32:36.375 tornado.access] 302 GET /api/notebooks?_=1418364598346 (101.226.33.203) 0.77ms
+[I 14:34:18.261 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:35:30.410 tornado.access] 302 GET /tree (101.226.65.102) 0.66ms
+[I 14:36:18.449 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:37:17.193 tornado.access] 302 GET /tree (180.153.206.36) 0.69ms
+[I 14:37:30.272 tornado.access] 302 GET /tree (180.153.214.180) 1.00ms
+[I 14:38:05.953 tornado.access] 302 GET /tree (101.226.66.179) 0.66ms
+[I 14:38:18.752 NotebookApp] Saving notebook at /LinuxShellScriptingCookbook/Have a try.ipynb
+[I 14:38:30.193 tornado.access] 302 GET /tree (101.226.33.203) 0.72ms
+[I 14:38:46.837 tornado.access] 302 GET /tree (101.226.51.230) 0.72ms
+[I 15:05:03.579 tornado.access] 302 GET /api/sessions?_=1418365458549 (101.226.33.237) 0.72ms
+[I 15:10:09.841 tornado.access] 302 GET /tree (101.226.33.237) 0.70ms
+[W 21:34:45.544 tornado.access] 404 GET /favicon.ico (61.153.0.166) 1.86ms referer=None
+[I 21:34:46.712 tornado.access] 302 GET / (61.153.0.166) 0.67ms
+[I 21:35:08.537 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 1.20ms
+[I 21:35:08.547 tornado.access] 302 GET / (61.153.0.166) 0.77ms
+[I 21:37:14.490 NotebookApp] Kernel started: 92a0bd70-e1ce-485c-825a-12e354ed144a
+[I 21:41:28.855 NotebookApp] Kernel started: 02c4bd04-960f-4dec-b117-a3064c0e32e9
+[I 22:09:14.952 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:11:14.938 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:17:14.922 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:21:14.909 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:37:14.865 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:39:14.855 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[I 22:41:14.850 NotebookApp] Saving notebook at /BuildingMachineLearningSystemWithPython/Dimension reduction.ipynb
+[W 15:20:18.350 tornado.access] 404 GET /favicon.ico (61.153.0.166) 13.26ms referer=None
+[I 15:20:20.826 tornado.access] 302 GET / (61.153.0.166) 20.12ms
+[I 15:21:22.804 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 49.01ms
+[I 15:21:22.821 tornado.access] 302 GET / (61.153.0.166) 0.65ms
+[I 15:31:03.634 tornado.access] 302 GET /tree (119.147.146.195) 0.74ms
+[I 15:32:34.368 tornado.access] 302 GET /tree/RecommendationSystemPractice (119.147.146.189) 0.74ms
+[I 15:33:39.722 NotebookApp] Creating new notebook in /RecommendationSystemPractice/
+[I 15:33:40.445 NotebookApp] Kernel started: 92d8ed67-eb9a-48c8-bde6-65b9d718ff72
+[I 15:33:40.449 tornado.access] 302 GET /notebooks/RecommendationSystemPractice/Untitled0.ipynb (119.147.146.189) 0.66ms
+[I 15:33:56.090 NotebookApp] Saving notebook at /shell.ipynb
+[I 15:37:41.064 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:39:41.063 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:41:41.060 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:43:41.048 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:47:41.042 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:49:35.983 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:53:41.032 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 15:55:42.018 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:23:41.960 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:25:41.957 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:27:41.949 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:29:41.939 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:31:41.939 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:33:41.938 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:35:41.941 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:37:41.934 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:39:41.923 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 16:43:42.912 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 17:49:44.778 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 17:51:44.765 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 17:52:48.694 NotebookApp] Kernel shutdown: 92d8ed67-eb9a-48c8-bde6-65b9d718ff72
+[I 17:52:57.960 NotebookApp] Kernel started: 1fadda1b-b037-4243-b8c5-01246b263232
+[I 17:54:58.752 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 17:58:58.753 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[I 18:48:13.397 tornado.access] 302 GET / (61.153.0.166) 0.80ms
+[I 18:50:33.464 NotebookApp] Saving notebook at /RecommendationSystemPractice/Using the user behavior data.ipynb
+[W 17:29:56.094 tornado.access] 404 GET /favicon.ico (61.153.0.166) 126.40ms referer=None
+[I 17:29:58.589 tornado.access] 302 GET / (61.153.0.166) 20.60ms
+[I 17:30:07.452 tornado.access] 302 POST /login?next=%2F (61.153.0.166) 134.10ms
+[I 17:30:07.462 tornado.access] 302 GET / (61.153.0.166) 0.64ms
+[I 17:31:05.751 NotebookApp] Creating new notebook in /pig/
+[I 17:31:06.380 NotebookApp] Kernel started: d6986b36-f43a-4310-9b06-b54862cdae76
+[I 17:32:50.901 NotebookApp] Saving notebook at /shell.ipynb
+[I 17:33:06.893 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:35:06.885 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:37:06.883 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:49:06.861 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:53:06.849 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:55:06.843 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 17:57:06.839 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 18:03:06.839 NotebookApp] Saving notebook at /pig/shell.ipynb
+[I 18:03:12.513 NotebookApp] Kernel shutdown: d02f3eb8-e337-496c-b66d-8cad922d7eff
+[I 18:03:14.177 NotebookApp] Kernel shutdown: 92a0bd70-e1ce-485c-825a-12e354ed144a
+[I 18:03:15.032 NotebookApp] Kernel shutdown: 02c4bd04-960f-4dec-b117-a3064c0e32e9
+[I 18:03:16.121 NotebookApp] Kernel shutdown: 28bb2471-bcbd-46fc-8032-1c9c68d9d118
+Exception in thread Thread-1 (most likely raised during interpreter shutdown):
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 551, in __bootstrap_inner
+  File "/usr/local/lib/python2.7/dist-packages/IPython/kernel/zmq/parentpoller.py", line 32, in run
+<type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'getppid'
+[I 18:03:17.310 NotebookApp] Kernel shutdown: 1fadda1b-b037-4243-b8c5-01246b263232
+[I 18:03:18.836 NotebookApp] Kernel shutdown: d6986b36-f43a-4310-9b06-b54862cdae76
