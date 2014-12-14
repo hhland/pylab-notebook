@@ -23,6 +23,11 @@ or
 {PIG_DOC}
 
 """
+import os
+PIG_HOME=os.getenv("PIG_HOME")
+
+if PIG_HOME == None:
+    raise "can't find PIG_HOME"
 
 from IPython.core.magic import (Magics, magics_class, line_magic, cell_magic,
                                 line_cell_magic, needs_local_scope)
@@ -32,6 +37,7 @@ from IPython.core.magic_arguments import (
 )
 from IPython.core import display
 from IPython.utils.io import capture_output
+import os
 
 __version__ = '0.0.1'
 
@@ -43,7 +49,7 @@ def run_pig(code, scope='local'):
         f.write(code)
         f.close()
 
-    cmd = ['/d/program/apache/pig-0.14.0/bin/pig','-x',scope,tmp_pig]
+    cmd = [PIG_HOME+'/bin/pig','-x',scope,tmp_pig]
 
     proc = Popen(cmd, stdout=PIPE, stderr=PIPE)
     for line in proc.stdout:
