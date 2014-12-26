@@ -1,3 +1,23 @@
+"""This file contains code for use with "Think Bayes",
+by Allen B. Downey, available from greenteapress.com
+
+Copyright 2012 Allen B. Downey
+License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
+"""
+
+"""This file contains class definitions for:
+
+Hist: represents a histogram (map from values to integer frequencies).
+
+Pmf: represents a probability mass function (map from values to probs).
+
+_DictWrapper: private parent class for Hist and Pmf.
+
+Cdf: represents a discrete cumulative distribution function
+
+Pdf: represents a continuous probability density function
+
+"""
 
 import bisect
 import copy
