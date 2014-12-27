@@ -1,0 +1,11 @@
+In 1999 Barabási and Albert published a paper in Science, “Emergence of Scaling in Random
+Networks,” that characterizes the structure (also called “topology”) of several real-world
+networks, including graphs that represent the interconnectivity of movie actors, world-
+wide web (WWW) pages, and elements in the electrical power grid in the western United
+States. You can download the paper from http://www.sciencemag.org/content/286/
+5439/509.
+They measure the degree (number of connections) of each node and compute P(k), the
+probability that a vertex has degree k; then they plot P(k) versus k on a log-log scale. The
+tail of the plot ﬁts a straight line, so they conclude that it obeys a power law; that is, as k
+gets large, P(k) is asymptotic to k−γ, where γ is a parameter that determines the rate of
+decay.
