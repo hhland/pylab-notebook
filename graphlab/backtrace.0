@@ -1,0 +1,58 @@
+Pointers
+------------
+0xb1203c
+0x5a164b
+0xc953d4
+0xb3b41d
+0xbbb07a
+0xbeeccc
+0x11bf0aa
+0x11bf581
+0xbff613
+0xa3c4b6
+0x10db29e
+0x10e968a
+0x10ea998
+0x130437a
+0x7f43acacde9a
+0x7f43abbf031d
+Raw
+------------
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server(_Z18__print_back_tracev+0x8c) [0xb1203c]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x5a164b]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0xc953d4]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0xb3b41d]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0xbbb07a]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0xbeeccc]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x11bf0aa]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x11bf581]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server(_ZN8graphlab12unity_sframe27construct_from_sframe_indexESs+0x5e3) [0xbff613]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server(_ZN6cppipc13dispatch_implIN8graphlab17unity_sframe_baseEMS2_FvSsEE7executeEPvPNS_11comm_serverERNS1_8iarchiveERNS1_8oarchiveE+0xb6) [0xa3c4b6]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server(_ZN6cppipc11comm_server8callbackERN8libfault14zmq_msg_vectorES3_+0x7be) [0x10db29e]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x10e968a]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x10ea998]
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server() [0x130437a]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x7e9a) [0x7f43acacde9a]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7f43abbf031d]
+
+Demangled
+------------
+__print_back_trace()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+graphlab::unity_sframe::construct_from_sframe_index(std::string)
+cppipc::dispatch_impl<graphlab::unity_sframe_base, void (graphlab::unity_sframe_base::*)(std::string)>::execute(void*, cppipc::comm_server*, graphlab::iarchive&, graphlab::oarchive&)
+cppipc::comm_server::callback(libfault::zmq_msg_vector&, libfault::zmq_msg_vector&)
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/usr/local/lib/python2.7/dist-packages/graphlab/unity_server()
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x7e9a)
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d)
+-------------------------------------------------------
+
+
