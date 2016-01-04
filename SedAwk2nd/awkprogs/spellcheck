@@ -1,3 +1,0 @@
-:
-# wrapper for spellcheck.awk
-gawk -f spellcheck.awk $*

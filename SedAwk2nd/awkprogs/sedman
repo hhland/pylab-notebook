@@ -1,5 +1,0 @@
-#sedman -- deformat nroff-formatted man page
-s/.//g
-s/9//g
-s/^[ 	]*//g
-s/	/ /g
