@@ -49,3 +49,6 @@ ordered_uniq_frequency = ORDER filtered_uniq_frequency BY hour, score;
 -- Output: (hour, n-gram, score, count, average_counts_among_all_hours)
 dump ordered_uniq_frequency
 --STORE ordered_uniq_frequency INTO 'tmp/script1-local-results.txt' USING PigStorage();
+REGISTER lib/datafu-pig-incubating-1.3.0.jar
+REGISTER lib/datafu-pig-incubating-1.3.0.jar
+REGISTER lib/datafu-pig-incubating-1.3.0.jar
