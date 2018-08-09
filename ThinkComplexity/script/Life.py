@@ -1,3 +1,11 @@
+""" Code example from Complexity and Computation, a book about
+exploring complexity science with Python.  Available free from
+
+http://greenteapress.com/complexity
+
+Copyright 2011 Allen B. Downey.
+Distributed under the GNU General Public License at gnu.org/licenses/gpl.html.
+"""
 
 import numpy
 import scipy.ndimage
@@ -9,6 +17,7 @@ import matplotlib.pyplot as pyplot
 
 class Life(object):
     """Implements Conway's Game of Life.
+
     n:     the number of rows and columns
     """
 
@@ -74,11 +83,11 @@ class LifeViewer(object):
 
     def animate(self, steps=10):
         """Creates the GUI and then invokes animate_callback.
+
         Generates an animation with the given number of steps.
         """
         self.steps = steps
-        #self.fig.canvas.manager.window.after(1000, self.animate_callback)
-        self.animate_callback()
+        self.fig.canvas.manager.window.after(1000, self.animate_callback)
         pyplot.show()
 
     def animate_callback(self):
